@@ -71,15 +71,15 @@ const Title = ({ clientHeight }) => {
 
   return (
     <section className="text-center text-[50px] md:text-[100px] lg:text-[140px] w-full h-[100vh] relative select-none flex flex-col items-center justify-center font-passion" ref={targetSection}>
-      <h1
+      <div
         ref={quoteRef}
         className="w-full"
       >
-        <p className="">
+        <div className="">
           <span className="italic">Together</span>
           <span>, we</span>
-        </p>
-        <p className="flex justify-center italic">
+        </div>
+        <div className="flex justify-center italic">
           <span>pioneer</span>&nbsp;
           <span id="owner" className="relative h-[140px] text-purple">
             <div ref={ownerClient} className="flex flex-col">
@@ -88,8 +88,8 @@ const Title = ({ clientHeight }) => {
             </div>
           </span>
           &nbsp;<span>future</span>
-        </p>
-      </h1>
+        </div>
+      </div>
     </section>
   );
 };

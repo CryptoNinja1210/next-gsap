@@ -23,6 +23,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import WeTop from "@/components/About/WeTop";
 import FutureCarousel from "@/components/Future/FutureCarousel";
 import Budbo from "@/components/About/Budbo";
+import Shows from "@/components/About/Shows";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -67,6 +68,8 @@ export default function Home() {
               <Logo />
               <Role />
               <We />
+              <Shows />
+              <div className="h-[3000px]" />
               <Token />
               <WeTop />
               <We1 />

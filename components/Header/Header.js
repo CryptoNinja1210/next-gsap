@@ -45,14 +45,14 @@ const Header = () => {
             </label>
           </div>
           <div className="flex items-center">
-            <p className="flex text-primary-graydark font-sysui text-[14px] leading-[16px]">
+            <div className="flex text-primary-graydark font-sysui text-[14px] leading-[16px]">
               <span className="mr-1 leading-[16px]"><Icon icon="tabler:arrows-double-ne-sw" width="16" height="16"/></span>
               <span className="mr-1 font-bold text-primary-purple">1 BUBO</span>
               <span className="mr-1 font-bold text-black">= 1.4567 USD</span>
               <span className="mr-1">- 24.12</span>
               <span className="mr-1 leading-[16px] font-bold text-secondary-greendark"><Icon icon="typcn:arrow-up-thick" width="16" height="16" /></span>
               <span className="mr-1 font-bold text-secondary-greendark">0.5%</span>
-            </p>
+            </div>
           </div>
           <div className="flex items-center gap-2 text-primary-graydark font-sysui text-[14px] leading-[16px]">
             Connect Crypto Wallet

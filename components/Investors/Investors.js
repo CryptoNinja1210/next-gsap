@@ -26,7 +26,7 @@ const Investors = () => {
   return (
     <div className="flex w-full">
       <div className="w-full m-auto px-4 font-sysui lg:px-[160px] lg:py-[70px] items-center">
-        <h1 className="text-center font-semibold text-[54px] my-[56px]">
+        <div className="text-center font-semibold text-[54px] my-[56px]">
           <span>Hear from some of our</span>
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">Investors</span>
@@ -34,7 +34,7 @@ const Investors = () => {
           <span>and</span>
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">Customers</span>
-        </h1>
+        </div>
         <div className="w-full lg:flex">
           {members.map( i =>
             <div key={i.key+"_members"} className="flex items-start lg:w-1/2 gap-[36px]">

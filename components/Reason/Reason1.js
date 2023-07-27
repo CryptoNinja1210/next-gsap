@@ -69,11 +69,11 @@ const Reason = () => {
       </div>
       <div className="mx-auto w-[1100px] h-[90px] border-b-[1px] my-[38px] border-secondary-graylight"></div>
       <div>
-        <h1 className="text-[32px] lg:text-[64px] font-semibold leading-none lg:mx-[80px] my-[40px] r">
+        <div className="text-[32px] lg:text-[64px] font-semibold leading-none lg:mx-[80px] my-[40px] r">
           <span>Let’s talk</span>&nbsp;
           <span className=" text-[50px] lg:px-[34px] lg:text-[128px] text-transparent bg-linear bg-clip-text">Reasons</span>&nbsp;
           <span>to invest</span>
-        </h1>
+        </div>
         <p className="text-[18px] lg:px-[30px] w-full lg:text-[32px] mb-[92px]">
           Reason #1 – Not another Cannabis startup; Budbo is a technology company that has built the ecosystem that benefits dispensaries, growers, manufacturers, couriers, patients, and consumers.
         </p>
@@ -261,10 +261,10 @@ const Reason = () => {
         </div>
       </div>
       <div className="w-full bg-reason lg:after:py-[85px]">
-        <h1 className="lg:text-center font-semibold text-[64px]">
+        <div className="lg:text-center font-semibold text-[64px]">
           <span>Meet your new&nbsp;</span>
           <span className="bg-linear bg-clip-text text-transparent text-[128px]">Team</span>
-        </h1>
+        </div>
         <h2 className="lg:text-center   text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
         <div className="relative flex justify-center mb-[50px]">
           <div className="w-1/5 flex m-auto">
@@ -287,11 +287,11 @@ const Reason = () => {
         <Team />
       </div>
       <div className="lg:p-[12px]">
-        <h1 className="text-[64px] font-semibold my-[24px]">
+        <div className="text-[64px] font-semibold my-[24px]">
           <span>Team member</span>
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">SPOTLIGHT</span>
-        </h1>
+        </div>
         <div className="lg:flex flex-row-reverse  justify-center items-center gap-[60px]">
           <div className="lg:w-1/2">
             <Image
