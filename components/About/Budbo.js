@@ -46,14 +46,14 @@ export default function Budbo() {
 
   return (
     <div ref={wrapperRef} className="w-[100vw] h-[100vh] overflow-hidden flexx flex-col text-center font-sysui pt-24">
-      <h1 className="text-[60px]">
+      <div className="text-[60px]">
         <span>
           We are
         </span>&nbsp;
         <span className="italic text-[90px] font-medium bg-linear bg-clip-text text-transparent">
           Budbo
         </span>
-      </h1>
+      </div>
       <div className="h-[45px] overflow-y-hidden">
         <p className="text-[30px]">...and we’ve been expecting you! Join the Revolution, invest today!</p>
         <p className="text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
