@@ -3,8 +3,10 @@ import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Title = ({ clientHeight }) => {
-  const quoteRef = useRef(null);
   const targetSection = useRef(null);
+  const quoteRef = useRef(null);
+  const ownerThe = useRef(null);
+  const ownerYour = useRef(null);
 
   useEffect(() => {
     const [stopTimeline, scrollTrigger] = stopTitle();
@@ -55,7 +57,7 @@ const Title = ({ clientHeight }) => {
   return (
     <section className="w-full h-[100vh] relative select-none" ref={targetSection}>
       <div
-        className={"py-80 section-container"}
+        className="py-80 section-container"
       >
         <h1
           ref={quoteRef}
@@ -65,30 +67,16 @@ const Title = ({ clientHeight }) => {
             <span className="italic">Together</span>
             <span>, we</span>
           </p>
-          <p className="text-[140px] flex justify-center">
+          <p className="text-[140px] flex justify-center italic">
             <span>pioneer</span>&nbsp;
-            <span id="owner" className="relative italic bg-linear bg-clip-text text-transparent w-full grid">
-              <span id="owner-the" className="">the</span>
-              <span id="owner-your" className="">your</span>
+            <span id="owner" className="relative bg-linear bg-clip-text text-transparent grid">
+              <span ref={ownerThe} id="owner-the" className="">the</span>
+              <span ref={ownerYour} id="owner-your" className="">your</span>
             </span>
             &nbsp;<span>future</span>
           </p>
         </h1>
       </div>
-      {/* <style jsx global>{`
-        .about-3 {
-          background: linear-gradient(
-            90deg,
-            #ffffff 0%,
-            #ffffff 50%,
-            #8b31ff 51%,
-            #7000ff 102%
-          );
-          background-size: 200% 100%;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      `}</style> */}
     </section>
   );
 };
