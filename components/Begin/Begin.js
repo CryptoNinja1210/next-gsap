@@ -163,7 +163,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			.to(
 				leftsideText.current,
 				{ fontSize: 10, opacity: 0, x: -150, y: 100, duration: 1, },
-				1.5
+				1
 			)
 			.to(
 				rightsideText.current,
@@ -174,13 +174,13 @@ const Begin = ({ isDesktop, clientHeight }) => {
 				middlesideText.current,
 				{ fontSize: 20, opacity: 0, width: 0, },
 				{ fontSize: 60, opacity: 1, width: 300, duration: 0.5, },
-				"<"
+				"<+=0.5"
 			)
 			.fromTo(
 				middlesideText.current,
 				{ fontSize: 60, },
 				{ fontSize: 20, opacity: 0, width: 0, y: 0, duration: 1.5, },
-				"+=1.5"
+				"<+=1"
 			)
 			.to(
 				leftPhone.current,
@@ -188,7 +188,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					x: - (window.innerWidth - leftPhone.current.clientWidth),
 					duration: 1,
 				},
-				"+=0.5"
+				"<+=1.5"
 			)
 			.to(
 				rightPhone.current,
@@ -209,9 +209,9 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	}
 
 	return (
-		<div ref={wrapperRef} className="text-4xl bg-transparent lg:text-5xl relative w-[100vw] h-[100vh] font-normal leading-normal font-sysui flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden">
+		<div ref={wrapperRef} className="text-4xl bg-transparent lg:text-5xl relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden font-passion">
 			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
-				<span ref={topleftText} className=" pr-5 font-semibold font-sysui text-primary-purple">
+				<span ref={topleftText} className=" pr-5 text-primary-purple">
 					Recession-proof
 				</span>
 				<Image
@@ -225,11 +225,11 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					Let&apos;s begin
 				</span>
 			</div>
-			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] font-semibold font-sysui whitespace-nowrap text-primary-purple">
+			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px]  whitespace-nowrap text-primary-purple">
 				<span>together</span>
 			</div>
 			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5">
-				<span ref={toprightText} className="pl-5 font-semibold font-sysui text-primary-purple whitespace-nowrap">
+				<span ref={toprightText} className="pl-5 text-primary-purple whitespace-nowrap">
 					your portfolio
 				</span>
 				<Image

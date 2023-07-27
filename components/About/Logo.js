@@ -116,7 +116,7 @@ const Logo = () => {
           opacity: 1,
           transformOrigin: "100% 100%",
           duration: 2,
-          rotateZ: 45,
+          rotateZ: 90,
         },
         e * 2
       )
@@ -173,26 +173,7 @@ const Logo = () => {
           duration: 2,
           rotateZ: -405,
         }
-      )
-      // .to(
-      //   logoRef.current,
-      //   {
-      //     width: 250,
-      //     duration: 1,
-      //   },
-      // )
-      // .fromTo(
-      //   logoTextRef.current,
-      //   {
-      //     opacity: 0,
-      //     duration: 1,
-      //   },
-      //   {
-      //     opacity: 1,
-      //     duration: 1,
-      //   },
-      // )
-      ;
+      );
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
       start: "bottom bottom",

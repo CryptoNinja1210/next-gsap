@@ -73,7 +73,7 @@ const Title = ({ clientHeight }) => {
   }
 
   return (
-    <section className="w-full h-[100vh] relative select-none flex flex-col items-center justify-center" ref={targetSection}>
+    <section className="w-full h-[100vh] relative select-none flex flex-col items-center justify-center font-passion" ref={targetSection}>
       <h1
         ref={quoteRef}
         className="font-medium text-[2.70rem] md:text-6xl lg:text-[4rem] text-center w-full"
