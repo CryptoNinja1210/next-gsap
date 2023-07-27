@@ -14,7 +14,7 @@ const Meta = ({ children }) => {
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <meta name="author" content="Shubh Porwal" />
+        <meta name="author" content="GSAP animation" />
         <meta
           name="copyright"
           content="All rights reserved, 2023"
@@ -26,7 +26,7 @@ const Meta = ({ children }) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={METADATA.title} />
         <meta property="og:description" content={METADATA.description} />
-        <meta property="og:image" content="https://res.cloudinary.com/dywdhyojt/image/upload/v1651299924/preview.png" />
+        <meta property="og:image" content="https://next-gsap-indol.vercel.app/preview.png" />
         <meta property="og:url" content={METADATA.siteUrl} />
         <meta property="og:site_name" content={METADATA.title} />
 
@@ -37,7 +37,7 @@ const Meta = ({ children }) => {
         <meta property="twitter:site" content={METADATA.twitterHandle} />
         <meta name="twitter:creator" content={METADATA.twitterHandle} />
         <meta property="twitter:url" content={METADATA.siteUrl} />
-        <meta property="twitter:image" content="https://res.cloudinary.com/dywdhyojt/image/upload/v1651299924/preview.png" />
+        <meta property="twitter:image" content="https://next-gsap-indol.vercel.app/preview.png" />
 
         <link
           rel="apple-touch-icon"
