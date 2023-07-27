@@ -163,7 +163,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			.to(
 				leftsideText.current,
 				{ fontSize: 10, opacity: 0, x: -150, y: 100, duration: 1, },
-				1
+				2
 			)
 			.to(
 				rightsideText.current,
@@ -211,7 +211,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	return (
 		<div ref={wrapperRef} className="text-4xl bg-transparent lg:text-5xl relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden font-passion">
 			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
-				<span ref={topleftText} className=" pr-5 text-primary-purple">
+				<span ref={topleftText} className=" pr-5 text-primary-purple whitespace-nowrap">
 					Recession-proof
 				</span>
 				<Image
