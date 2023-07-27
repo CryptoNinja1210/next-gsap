@@ -72,31 +72,6 @@ const Title = ({ clientHeight }) => {
     return [stopTimeline, scrollTrigger];
   }
 
-  // const textCarousel = () => {
-  //   const carouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-  //   carouselTimeline
-  //     .fromTo(
-  //       ownerClient.current,
-  //       {
-  //         translateY: 0,
-  //         duration: 1,
-  //       },
-  //       {
-  //         translateY: -20,
-  //         duration: 1,
-  //       },
-  //       1
-  //     );
-  //   const scrollTrigger = ScrollTrigger.create({
-  //     trigger: targetSection.current,
-  //     start: "bottom bottom",
-  //     end: "100%",
-  //     scrub: 0,
-  //     animation: carouselTimeline,
-  //   });
-  //   return [carouselTimeline, scrollTrigger];
-  // }
-
   return (
     <section className="w-full h-[100vh] relative select-none flex flex-col items-center justify-center" ref={targetSection}>
       <h1
