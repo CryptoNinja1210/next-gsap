@@ -9,13 +9,10 @@ const Title = ({ clientHeight }) => {
 
   useEffect(() => {
     const [stopTimeline, scrollTrigger] = stopTitle();
-    // const [textCarouselTimeline, textCarouselScrollTrigger] = textCarousel();
 
     return () => {
       scrollTrigger && scrollTrigger.kill();
       stopTimeline && stopTimeline.progress(1);
-      // textCarouselScrollTrigger && textCarouselScrollTrigger.kill();
-      // textCarouselTimeline && textCarouselTimeline.progress(1);
     }
   }, [quoteRef, targetSection]);
 
