@@ -118,7 +118,7 @@ const Logo = () => {
           duration: 2,
           rotateZ: 90,
         },
-        e * 2
+        e * 4.3
       )
       .fromTo(
         phone_1.current[e],

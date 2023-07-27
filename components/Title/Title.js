@@ -9,13 +9,10 @@ const Title = ({ clientHeight }) => {
 
   useEffect(() => {
     const [stopTimeline, scrollTrigger] = stopTitle();
-    // const [textCarouselTimeline, textCarouselScrollTrigger] = textCarousel();
 
     return () => {
       scrollTrigger && scrollTrigger.kill();
       stopTimeline && stopTimeline.progress(1);
-      // textCarouselScrollTrigger && textCarouselScrollTrigger.kill();
-      // textCarouselTimeline && textCarouselTimeline.progress(1);
     }
   }, [quoteRef, targetSection]);
 
@@ -73,16 +70,16 @@ const Title = ({ clientHeight }) => {
   }
 
   return (
-    <section className="w-full h-[100vh] relative select-none flex flex-col items-center justify-center font-passion" ref={targetSection}>
+    <section className="text-center text-[50px] md:text-[100px] lg:text-[140px] w-full h-[100vh] relative select-none flex flex-col items-center justify-center font-passion" ref={targetSection}>
       <div
         ref={quoteRef}
-        className="font-medium text-[2.70rem] md:text-6xl lg:text-[4rem] text-center w-full"
+        className="w-full"
       >
-        <div className="text-[120px]">
+        <div className="">
           <span className="italic">Together</span>
           <span>, we</span>
         </div>
-        <div className="text-[140px] flex justify-center italic">
+        <div className="flex justify-center italic">
           <span>pioneer</span>&nbsp;
           <span id="owner" className="relative h-[140px] text-purple">
             <div ref={ownerClient} className="flex flex-col">
