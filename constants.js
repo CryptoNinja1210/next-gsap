@@ -1,9 +1,9 @@
 export const METADATA = {
-  title: "Portfolio | Shubh Porwal",
+  title: "GSAP",
   description:
-    "Shubh Porwal is a Full Stack Developer from Kuwait, interested in crafting beautiful and functional applications. Shubh is pursuing his undergraduate from Pandit Deendayal Energy University, Gujarat.",
-  siteUrl: "https://shubhporwal.com/",
-  twitterHandle: "@shubh731",
+    "",
+  siteUrl: "https://next-gsap-indol.vercel.app/",
+  twitterHandle: "@gsap",
 };
 
 export const MENULINKS = [
@@ -31,30 +31,28 @@ export const MENULINKS = [
 
 export const TYPED_STRINGS = [
   "A pragmatic Full Stack Developer",
-  "I build things for the web",
-  "I create aesthetic and modern apps",
 ];
 
 export const SOCIAL_LINKS = [
   {
     name: "mail",
-    url: "mailto: shubhporwal73@gmail.com",
+    url: "",
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/shubhporwal/",
+    url: "https://www.linkedin.com/in/",
   },
   {
     name: "github",
-    url: "https://github.com/shubh73",
+    url: "https://github.com/",
   },
   {
     name: "instagram",
-    url: "https://www.instagram.com/shubhii73/",
+    url: "https://www.instagram.com/",
   },
   {
     name: "twitter",
-    url: "https://twitter.com/shubh731",
+    url: "https://twitter.com/",
   },
 ];
 
@@ -96,7 +94,7 @@ export const PROJECTS = [
     blurImage: "/projects/blur/airbnb-blur.webp",
     description: "Airbnb UI clone using NextJS + Tailwind CSS 🛏️",
     gradient: ["#F14658", "#DC2537"],
-    url: "https://shubh73-airbnb.vercel.app/",
+    url: "https://next-gsap-indol.vercel.app/",
     tech: ["react", "nextjs", "tailwindcss", "mapbox"],
   },
   // {
@@ -115,7 +113,7 @@ export const PROJECTS = [
     blurImage: "/projects/blur/medium-blur.webp",
     description: "Medium UI clone using NextJS + Tailwind CSS ✍🏻",
     gradient: ["#FFA62E", "#EA4D2C"],
-    url: "https://shubh73-medium.vercel.app/",
+    url: "https://next-gsap-indol.vercel.app/",
     tech: ["typescript", "react", "nextjs", "tailwindcss", "sanity.io"],
   },
   {
@@ -125,7 +123,7 @@ export const PROJECTS = [
     description:
     "Conversational Voice Controlled React News Application using Alan AI 🎙",
     gradient: ["#000066", "#6699FF"],
-    url: "https://shubh73-inshorts.netlify.app/",
+    url: "https://next-gsap-indol.vercel.app/",
     tech: ["react", "chakra-ui", "alan"],
   },
   {
@@ -134,7 +132,7 @@ export const PROJECTS = [
     blurImage: "/projects/blur/tesla-blur.webp",
     description: "A Tesla React Native App 🏎️",
     gradient: ["#142D46", "#2E4964"],
-    url: "https://github.com/shubh73/tesla",
+    url: "https://github.com/",
     tech: ["react"],
   },
 ];
@@ -143,7 +141,7 @@ export const WORK = [
   {
     company: "Spacenos",
     title: "Web Developer Intern",
-    location: "Bangalore, Karnataka",
+    location: "",
     range: "September - December 2021",
     responsibilities: [
       "Led the Full Stack revamp on the Admin Portal.",
