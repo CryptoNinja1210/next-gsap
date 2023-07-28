@@ -7,31 +7,26 @@ export default function Acount() {
   const paramList = [
     {
       number: 1000,
-      minNumber: 10,
       heading1: 'Laboratories',
       heading2: '($1.1billion global industry CAGR 15.4%)'
     },
     {
       number: 8500,
-      minNumber: 50,
       heading1: 'Growers',
       heading2: '($1.8 billion globally, CAGR 21.4%)'
     },
     {
       number: 40000,
-      minNumber: 200,
       heading1: 'Dispensaries and Retailers',
       heading2: '($13.2 billion globally, CAGR 25.5%)'
     },
     {
       number: 100000,
-      minNumber: 500,
       heading1: 'Product Manufacturers',
       heading2: '($18.38 billion globally, CAGR 21.15%)'
     },
     {
       number: 289000000,
-      minNumber: 1000000,
       heading1: 'Consumers and Patients',
       heading2: '($323.9 billion globally, CAGR 21.4%)'
     },
@@ -40,32 +35,27 @@ export default function Acount() {
   const parameterRef = useRef([]);
   const [parameters, setParameters] = useState([
     {
-      number: 10,
-      minNumber: 10,
+      number: 0,
       heading1: 'Laboratories',
       heading2: '($1.1billion global industry CAGR 15.4%)'
     },
     {
-      number: 50,
-      minNumber: 50,
+      number: 0,
       heading1: 'Growers',
       heading2: '($1.8 billion globally, CAGR 21.4%)'
     },
     {
-      number: 200,
-      minNumber: 200,
+      number: 0,
       heading1: 'Dispensaries and Retailers',
       heading2: '($13.2 billion globally, CAGR 25.5%)'
     },
     {
-      number: 500,
-      minNumber: 500,
+      number: 0,
       heading1: 'Product Manufacturers',
       heading2: '($18.38 billion globally, CAGR 21.15%)'
     },
     {
-      number: 1000000,
-      minNumber: 1000000,
+      number: 0,
       heading1: 'Consumers and Patients',
       heading2: '($323.9 billion globally, CAGR 21.4%)'
     },
@@ -143,7 +133,7 @@ export default function Acount() {
       end: "center center",
       scrub: 0,
       onUpdate: (self) => {
-        const progress = Math.max(paramList[index].minNumber, Math.ceil(self.progress * paramList[index].number/paramList[index].minNumber) * paramList[index].minNumber);
+        const progress = Math.max(0, Math.ceil(self.progress * paramList[index].number));
         setParameters(prevState => {
           return [
             ...prevState.slice(0, index),

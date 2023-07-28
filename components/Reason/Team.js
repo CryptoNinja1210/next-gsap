@@ -53,12 +53,15 @@ const Team = ({ battle }) => {
   const battleText = useRef(null);
 
   useEffect(() => {
-    const [togglingTeamImgTimeline, togglingTeamImgTrigger] = revealBattleText();
-    return () => {
-      togglingTeamImgTrigger && togglingTeamImgTrigger.kill();
-      togglingTeamImgTimeline && togglingTeamImgTimeline.progress(1);
+    if(battle) {
+      const [togglingTeamImgTimeline, togglingTeamImgTrigger] = revealBattleText();
+      return () => {
+        togglingTeamImgTrigger && togglingTeamImgTrigger.kill();
+        togglingTeamImgTimeline && togglingTeamImgTimeline.progress(1);
+      }
     }
-  }, [wrapperRef])
+    return null
+  }, [battle, wrapperRef])
   const revealBattleText = () => {
     const battleTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     battleTimeline
@@ -95,17 +98,17 @@ const Team = ({ battle }) => {
     <div ref={wrapperRef} className="relative">
       <p ref={battleText} className={`text-white font-passion z-10 w-full text-[47px] mt-3 text-center absolute ${battle ? 'block' : 'hidden'}`}>Battle tested and forged in <span className="bg-linear bg-clip-text text-transparent">fire</span></p>
       <div ref={teamPhoto} className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
-        {members.map(i =>
-          <div key={'client_' + i.file} className="">
+        {members.map(item =>
+          <div key={'client_' + item.file} className="">
             <Image
-              src={`/team/${i.file}.png`}
+              src={`/team/${item.file}.png`}
               alt="team"
               width={135}
               height={140}
             />
             <div className="text-[14px] font-semibold leading-[20px] bg-linearblack text-center flex flex-col">
-              <span>{i.name}</span>
-              <span className="text-primary-purple text-[12px]">{i.role}</span>
+              <span>{item.name}</span>
+              <span className="text-primary-purple text-[12px]">{item.role}</span>
             </div>
           </div>
         )}
