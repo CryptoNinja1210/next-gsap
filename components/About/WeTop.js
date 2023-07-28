@@ -49,7 +49,8 @@ const WeTop = () => {
       .from(
         bookRef.current,
         {
-          width: halfBookWidth,
+          // width: halfBookWidth,
+          rotateX: 90,
           duration: 0.5,
         }
       )
@@ -59,7 +60,7 @@ const WeTop = () => {
           width: leftPhoneInitialWidth,
           translateX: 300,
           translateY: -60,
-          opacity: 0.7,
+          opacity: 0,
           duration: 1,
         }
       )
@@ -69,7 +70,7 @@ const WeTop = () => {
           width: rightPhoneInitialWidth,
           translateX: -300,
           translateY: -60,
-          opacity: 0.7,
+          opacity: 0,
           duration: 1,
         },
         "<"

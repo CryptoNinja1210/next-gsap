@@ -59,8 +59,9 @@ const Growth = () => {
 				<Account />
 			</div>
 			<div className="relative py-[100px] font-normal leading-normal font-sysui text-center">
-				<h1 className="lg:px-[4rem] text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] my-[220px]" id="saas-model">
-					Proven SaaS model • Patent-pending technology
+				<h1 className="lg:px-[4rem] text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] my-[120px]" id="saas-model">
+					Proven SaaS model <br/>
+					Patent-pending technology
 				</h1>
 				<h5 className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] mb-[40px]">Don&apos;t miss another opportunity</h5>
 				<div className="text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[3.5rem] mb-[95px]">
