@@ -192,7 +192,7 @@ const We = () => {
             />
           </div>
         </div>
-        <div className="lg:h-[2460px] h-[1400px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
+        <div className="lg:h-[2460px] h-[1000px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
       </div>
       <div className="relative my-[120px]  text-center">
         <h2 className="text-[60px]">
@@ -210,7 +210,7 @@ const We = () => {
           />
         </div>
         <div className="flex justify-center mt-[100px] mb-[26px]">
-          <div className="text-[48px] w-[860px]">
+          <div className="text-[40px] lg:text-[48px] w-[860px]">
             <span>Explosive potential for revenue growth</span>&nbsp;
             <span className="italic font-medium bg-linear bg-clip-text text-transparent">Saas</span>&nbsp;
             <span>through monthly recurring revenue model</span>
