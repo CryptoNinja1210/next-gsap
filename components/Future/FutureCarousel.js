@@ -88,9 +88,9 @@ const FutureCarousel = () => {
       <h1 className="text-[38px] lg:text-[88px] text-center font-semibold my-auto">
         Your future awaits...
       </h1>
-      <div ref={imagesRef} className="flex flex-nowrap w-[600%] lg:w-[200%] items-stretch">
+      <div ref={imagesRef} className="flex flex-nowrap w-[800%] lg:w-[200%] items-stretch">
         {IMAGES.map((x, i) => (
-          <section key={"carousel_" + x.id}>
+          <div key={"carousel_" + x.id}>
             <BlurImage
               src={x.src}
               alt="Purple Line"
@@ -98,18 +98,18 @@ const FutureCarousel = () => {
               height={x.h}
               className="object-cover"
             />
-          </section>
+          </div>
         ))}
         {IMAGES.map((x, i) => (
-          <section key={"carousel_2_" + x.id}>
-            <BlurImage
+          <div key={"carousel_2_" + x.id}>
+            <Image
               src={x.src}
               alt="Purple Line"
               width={x.w}
               height={x.h}
               className="object-cover"
             />
-          </section>
+          </div>
         ))}
       </div>
     </div>

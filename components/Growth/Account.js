@@ -213,9 +213,9 @@ export default function Acount() {
           />
         </div>
         <h2 className="text-[60px] lg:text-[100px] font-bold bg-linear bg-clip-text text-transparent
-        absolute left-[8vw] top-[25%]">$</h2>
+        absolute left-[8vw] top-[25%] opacity-60">$</h2>
         <h2 className="text-[60px] lg:text-[100px] font-bold bg-linear bg-clip-text text-transparent
-        absolute right-[20vw] top-[12%]">$</h2>
+        absolute right-[20vw] top-[12%] opacity-70">$</h2>
         <h2 className="text-[50px] lg:text-[80px] font-bold bg-linear bg-clip-text text-transparent
         absolute right-[15vw] top-[30%] opacity-80">$</h2>
         <h2 className="text-[20px] lg:text-[40px] font-bold bg-linear bg-clip-text text-transparent

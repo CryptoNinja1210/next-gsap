@@ -193,7 +193,7 @@ const We = () => {
             />
           </div>
         </div>
-        <div className="lg:h-[2460px] h-[1000px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
+        <div className="lg:h-[2460px] h-[1300px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
       </div>
       <div className="relative my-[120px]  text-center">
         <h2 className="text-[60px]">

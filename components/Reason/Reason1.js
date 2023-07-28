@@ -285,7 +285,7 @@ const Reason = () => {
               <div className="text-[18px] font-medium lg:mb-[150px]">
                 Visibility into the entire cannabis supply chain from
                 <br />
-                <span className="bg-linear bg-clip-text text-transparent text-[40] lg:text-[64px] italic">seed to soul.</span>
+                <span className="bg-linear bg-clip-text text-transparent text-[45px] lg:text-[64px] italic">seed to soul.</span>
               </div>
               <div className="font-medium text-[16px] lg:pl-[40px]">
                 <p className="text-[28px] mb-[30px]">Blockchain powered telematic logistic solutions</p>
