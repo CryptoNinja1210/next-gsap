@@ -97,7 +97,7 @@ const Shows = () => {
 
   return (
     <div ref={wrapperRef} className="relative lg:top-0 top-[-350px] my-40">
-      <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute lg:top-6 left-[19%] ">
+      <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[-200px] lg:top-6 left-[19%] ">
         <Image
           src="/about/Main User Dropdown.png"
           alt="main-user dropdown"
@@ -153,7 +153,7 @@ const Shows = () => {
           height={488}
         />
       </div>
-      <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[1570px] left-[62%] ">
+      <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="lg:w-[354px] w-[230px] absolute top-[1570px] left-[30%] lg:left-[-2%] ">
         <Image
           src="/about/Heat Zone.png"
           alt="heat zone"

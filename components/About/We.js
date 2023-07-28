@@ -119,7 +119,7 @@ const We = () => {
           </div>
         </div>
         <div className="relative top-[-8840px]">
-          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] lg:right-16 left-[50px] pointer-events-none -z-1">
+          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] left-[50px] lg:left-[70%] pointer-events-none -z-1">
             <Image
               src="/about/homebook 3.png"
               alt="homebook3"
@@ -183,7 +183,7 @@ const We = () => {
               height={403}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-full absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
+          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-full lg:w-[1200px] absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
             <Image
               src="/about/checkout.gif"
               alt="checkout"
