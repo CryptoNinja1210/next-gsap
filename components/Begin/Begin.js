@@ -202,12 +202,13 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			.fromTo(
 				middleExitText.current,
 				{ fontSize: 20, opacity: 0, skewY: 0, rotateY: 0, },
-				{ fontSize: 60, opacity: 1, skewY: -30, rotateY: -30, duration: 0.5, },
+				{ fontSize: 120, opacity: 1, skewY: -40, rotateY: -60, duration: 0.5, },
 				"<"
 			)
 			.to(
 				middleExitText.current,
-				{ translateY: -window.innerHeight, duration: 1, }
+				{ translateY: -window.innerHeight, duration: 1, skewY: 40, rotateY: 0, },
+				"<+=0.3"
 			)
 			;
 		const scrollTrigger = ScrollTrigger.create({
@@ -240,9 +241,9 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] whitespace-nowrap text-primary-purple">
 				<span>together</span>
 			</div>
-			<div ref={middleExitText} className="absolute w-full h-full flex z-50 justify-center items-center  whitespace-nowrap text-primary-purple text-6xl">
-				<span>Public exit experience</span>
-			</div>
+			<p ref={middleExitText} className="absolute w-full h-full flex z-50 pt-[20%] justify-center items-center  whitespace-nowrap text-primary-purple text-6xl">
+				Public exit experience
+			</p>
 			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5">
 				<span ref={toprightText} className="pl-5 text-primary-purple whitespace-nowrap">
 					your portfolio
