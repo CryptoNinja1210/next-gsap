@@ -2,6 +2,7 @@ import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 const Reason2 = () => {
 
@@ -40,12 +41,12 @@ const Reason2 = () => {
   }
 
   return (
-    <div ref={wrapperRef} className="w-full h-[100vh] flex flex-col items-center text-center">
+    <div ref={wrapperRef} className="w-full flex flex-col items-center text-center gap-5">
       <h2 ref={textRef} className="text-[32px] w-full font-semibold leading-none">
         Reason #2 – Budbo is the first holistic ecosystem that touches every stakeholder of the cannabis industry.
       </h2>
       <div ref={imgRef} className="flex justify-center items-stretch w-full my-auto p-2">
-        <Image
+        <BlurImage
           src="/reason/Table.png"
           alt="traxchain"
           width={1120}
