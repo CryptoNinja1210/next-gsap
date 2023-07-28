@@ -1,6 +1,7 @@
 import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import BlurImage from "../BlurImage";
 
 const { useRef, useEffect } = require("react");
 
@@ -90,7 +91,7 @@ const FutureCarousel = () => {
       <div ref={imagesRef} className="flex flex-nowrap w-[600%] lg:w-[200%] items-stretch">
         {IMAGES.map((x, i) => (
           <section key={"carousel_" + x.id}>
-            <Image
+            <BlurImage
               src={x.src}
               alt="Purple Line"
               width={x.w}
@@ -101,7 +102,7 @@ const FutureCarousel = () => {
         ))}
         {IMAGES.map((x, i) => (
           <section key={"carousel_2_" + x.id}>
-            <Image
+            <BlurImage
               src={x.src}
               alt="Purple Line"
               width={x.w}

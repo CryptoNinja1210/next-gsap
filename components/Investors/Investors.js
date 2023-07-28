@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import BlurImage from "../BlurImage";
 
 const members = [
   {
@@ -38,7 +39,7 @@ const Investors = () => {
         <div className="w-full lg:flex">
           {members.map( i =>
             <div key={i.key+"_members"} className="flex items-start lg:w-1/2 gap-[36px]">
-              <Image
+              <BlurImage
                 src={`/investors/${i.file}.png`}
                 alt="team"
                 width={128}
@@ -52,7 +53,7 @@ const Investors = () => {
                   <br/>
                   <p className="text-primary-graydark lg:ml-0 ml-[-80px]">{i.words}</p>
                 </div>
-                <Image 
+                <BlurImage 
                   src={`/investors/${i.banner}.png`}
                   alt="team"
                   width={402}

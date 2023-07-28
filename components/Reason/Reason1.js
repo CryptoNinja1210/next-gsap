@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import BlurImage from "../BlurImage";
 
 const Reason = () => {
   const bookRef = useRef([]);
@@ -150,7 +151,7 @@ const Reason = () => {
             </div>
             <div className="w-full h-max flex  justify-center items-start">
               <div ref={(ref) => (bookRef.current[0] = ref)}>
-                <Image
+                <BlurImage
                   src="/reason/homebook 1.png"
                   alt="homebook1"
                   width={872}
@@ -159,7 +160,7 @@ const Reason = () => {
                 />
               </div>
               <div ref={handphoneRef}>
-                <Image
+                <BlurImage
                   src="/reason/Image.png"
                   alt="homephone"
                   width={257}
@@ -183,7 +184,7 @@ const Reason = () => {
             Supercharge your portfolio.
           </h1>
           <div className="absolute translate-y-20">
-            <Image
+            <BlurImage
               src="/reason/Ellipse 7.svg"
               alt="ellipse"
               width={2068}
@@ -192,7 +193,7 @@ const Reason = () => {
             />
           </div>
           <div ref={superChargeImgRef} className="flex justify-center relative z-10 pt-10">
-            <Image
+            <BlurImage
               src="/reason/checkout 2.png"
               alt="checkout2"
               width={685}
@@ -224,7 +225,7 @@ const Reason = () => {
           </div>
           <div className="lg:flex justify-center items-start my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
-              <Image
+              <BlurImage
                 src="/reason/connectbook5 1.png"
                 alt="connectbook"
                 width={1178}
@@ -232,7 +233,7 @@ const Reason = () => {
                 className="w-[700px] lg:w-[1178px]"
               />
               <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[100px] lg:w-[212px]">
-                <Image
+                <BlurImage
                   src="/reason/connectphone 1.png"
                   alt="connectphone"
                   width={212}
@@ -263,7 +264,7 @@ const Reason = () => {
           <div className="lg:flex justify-center items-end my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
               <div className="w-[543px] lg:w-[1085px]">
-                <Image
+                <BlurImage
                   src="/reason/traxbook 1.png"
                   alt="traxbook"
                   width={1085}
@@ -271,7 +272,7 @@ const Reason = () => {
                 />
               </div>
               <div className="absolute lg:translate-x-[-140px] w-[80px] lg:w-[163px] translate-y-[15px]">
-                <Image
+                <BlurImage
                   src="/reason/traxchain 1.png"
                   alt="traxchain"
                   width={163}
@@ -326,7 +327,7 @@ const Reason = () => {
         <h2 className="lg:text-center  text-[18px] lg:text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
         <div className="relative flex lg:flex-row flex-col justify-center mb-[50px]">
           <div className="w-lg:1/5 w-3/5 flex m-auto">
-            <Image
+            <BlurImage
               src="/team/1_active.png"
               alt="team"
               objectFit="contain"
@@ -352,7 +353,7 @@ const Reason = () => {
         </div>
         <div className="lg:flex flex-row-reverse  justify-center items-center gap-[60px]">
           <div className="lg:w-1/2">
-            <Image
+            <BlurImage
               src="/team/Dr Uma Image.png"
               alt="team"
               width={632}

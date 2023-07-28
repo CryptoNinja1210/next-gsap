@@ -2,6 +2,7 @@ import { Linear } from "gsap";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 const { default: Image } = require("next/image")
 
@@ -96,7 +97,7 @@ const WeTop = () => {
       </div>
       <div className="w-full flex my-auto justify-center items-baseline">
         <div ref={leftPhone} className="z-40 w-[80px] md:w-[110px] lg:w-[158px] h-[358px]">
-          <Image
+          <BlurImage
             src="/about/leaderboard 2.png"
             alt="left phone - leaderboard"
             width={158}
@@ -104,7 +105,7 @@ const WeTop = () => {
           />
         </div>
         <div ref={bookRef} className="z-50 w-[500px] md:w-[750px] lg:w-[1017px] h-[487px]">
-          <Image
+          <BlurImage
             src="/about/userbook.png"
             alt="center notebook - userbook"
             width={1017}
@@ -112,7 +113,7 @@ const WeTop = () => {
           />
         </div>
         <div ref={rightPhone} className="z-40  w-[80px] md:w-[110px] lg:w-[158px] h-[358px]">
-          <Image
+          <BlurImage
             src="/about/driver2 2.png"
             alt="right phone - driver2"
             width={158}

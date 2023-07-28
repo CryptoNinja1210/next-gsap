@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image"
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 const Shows = () => {
   const wrapperRef = useRef(null);
@@ -98,7 +99,7 @@ const Shows = () => {
   return (
     <div ref={wrapperRef} className="relative lg:top-0 top-[-350px] my-40">
       <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[-200px] lg:top-6 left-[19%] ">
-        <Image
+        <BlurImage
           src="/about/Main User Dropdown.png"
           alt="main-user dropdown"
           width={303}
@@ -106,7 +107,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[278px] left-[32%] ">
-        <Image
+        <BlurImage
           src="/about/Dropdowns.png"
           alt="dropdowns"
           width={303}
@@ -114,7 +115,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[0px] left-[21.3%] z-[-1]">
-        <Image
+        <BlurImage
           src="/about/circle.svg"
           alt="circle bg"
           width={1095}
@@ -122,7 +123,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (bookRef.current[0] = ref)} className="w-[550px] lg:w-[1439px] absolute top-[640px] lg:top-[112px] right-3 lg:left-[44%] ">
-        <Image
+        <BlurImage
           src="/about/connectbook5 4.png"
           alt="com"
           width={1439}
@@ -130,7 +131,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="lg:w-[241px] w-[159px] absolute top-[800px] lg:top-[665px] left-[26.6%] ">
-        <Image
+        <BlurImage
           src="/about/map 4.png"
           alt="phone"
           width={241}
@@ -138,7 +139,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[964px] left-[65%] ">
-        <Image
+        <BlurImage
           src="/about/map 4.png"
           alt="phone2"
           width={241}
@@ -146,7 +147,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[1272px] left-[14.67%] ">
-        <Image
+        <BlurImage
           src="/about/Popular Products.png"
           alt="products"
           width={731}
@@ -154,7 +155,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="lg:w-[354px] w-[230px] absolute top-[1570px] left-[30%] lg:left-[-2%] ">
-        <Image
+        <BlurImage
           src="/about/Heat Zone.png"
           alt="heat zone"
           width={354}
@@ -162,7 +163,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (bookRef.current[1] = ref)} className="lg:w-[1439px] w-[789px] absolute top-[2000px] lg:top-[2106px] lg:right-[43.25%] ">
-        <Image
+        <BlurImage
           src="/about/connectbook5 4.png"
           alt="com2"
           width={1439}
@@ -170,7 +171,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[7] = ref)} className="absolute top-[1617px] left-[31.7%] z-[-1]">
-        <Image
+        <BlurImage
           src="/about/circle.svg"
           alt="circle bg"
           width={1095}
@@ -178,7 +179,7 @@ const Shows = () => {
         />
       </div>
       <div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[2431px] left-[15%] lg:left-[53.5%] ">
-        <Image
+        <BlurImage
           src="/about/Dashboard Chart Card.png"
           alt="chart card"
           width={354}

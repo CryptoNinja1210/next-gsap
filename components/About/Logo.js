@@ -2,6 +2,7 @@ import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 const Logo = () => {
   const wrapperRef = useRef(null);
@@ -187,7 +188,7 @@ const Logo = () => {
   return (
     <div ref={wrapperRef} className="text-center relative h-[100vh] w-[100vw] flex flex-col justify-center items-center">
       <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px] h-[209px]">
-        <Image
+        <BlurImage
           src="/logo.svg"
           alt="Logo"
           width={560}
@@ -196,7 +197,7 @@ const Logo = () => {
         />
       </div>
       <div ref={logoTextRef} id="logo-text" className="absolute mx-auto  mb-[120px]">
-        <Image
+        <BlurImage
           src="/logo_txt_only.svg"
           alt="Purple "
           width={476}
@@ -206,7 +207,7 @@ const Logo = () => {
       </div>
       {[...Array(8)].map((_, index) => (
         <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className="z-40 inset-0 absolute ">
-          <Image
+          <BlurImage
             src="/screenshot/map 3.png"
             alt="Logo Phone"
             width={200}

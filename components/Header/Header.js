@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { Dialog } from '@headlessui/react'
 import { useTheme } from "next-themes";
+import BlurImage from "../BlurImage";
 
 const menues = [
   { name: 'Home', href: '#' },
@@ -62,7 +63,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-[8px]">
             <div className="flex text-primary-graydark font-sysui font-bold text-[14px] leading-normal items-center">
               Convert Prices to &nbsp;
-              <Image
+              <BlurImage
                 src="/logo_ico.svg"
                 alt="Bubo icon"
                 width={16} height={16}
@@ -96,7 +97,7 @@ const Header = () => {
       <div className="py-[24px] px-[18px] md:px-[48px] row-auto flex justify-between border-b-[1px] dark:border-purple border-secondary-graylight">
         <div className="flex gap-[24px] h-[48px]">
           <a href="#home" className="hidden md:flex link mt-[-10px]">
-            <Image
+            <BlurImage
               src="/logo_txt.svg"
               alt="Logo - Budbo"
               width={145}
@@ -104,7 +105,7 @@ const Header = () => {
             />
           </a>
           <a href="#home" className="flex md:hidden link mt-[-20px] mb-[-20px]">
-            <Image
+            <BlurImage
               src="/logo.svg"
               alt="Logo - Budbo"
               objectFit="fill"
@@ -114,7 +115,7 @@ const Header = () => {
           </a>
           <button className="xl:px-[24px] xl:py-[14px] h-[48px] w-[48px] xl:w-full bg-primary-purple10 flex gap-[16px] rounded-[24px] xl:rounded-[8px]
             font-bold text-primary-purple text-[18px] hover:bg-primary-purple50 transition-all justify-center items-center">
-            <Image
+            <BlurImage
               src="/cannabis.svg"
               alt="Cannabis Slider Icon"
               width={24}
@@ -193,7 +194,7 @@ const Header = () => {
                   </div>
                   <div className="py-6">
                     <a href="#" className=" lg:hidden md:flex link mt-[-10px]">
-                      <Image
+                      <BlurImage
                         src="/logo_txt.svg"
                         alt="Logo - Budbo"
                         width={145}

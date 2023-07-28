@@ -2,6 +2,7 @@ import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 const Token = () => {
   const wrapperRef = useRef(null);
@@ -50,7 +51,7 @@ const Token = () => {
   return (
     <div ref={wrapperRef} className="h-[100vh] w-[100vw] flex justify-center items-center">
       <div ref={imgRef} className="pointer-events-none w-[404px] h-[404px]">
-        <Image
+        <BlurImage
           src="/about/token.png"
           alt="budbo token"
           width={404}

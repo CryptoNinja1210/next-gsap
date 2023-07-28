@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
+import BlurImage from "../BlurImage";
 
 const Role = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -29,7 +30,7 @@ const Role = () => {
         <span>Simply</span>&nbsp;
         <span className="italic">savvy.</span>
       </div>
-      <Image
+      <BlurImage
         src="/about/ez.gif"
         alt="savvy"
         width={962}

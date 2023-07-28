@@ -4,6 +4,7 @@ import animatedCheckbox from "./checkbox.json"
 import { useEffect, useRef } from "react";
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import BlurImage from "../BlurImage";
 
 
 const interactivity = {
@@ -51,7 +52,7 @@ const Future = ({ }) => {
 				</div>
 			</div>
 			<div className="lg:my-[80px] my-5">
-				<Image
+				<BlurImage
 					src="/screenshot/owlanim.gif"
 					alt="Owl Animation"
 					width={382}
