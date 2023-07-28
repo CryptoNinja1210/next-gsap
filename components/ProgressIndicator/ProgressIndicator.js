@@ -9,6 +9,7 @@ const ProgressIndicator = () => {
             const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = totalScroll / windowHeight;
             progress.current ? (progress.current.style.transform = `scaleX(${scrolled})`) : "";
+            // console.log(scrolled);
         });
     }, [progress]);
 

@@ -87,7 +87,7 @@ const Shows = () => {
       );
     const scrollTrigger = ScrollTrigger.create({
       trigger: bookRef.current[index],
-      start: "top bottom+=-300px",
+      start: "top center+=400px",
       end: "center center",
       scrub: 0,
       animation: revealBookTimeline
