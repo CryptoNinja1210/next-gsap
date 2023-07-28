@@ -84,9 +84,9 @@ const We1 = () => {
   }
 
 	return (
-		<div className="w-full text-center font-sysui mt-[130px]">
-			<div className="relative top-[-18480px] h-[2000px]">
-				<div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[18540px] left-[16%] pointer-events-none">
+		<div className="w-full text-center font-sysui">
+			<div className="relative h-[1700px]">
+				<div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[60px] left-[16%] pointer-events-none">
 					<Image
 						src="/about/coins/bitcoin.png"
 						alt="bitcoin"
@@ -95,7 +95,7 @@ const We1 = () => {
 						className="w-[120px] lg:w-[190px] h-[120px] lg:h-[190px]"
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[18720px] left-[22%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[240px] left-[22%] pointer-events-none">
 					<Image
 						src="/about/Current APR.png"
 						alt="bitcoin"
@@ -103,7 +103,7 @@ const We1 = () => {
 						height={460}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[18600px] right-[21%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[120px] right-[21%] pointer-events-none">
 					<Image
 						src="/about/Your Crypto Wallet.png"
 						alt="bitcoin"
@@ -111,7 +111,7 @@ const We1 = () => {
 						height={384}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[18690px] left-[22%] pointer-events-none z-[-1]">
+				<div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[210px] left-[22%] pointer-events-none z-[-1]">
 					<Image
 						src="/about/circle.svg"
 						alt="bitcoin"
@@ -119,7 +119,7 @@ const We1 = () => {
 						height={724}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[18935px] right-[19%] z-[-1] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[455px] right-[19%] z-[-1] pointer-events-none">
 					<Image
 						src="/about/coins/tether-coin.png"
 						alt="bitcoin"
@@ -127,7 +127,7 @@ const We1 = () => {
 						height={102}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[19180px] left-[34%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[700px] left-[34%] pointer-events-none">
 					<Image
 						src="/about/coins/budbo-coin.png"
 						alt="bitcoin"
@@ -135,7 +135,7 @@ const We1 = () => {
 						height={152}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[19100px] left-[42%] pointer-events-none flex flex-col gap-[25px]">
+				<div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[620px] left-[42%] pointer-events-none flex flex-col gap-[25px]">
 					<Image
 						src="/about/owl5-1 1.gif"
 						alt="bitcoin"
@@ -149,7 +149,7 @@ const We1 = () => {
 						height={48}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[7] = ref)} className="absolute top-[19040px] right-[26%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[7] = ref)} className="absolute top-[560px] right-[18%] pointer-events-none">
 					<Image
 						src="/about/dropdown.png"
 						alt="bitcoin"
@@ -157,7 +157,7 @@ const We1 = () => {
 						height={832}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[19580px] right-[21%] pointer-events-none -z-1">
+				<div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[1000px] right-[14%] pointer-events-none -z-1">
 					<Image
 						src="/about/coins/sol.png"
 						alt="bitcoin"
@@ -165,7 +165,7 @@ const We1 = () => {
 						height={160}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[9] = ref)} className="absolute top-[19450px] left-[17%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[9] = ref)} className="absolute top-[970px] left-[17%] pointer-events-none">
 					<Image
 						src="/about/Your Referal Link & Code.png"
 						alt="bitcoin"
@@ -173,7 +173,7 @@ const We1 = () => {
 						height={384}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[10] = ref)} className="absolute top-[19920px] left-[19%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[10] = ref)} className="absolute top-[440px] left-[19%] pointer-events-none">
 					<Image
 						src="/about/Exchange-rate.png"
 						alt="bitcoin"
@@ -181,7 +181,7 @@ const We1 = () => {
 						height={70}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[11] = ref)} className="absolute top-[19900px] left-[38%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[11] = ref)} className="absolute top-[1420px] left-[38%] pointer-events-none">
 					<Image
 						src="/about/coins/binance.png"
 						alt="bitcoin"
@@ -189,7 +189,7 @@ const We1 = () => {
 						height={160}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[12] = ref)} className="absolute top-[19790px] left-[23%] pointer-events-none -z-1">
+				<div ref={(ref) => (fadingImgRef.current[12] = ref)} className="absolute top-[1310px] left-[23%] pointer-events-none -z-1">
 					<Image
 						src="/about/coins/eth-coin.png"
 						alt="bitcoin"
@@ -197,7 +197,7 @@ const We1 = () => {
 						height={152}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[13] = ref)} className="absolute top-[20000px] right-[770px] pointer-events-none -z-1">
+				<div ref={(ref) => (fadingImgRef.current[13] = ref)} className="absolute top-[1520px] right-[770px] pointer-events-none -z-1">
 					<Image
 						src="/about/budbo 1.gif"
 						alt="bitcoin"

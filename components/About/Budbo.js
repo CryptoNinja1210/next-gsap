@@ -89,11 +89,11 @@ export default function Budbo() {
 
   return (
     <div ref={wrapperRef} className="w-[100vw] h-[100vh] overflow-hidden flexx flex-col text-center font-sysui pt-24">
-      <div ref={weAreRef} className="text-[60px]">
+      <div ref={weAreRef} className="text-[40px] lg:text-[60px]">
         <span>
           We are
         </span>&nbsp;
-        <span className="italic text-[90px] font-medium bg-linear bg-clip-text text-transparent">
+        <span className="italic text-[60px] lg:text-[90px] font-medium bg-linear bg-clip-text text-transparent">
           Budbo
         </span>
       </div>
@@ -179,7 +179,7 @@ export default function Budbo() {
             height={181}
           />
         </div>
-        <div ref={img2Ref} className="relative lg:left[-260%] left-[-980%] flex lg:gap-[45px] gap-3 items-center justify-center w-[1080%] lg:w-[360%]">
+        <div ref={img2Ref} className="relative lg:left-[-260%] left-[-980%] flex lg:gap-[45px] gap-3 items-center justify-center w-[1080%] lg:w-[360%]">
 
 
           <Image
