@@ -28,16 +28,17 @@ const Header = () => {
     const handleScroll = () => {
       const roles = document.getElementById('roles');
       const we = document.getElementById('we');
+      const reason = document.getElementById('reason');
       const header = document.getElementById('header');
+      const investor = document.getElementById('investor');
 
       (roles.getBoundingClientRect().top > 0) && setTheme('light');
-      (roles.getBoundingClientRect().top < 0) && setTheme('dark');
-      // (we.getBoundingClientRect().top < 0) && theme == 'dark' && setTheme('light');
+      (roles.getBoundingClientRect().top < 0) &&(we.getBoundingClientRect().top > 0 ) && setTheme('dark');
+      (we.getBoundingClientRect().top < 0 ) && (reason.getBoundingClientRect().top > 0) && setTheme('light');
+      (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
+      (investor.getBoundingClientRect().top < 0) && setTheme('light');
+
       // (roles.getBoundingClientRect().top < 0 && we.getBoundingClientRect().top < 0 && )
-      // (0 && we.getBoundingClientRect().top < 0) && setTheme('light')
-      // (roles.getBoundingClientRect().top > 0) && setTheme('light');
-      // (we.getBoundingClientRect().top < 0) && setTheme('light');
-      // (we.getBoundingClientRect().top > 0) && setTheme('dark');
 
 
     };
