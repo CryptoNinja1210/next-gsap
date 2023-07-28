@@ -36,26 +36,31 @@ export default function Acount() {
   const [parameters, setParameters] = useState([
     {
       number: 0,
+      bannerWidth: 'w-[60%] sm:w-[45%] lg:w-[35%]',
       heading1: 'Laboratories',
       heading2: '($1.1billion global industry CAGR 15.4%)'
     },
     {
       number: 0,
+      bannerWidth: 'w-[60%] sm:w-[45%] lg:w-[35%]',
       heading1: 'Growers',
       heading2: '($1.8 billion globally, CAGR 21.4%)'
     },
     {
       number: 0,
+      bannerWidth: 'w-[80%] sm:w-[60%] lg:w-[50%]',
       heading1: 'Dispensaries and Retailers',
       heading2: '($13.2 billion globally, CAGR 25.5%)'
     },
     {
       number: 0,
+      bannerWidth: 'w-[80%] sm:w-[60%] lg:w-[50%]',
       heading1: 'Product Manufacturers',
       heading2: '($18.38 billion globally, CAGR 21.15%)'
     },
     {
       number: 0,
+      bannerWidth: 'w-[90%] sm:w-[80%] lg:w-[70%]',
       heading1: 'Consumers and Patients',
       heading2: '($323.9 billion globally, CAGR 21.4%)'
     },
@@ -164,7 +169,7 @@ export default function Acount() {
         {parameters && parameters.map((parameter, i) => (
           <div key={parameter.heading1} ref={(ref) => (parameterRef.current[i] = ref)}>
             <h3 className="mt-[33px] text-[5rem] sm:text-[6rem] md:text-[8rem] font-bold italic">{`${parameter.number}+`}</h3>
-            <div className="h-[4.5rem] w-[60%] sm:w-[45%] lg:w-[35%] relative bg-linear skew-x-[-20deg] m-auto z-[-1]"></div>
+            <div className={`h-[4.5rem] ${parameter.bannerWidth} relative bg-linear skew-x-[-20deg] m-auto z-[-1]`}></div>
             <div id="revenue-description" className="mt-[-4.5rem] py-[.5rem]">
               <div id="revenue-laboratories">
                 <h6 className="text-[2rem] font-bold italic text-white leading-none mb-[.5rem]">{parameter.heading1}</h6>

@@ -240,9 +240,9 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	}
 
 	return (
-		<div ref={wrapperRef} className="text-2xl md:text-3xl lg:text-5xl bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden font-passion">
+		<div ref={wrapperRef} className="text-2xl md:text-3xl lg:text-5xl bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden">
 			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
-				<span ref={topleftText} className=" pr-5 text-primary-purple whitespace-nowrap">
+				<span ref={topleftText} className=" pr-5 whitespace-nowrap">
 					Recession-proof
 				</span>
 				<Image
@@ -252,18 +252,18 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					width={512}
 					height={687}
 				/>
-				<span ref={leftsideText} className="z-30 absolute right-9 top-[138px] whitespace-nowrap text-primary-purple">
+				<span ref={leftsideText} className="z-30 absolute right-9 top-[138px] whitespace-nowrap">
 					Let&apos;s begin
 				</span>
 			</div>
-			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] whitespace-nowrap text-primary-purple">
+			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] whitespace-nowrap">
 				<span>together</span>
 			</div>
-			<p ref={middleExitText} className="absolute w-full h-full flex z-50 pt-[20%] justify-center items-center  whitespace-nowrap text-primary-purple text-2xl md:text-3xl lg:text-5xl">
+			<p ref={middleExitText} className="absolute w-full h-full flex z-50 pt-[20%] justify-center items-center  whitespace-nowrap text-2xl md:text-3xl lg:text-5xl">
 				Public exit experience
 			</p>
 			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5">
-				<span ref={toprightText} className="pl-5 text-primary-purple whitespace-nowrap">
+				<span ref={toprightText} className="pl-5 whitespace-nowrap">
 					your portfolio
 				</span>
 				<Image
@@ -273,7 +273,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					width={380}
 					height={510}
 				/>
-				<span ref={rightsideText} className="z-30 absolute left-9 top-[138px] whitespace-nowrap text-primary-purple">
+				<span ref={rightsideText} className="z-30 absolute left-9 top-[138px] whitespace-nowrap">
 					your adventure
 				</span>
 			</div>
