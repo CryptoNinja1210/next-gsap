@@ -42,7 +42,6 @@ const WeTop = () => {
 
   const revealPhone = () => {
     const revealPhoneTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-    const halfBookWidth = bookRef.current.clientWidth / 2;
     const leftPhoneInitialWidth = leftPhone.current.clientWidth / 2;
     const rightPhoneInitialWidth = rightPhone.current.clientWidth / 2;
     revealPhoneTimeline
@@ -87,7 +86,7 @@ const WeTop = () => {
   return (
 		<div ref={wrapperRef} className="w-full h-[100vh] text-center font-sysui pt-[130px] flex flex-col justify-center">
       <div ref={spanRef} className="w-[100vw] flex flex-col justify-center items-center">
-        <h2 className="text-[35px] md:text-[45px] lg:text-[68px]">
+        <h2 className="text-[35px] md:text-[45px] lg:text-[68px] pt-10">
           We are
         </h2>
         <h1 className="italic text-[35px] md:text-[45px] lg:text-[68px] font-medium bg-linear bg-clip-text text-transparent">
