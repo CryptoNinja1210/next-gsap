@@ -252,7 +252,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					width={512}
 					height={687}
 				/>
-				<span ref={leftsideText} className="z-50 lg:z-30 absolute right-9 top-[138px] whitespace-nowrap text-primary-purple">
+				<span ref={leftsideText} className="z-30 absolute right-9 top-[138px] whitespace-nowrap text-primary-purple">
 					Let&apos;s begin
 				</span>
 			</div>
@@ -273,7 +273,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					width={380}
 					height={510}
 				/>
-				<span ref={rightsideText} className="z-50 lg:z-30 absolute left-9 top-[138px] whitespace-nowrap text-primary-purple">
+				<span ref={rightsideText} className="z-30 absolute left-9 top-[138px] whitespace-nowrap text-primary-purple">
 					your adventure
 				</span>
 			</div>
