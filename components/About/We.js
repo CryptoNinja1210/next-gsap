@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const We = () => {
   const fadingImgRef = useRef([]);
+  const bookRef = useRef([]);
 
   useEffect(() => {
     const [fadingImgTimeline0, scrollTrigger0] = fadingImg(0);
@@ -17,7 +18,9 @@ const We = () => {
     const [fadingImgTimeline5, scrollTrigger5] = fadingImg(5);
     const [fadingImgTimeline6, scrollTrigger6] = fadingImg(6);
     const [fadingImgTimeline7, scrollTrigger7] = fadingImg(7);
-    const [fadingImgTimeline8, scrollTrigger8] = fadingImg(8);
+    const [revealBookTimeline0, revealBookScrollTrigger0] = revealBook(0);
+    const [revealBookTimeline1, revealBookScrollTrigger1] = revealBook(1);
+    const [revealBookTimeline2, revealBookScrollTrigger2] = revealBook(2);
     return () =>{
       scrollTrigger0 && scrollTrigger0.kill();
       fadingImgTimeline0 && fadingImgTimeline0.progress(1);
@@ -35,8 +38,12 @@ const We = () => {
       fadingImgTimeline6 && fadingImgTimeline6.progress(1);
       scrollTrigger7 && scrollTrigger7.kill();
       fadingImgTimeline7 && fadingImgTimeline7.progress(1);
-      scrollTrigger8 && scrollTrigger8.kill();
-      fadingImgTimeline8 && fadingImgTimeline8.progress(1);
+      revealBookScrollTrigger0 && revealBookScrollTrigger0.kill();
+      revealBookTimeline0 && revealBookTimeline0.progress(1);
+      revealBookScrollTrigger1 && revealBookScrollTrigger1.kill();
+      revealBookTimeline1 && revealBookTimeline1.progress(1);
+      revealBookScrollTrigger2 && revealBookScrollTrigger2.kill();
+      revealBookTimeline2 && revealBookTimeline2.progress(1);
     }
   },[])
 
@@ -64,7 +71,29 @@ const We = () => {
     });
     return [fadingImgTimeline, scrollTrigger];
   }
-  
+
+  const revealBook = (index) => {
+    const revealBookTimeline = gsap.timeline({
+      defaults: { ease: Linear.easeNone }
+    });
+    revealBookTimeline
+      .from(
+        bookRef.current[index],
+        {
+          rotateX: 90,
+          duration: 1
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: bookRef.current[index],
+      start: "top bottom",
+      end: "center center",
+      scrub: 0,
+      animation: revealBookTimeline
+    });
+    return [revealBookTimeline, scrollTrigger];
+  }
+
   return (
     <div className="relative text-center font-sysui my-[130px]">
       <div>
@@ -90,7 +119,7 @@ const We = () => {
           </div>
         </div>
         <div className="relative top-[-8840px]">
-          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8300px] right-[60px] pointer-events-none -z-1">
+          <div ref={(ref) => (bookRef.current[0] = ref)} className="absolute top-[8300px] right-[60px] pointer-events-none -z-1">
             <Image
               src="/about/homebook 3.png"
               alt="homebook3"
@@ -98,7 +127,7 @@ const We = () => {
               height={480}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[8700px] left-[340px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8700px] left-[340px] pointer-events-none -z-1">
             <Image
               src="/about/summary.png"
               alt="summary"
@@ -106,7 +135,7 @@ const We = () => {
               height={816}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[8900px] right-[-400px] hover:right-[-10px] transition-all duration-1000">
+          <div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[8900px] right-[-400px] hover:right-[-10px] transition-all duration-1000">
             <Image
               src="/about/reatiler.png"
               alt="reatiler list"
@@ -114,7 +143,7 @@ const We = () => {
               height={443}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[8500px] left-[411px] pointer-events-none z-[-2]">
+          <div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[8500px] left-[411px] pointer-events-none z-[-2]">
             <Image
               src="/about/circle.svg"
               alt="circle bg"
@@ -122,7 +151,7 @@ const We = () => {
               height={700}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[9480px] right-[560px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[9480px] right-[560px] pointer-events-none -z-1">
             <Image
               src="/about/account.png"
               alt="account"
@@ -130,7 +159,7 @@ const We = () => {
               height={276}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[9650px] right-[185px] pointer-events-none z-[-2]">
+          <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[9650px] right-[185px] pointer-events-none z-[-2]">
             <Image
               src="/about/circle.svg"
               alt="circle bg"
@@ -138,7 +167,7 @@ const We = () => {
               height={1050}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[9800px] left-[-26px] pointer-events-none -z-1">
+          <div ref={(ref) => (bookRef.current[1] = ref)} className="absolute top-[9800px] left-[-26px] pointer-events-none -z-1">
             <Image
               src="/about/retailer.png"
               alt="retailer"
@@ -146,7 +175,7 @@ const We = () => {
               height={554}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[7] = ref)} className="absolute top-[9858px] right-[76px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[9858px] right-[76px] pointer-events-none -z-1">
             <Image
               src="/about/image 495.png"
               alt="image 495"
@@ -154,7 +183,7 @@ const We = () => {
               height={403}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[10435px] left-1/2 -translate-x-1/2 -z-1">
+          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[10435px] left-1/2 -translate-x-1/2 -z-1">
             <Image
               src="/about/checkout.gif"
               alt="checkout"
@@ -172,12 +201,14 @@ const We = () => {
         <h1 className="italic text-[90px] font-medium bg-linear bg-clip-text text-transparent mb-[120px]">
           Software-as-a-Service
         </h1>
-        <Image
-          src="/about/connectbook5 2.png"
-          alt="connectbook5"
-          width={1040}
-          height={498}
-        />
+        <div ref={(ref) => (bookRef.current[2] = ref)} className="">
+          <Image
+            src="/about/connectbook5 2.png"
+            alt="connectbook5"
+            width={1040}
+            height={498}
+          />
+        </div>
         <div className="flex justify-center mt-[100px] mb-[26px]">
           <div className="text-[48px] w-[860px]">
             <span>Explosive potential for revenue growth</span>&nbsp;
