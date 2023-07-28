@@ -71,8 +71,6 @@ export default function Acount() {
     },
   ])
 
-  
-
   useEffect(() => {
     const countScolltrigger0 = countUp(0);
     const countScolltrigger1 = countUp(1);
