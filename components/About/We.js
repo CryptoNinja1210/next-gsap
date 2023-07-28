@@ -1,10 +1,72 @@
 import Image from "next/image";
 import { Icon } from '@iconify/react';
 import Acount from "../Growth/Account";
+import { useEffect, useRef } from "react";
+import { Linear, gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const We = () => {
+  const fadingImgRef = useRef([]);
+
+  useEffect(() => {
+    const [fadingImgTimeline0, scrollTrigger0] = fadingImg(0);
+    const [fadingImgTimeline1, scrollTrigger1] = fadingImg(1);
+    const [fadingImgTimeline2, scrollTrigger2] = fadingImg(2);
+    const [fadingImgTimeline3, scrollTrigger3] = fadingImg(3);
+    const [fadingImgTimeline4, scrollTrigger4] = fadingImg(4);
+    const [fadingImgTimeline5, scrollTrigger5] = fadingImg(5);
+    const [fadingImgTimeline6, scrollTrigger6] = fadingImg(6);
+    const [fadingImgTimeline7, scrollTrigger7] = fadingImg(7);
+    const [fadingImgTimeline8, scrollTrigger8] = fadingImg(8);
+    return () =>{
+      scrollTrigger0 && scrollTrigger0.kill();
+      fadingImgTimeline0 && fadingImgTimeline0.progress(1);
+      scrollTrigger1 && scrollTrigger1.kill();
+      fadingImgTimeline1 && fadingImgTimeline1.progress(1);
+      scrollTrigger2 && scrollTrigger2.kill();
+      fadingImgTimeline2 && fadingImgTimeline2.progress(1);
+      scrollTrigger3 && scrollTrigger3.kill();
+      fadingImgTimeline3 && fadingImgTimeline3.progress(1);
+      scrollTrigger4 && scrollTrigger4.kill();
+      fadingImgTimeline4 && fadingImgTimeline4.progress(1);
+      scrollTrigger5 && scrollTrigger5.kill();
+      fadingImgTimeline5 && fadingImgTimeline5.progress(1);
+      scrollTrigger6 && scrollTrigger6.kill();
+      fadingImgTimeline6 && fadingImgTimeline6.progress(1);
+      scrollTrigger7 && scrollTrigger7.kill();
+      fadingImgTimeline7 && fadingImgTimeline7.progress(1);
+      scrollTrigger8 && scrollTrigger8.kill();
+      fadingImgTimeline8 && fadingImgTimeline8.progress(1);
+    }
+  },[])
+
+  const fadingImg = (index) => {
+    const fadingImgTimeline = gsap.timeline({
+      defaults: { ease: Linear.easeNone }
+    });
+    fadingImgTimeline
+      .fromTo(
+        fadingImgRef.current[index],
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1,
+          duration: 1
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: fadingImgRef.current[index],
+      start: "center bottom",
+      end: "center center",
+      scrub: 0,
+      animation: fadingImgTimeline
+    });
+    return [fadingImgTimeline, scrollTrigger];
+  }
+  
   return (
-    <div className="relative text-center font-sysui my-[130px]">
+    <div id="we" className="relative text-center font-sysui my-[130px]">
       <div>
         <h2 className="text-[60px] leading-4">
           We are
@@ -28,7 +90,7 @@ const We = () => {
           </div>
         </div>
         <div className="relative top-[-8840px]">
-          <div className="absolute top-[8300px] right-[60px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8300px] right-[60px] pointer-events-none -z-1">
             <Image
               src="/about/homebook 3.png"
               alt="homebook3"
@@ -36,7 +98,7 @@ const We = () => {
               height={480}
             />
           </div>
-          <div className="absolute top-[8700px] left-[340px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[8700px] left-[340px] pointer-events-none -z-1">
             <Image
               src="/about/summary.png"
               alt="summary"
@@ -44,7 +106,7 @@ const We = () => {
               height={816}
             />
           </div>
-          <div className="absolute top-[8900px] right-[-400px] hover:right-[-10px] transition-all duration-1000">
+          <div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[8900px] right-[-400px] hover:right-[-10px] transition-all duration-1000">
             <Image
               src="/about/reatiler.png"
               alt="reatiler list"
@@ -52,7 +114,7 @@ const We = () => {
               height={443}
             />
           </div>
-          <div className="absolute top-[8500px] left-[411px] pointer-events-none z-[-2]">
+          <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[8500px] left-[411px] pointer-events-none z-[-2]">
             <Image
               src="/about/circle.svg"
               alt="circle bg"
@@ -60,7 +122,7 @@ const We = () => {
               height={700}
             />
           </div>
-          <div className="absolute top-[9480px] right-[560px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[9480px] right-[560px] pointer-events-none -z-1">
             <Image
               src="/about/account.png"
               alt="account"
@@ -68,7 +130,7 @@ const We = () => {
               height={276}
             />
           </div>
-          <div className="absolute top-[9650px] right-[185px] pointer-events-none z-[-2]">
+          <div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[9650px] right-[185px] pointer-events-none z-[-2]">
             <Image
               src="/about/circle.svg"
               alt="circle bg"
@@ -76,7 +138,7 @@ const We = () => {
               height={1050}
             />
           </div>
-          <div className="absolute top-[9800px] left-[-26px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[9800px] left-[-26px] pointer-events-none -z-1">
             <Image
               src="/about/retailer.png"
               alt="retailer"
@@ -84,7 +146,7 @@ const We = () => {
               height={554}
             />
           </div>
-          <div className="absolute top-[9858px] right-[76px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[7] = ref)} className="absolute top-[9858px] right-[76px] pointer-events-none -z-1">
             <Image
               src="/about/image 495.png"
               alt="image 495"
@@ -92,7 +154,7 @@ const We = () => {
               height={403}
             />
           </div>
-          <div className="absolute top-[10435px] left-1/2 -translate-x-1/2 -z-1">
+          <div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[10435px] left-1/2 -translate-x-1/2 -z-1">
             <Image
               src="/about/checkout.gif"
               alt="checkout"

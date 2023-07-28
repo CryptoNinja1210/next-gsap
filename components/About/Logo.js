@@ -118,7 +118,7 @@ const Logo = () => {
           duration: 2,
           rotateZ: 90,
         },
-        e * 2
+        e * 4.3
       )
       .fromTo(
         phone_1.current[e],
@@ -186,7 +186,7 @@ const Logo = () => {
 
   return (
     <div ref={wrapperRef} className="text-center relative h-[100vh] w-[100vw] flex flex-col justify-center items-center">
-      <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px]">
+      <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px] h-[209px]">
         <Image
           src="/logo.svg"
           alt="Logo"

@@ -59,19 +59,22 @@ const Future = ({ }) => {
 					className="m-auto flex lg:w-[764px]"
 				/>
 			</div>
-			<div className="text-center lg:py-[34px] py-[64px] justify-center relative z-10">
-				<h3 className="lg:text-[80px] text-4xl font-semibold py-8 lg:py-[60px]">Invest with confidence today</h3>
-				<button className="h-[52px] lg:h-[80px] px-[48px] bg-primary-purple
-					hover:bg-primary-purple50 transition-all rounded-xl">I’m joining the Budbo Team</button>
-			</div>
-			<div className="-translate-y-full -z-1  lg:h-[375px] h-[232px">
-				{/* <Image
-					src="/investors/invest today.svg"
-					alt=""
-					width={3000}
-					height={375}
-					className="lg:h-[475px] h-[232px] w-[90%] m-auto"
-				/> */}
+			<div className="flex justify-center text-center relative z-10 lg:py-[34px] py-[64px] ">
+				{/* <div className="absolute w-full h-full ">
+					<Image
+						src="/investors/invest today.svg"
+						alt=""
+						width={3000}
+						height={375}
+						className="lg:h-[475px] h-[232px] w-[90%] m-auto"
+					/>
+				</div> */}
+				<div className=" m-auto p-5 rounded-3xl flex flex-col gap-[100px] bg-linear bg-opacity-50">
+					<h3 className="lg:text-[80px] text-4xl font-semibold ">Invest with confidence today</h3>
+					<button className="h-[52px] lg:h-[80px] px-[48px] m-auto bg-primary-purple hover:bg-primary-purple50 transition-all rounded-xl">
+						I’m joining the Budbo Team
+					</button>
+				</div>
 			</div>
 		</div>
 	);

@@ -93,7 +93,7 @@ const Team = ({ battle }) => {
   }
   return (
     <div ref={wrapperRef} className="relative">
-      <p ref={battleText} className={`bg-linear bg-clip-text text-transparent z-10 w-full text-[47px] mt-3 text-center absolute ${battle ? 'block' : 'hidden'}`}>Battle tested and forged in fire</p>
+      <p ref={battleText} className={`text-white font-passion z-10 w-full text-[47px] mt-3 text-center absolute ${battle ? 'block' : 'hidden'}`}>Battle tested and forged in <span className="bg-linear bg-clip-text text-transparent">fire</span></p>
       <div ref={teamPhoto} className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
         {members.map(i =>
           <div key={'client_' + i.file} className="">

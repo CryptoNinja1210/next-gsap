@@ -13,6 +13,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	const leftsideText = useRef(null);
 	const rightsideText = useRef(null);
 	const middlesideText = useRef(null);
+	const middleExitText = useRef(null);
 
 	useEffect(() => {
 		const [revealTimeline, revealScrollTrigger] = getRevealSt();
@@ -163,7 +164,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			.to(
 				leftsideText.current,
 				{ fontSize: 10, opacity: 0, x: -150, y: 100, duration: 1, },
-				1
+				2
 			)
 			.to(
 				rightsideText.current,
@@ -197,7 +198,19 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					duration: 2,
 				},
 				"<"
-			);
+			)
+			.fromTo(
+				middleExitText.current,
+				{ fontSize: 20, opacity: 0, skewY: 0, rotateY: 0, },
+				{ fontSize: 120, opacity: 1, skewY: -40, rotateY: -60, duration: 0.5, },
+				"<"
+			)
+			.to(
+				middleExitText.current,
+				{ translateY: -window.innerHeight, duration: 1, skewY: 40, rotateY: 0, },
+				"<+=0.3"
+			)
+			;
 		const scrollTrigger = ScrollTrigger.create({
 			trigger: wrapperRef.current,
 			start: "bottom bottom",
@@ -211,7 +224,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	return (
 		<div ref={wrapperRef} className="text-4xl bg-transparent lg:text-5xl relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden font-passion">
 			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
-				<span ref={topleftText} className=" pr-5 text-primary-purple">
+				<span ref={topleftText} className=" pr-5 text-primary-purple whitespace-nowrap">
 					Recession-proof
 				</span>
 				<Image
@@ -225,9 +238,12 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					Let&apos;s begin
 				</span>
 			</div>
-			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px]  whitespace-nowrap text-primary-purple">
+			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] whitespace-nowrap text-primary-purple">
 				<span>together</span>
 			</div>
+			<p ref={middleExitText} className="absolute w-full h-full flex z-50 pt-[20%] justify-center items-center  whitespace-nowrap text-primary-purple text-6xl">
+				Public exit experience
+			</p>
 			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5">
 				<span ref={toprightText} className="pl-5 text-primary-purple whitespace-nowrap">
 					your portfolio
