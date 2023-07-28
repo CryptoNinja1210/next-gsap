@@ -1,11 +1,59 @@
 import Image from "next/image";
 import Account from "./Account";
+import { useEffect, useRef } from "react";
+import { Linear, gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Growth = () => {
+	const explosiveTitle = useRef(null);
+
+	useEffect(() => {
+
+		const [revealTextTimeline, scrollTrigger] = revealText();
+
+		return () => {
+			scrollTrigger && scrollTrigger.kill();
+			revealTextTimeline && revealTextTimeline.progress(1);
+		}
+	},[])
+
+	const revealText = () => {
+		const revealTextTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+		revealTextTimeline
+			.to(
+				explosiveTitle.current,
+				{
+					scaleX: 1,
+					skewY: -15,
+					duration: 1
+				}
+			)
+			.to(
+				explosiveTitle.current,
+				{
+					y: -200,
+					scaleX: 0.7,
+					skewY: 20,
+					duration: 1
+				}
+			)
+			// .to(
+
+			// )
+			;
+		const scrollTrigger = ScrollTrigger.create({
+			trigger: explosiveTitle.current,
+			start: "top bottom",
+			end: "100%",
+			scrub: 0,
+			animation: revealTextTimeline,
+		});
+		return [revealTextTimeline, scrollTrigger];
+	}
 	return (
 		<>
 			<div className=" my-[100px] font-normal leading-normal font-sysui text-center relative">
-				<h6 className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] text-center mb-16" id="begin-precession">
+				<h6 ref={explosiveTitle} className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] text-center mb-16 bg-linear bg-clip-text text-transparent font-passion ">
 					Explosive revenue growth
 				</h6>
 				<Account />
