@@ -149,7 +149,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	}
 
 	const revealLeftsideTextTranslate = window.innerWidth > 1200 ? {
-		translateX: leftPhone.current.clientWidth/2,
+		translateX: -100,
 		translateY: 0,
 	} : {
 		translateX: 0,
