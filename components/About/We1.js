@@ -111,7 +111,7 @@ const We1 = () => {
 						height={384}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[18690px] left-[22%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[18690px] left-[22%] pointer-events-none z-[-1]">
 					<Image
 						src="/about/circle.svg"
 						alt="bitcoin"
