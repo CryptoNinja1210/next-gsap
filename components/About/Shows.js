@@ -154,7 +154,7 @@ const Shows = () => {
           height={488}
         />
       </div>
-      <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="lg:w-[354px] w-[230px] absolute top-[1570px] left-[30%] lg:left-[-2%] ">
+      <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="lg:w-[354px] w-[230px] absolute top-[1570px] right-[70%] lg:right-[12%] ">
         <BlurImage
           src="/about/Heat Zone.png"
           alt="heat zone"
