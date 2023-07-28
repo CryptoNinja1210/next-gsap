@@ -34,7 +34,7 @@ const choices = [
 const Future = ({ }) => {
 
 	return (
-		<div className="bg-black text-white py-[20px] text-center font-sysui">
+		<div className="h-full bg-black dark:bg-black text-white  text-center font-sysui">
 			<h2 className="text-[60px] font-semibold mt-[120px] mb-[90px]">Start your adventure.</h2>
 			<div className="w-full">
 				<div className="flex flex-col lg:h-[240px] content-center flex-wrap justify-start">
@@ -60,15 +60,6 @@ const Future = ({ }) => {
 				/>
 			</div>
 			<div className="flex justify-center text-center relative z-10 lg:py-[34px] py-[64px] ">
-				{/* <div className="absolute w-full h-full ">
-					<Image
-						src="/investors/invest today.svg"
-						alt=""
-						width={3000}
-						height={375}
-						className="lg:h-[475px] h-[232px] w-[90%] m-auto"
-					/>
-				</div> */}
 				<div className=" m-auto p-5 rounded-3xl flex flex-col gap-[100px] bg-linear bg-opacity-50">
 					<h3 className="lg:text-[80px] text-4xl font-semibold ">Invest with confidence today</h3>
 					<button className="h-[52px] lg:h-[80px] px-[48px] m-auto bg-primary-purple hover:bg-primary-purple50 transition-all rounded-xl">

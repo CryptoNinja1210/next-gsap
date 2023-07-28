@@ -104,7 +104,7 @@ export default function Budbo() {
           <p className="text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
         </div>
       </div>
-      <div className="flex flex-col lg:gap-[108px] gap-4 mt-10">
+      <div className="flex flex-col k lg:gap-[108px] gap-4 mt-10">
         <div ref={imgRef} className="flex lg:gap-[45px] gap-3 items-center justify-center w-[360%]">
           <Image
             src="/about/budbo/Rectangle 120.jpg"

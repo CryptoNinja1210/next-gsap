@@ -173,7 +173,7 @@ const Reason = () => {
                 height={564}
                 className="w-[700px] lg:w-[1178px]"
               />
-              <div className="absolute translate-x-[-140px] translate-y-[15px] w-[130px] lg:w-[212px]">
+              <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[100px] lg:w-[212px]">
                 <Image
                   src="/reason/connectphone 1.png"
                   alt="connectphone"
@@ -212,7 +212,7 @@ const Reason = () => {
                   height={520}
                 />
               </div>
-              <div className="absolute translate-x-[-140px] translate-y-[15px] w-[110px] lg:w-[163px]">
+              <div className="absolute lg:translate-x-[-140px] w-[80px] lg:w-[163px] translate-y-[15px]">
                 <Image
                   src="/reason/traxchain 1.png"
                   alt="traxchain"
@@ -260,14 +260,14 @@ const Reason = () => {
           <Team battle={true}/>
         </div>
       </div>
-      <div className="w-full bg-reason lg:after:py-[85px]">
+      <div className="w-full mx-auto bg-reason lg:after:py-[85px] m-auto">
         <div className="lg:text-center font-semibold text-[64px]">
           <span>Meet your new&nbsp;</span>
           <span className="bg-linear bg-clip-text text-transparent text-[128px]">Team</span>
         </div>
         <h2 className="lg:text-center   text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
-        <div className="relative flex justify-center mb-[50px]">
-          <div className="w-1/5 flex m-auto">
+        <div className="relative flex lg:flex-row flex-col justify-center mb-[50px]">
+          <div className="w-lg:1/5 w-3/5 flex lg:m-auto">
             <Image
               src="/team/1_active.png"
               alt="team"
@@ -276,10 +276,10 @@ const Reason = () => {
               height={378}
             />
           </div>
-          <div className="w-4/5 text-left justify-start px-[48px]">
-            <h3 className="text-center lg:text-start text-[50px]">Luke Patterson</h3>
-            <h5 className="text-center lg:text-start text-[28px] text-primary-purple">CEO (Co-Founder)</h5>
-            <p className="font-medium text-[20px] w-full text-primary-graydark50">
+          <div className="w-4/5 text-left justify-start lg:px-[48px]">
+            <h3 className="text-center lg:text-start text-4xl lg:text-[50px]">Luke Patterson</h3>
+            <h5 className="text-center lg:text-start my-5 lg:text-[28px] text-4xl text-primary-purple">CEO (Co-Founder)</h5>
+            <p className="p-0 m-0 font-medium text-[20px] w-full text-primary-graydark50">
               A data-driven entrepreneur with true grit, Luke has decades of experience in the software industry. His works have been featured in Yahoo, TechCrunch, Complex, and Business Insider. As CEO and founder of his previous software venture in the restaurant and bar industry, Luke oversaw and directed every facet of the organization which ultimately resulted in its acquisition.
             </p>
           </div>
