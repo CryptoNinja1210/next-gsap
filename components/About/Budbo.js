@@ -8,16 +8,21 @@ import { useEffect, useRef } from "react";
 export default function Budbo() {
 
   const wrapperRef = useRef(null);
+  const weAreRef = useRef(null);
   const imgRef = useRef(null);
   const img2Ref = useRef(null);
   const phoneRef = useRef(null);
+  const textCarouselRef = useRef(null);
 
   useEffect(() => {
     const [carouselTimeline, scrollTrigger] = Carousel();
+    const [textCarouselTimeline, textCarouselScrollTrigger] = textCarousel();
 
     return () => {
       scrollTrigger && scrollTrigger.kill();
       carouselTimeline && carouselTimeline.progress(1);
+      textCarouselScrollTrigger && textCarouselScrollTrigger.kill();
+      textCarouselTimeline && textCarouselTimeline.progress(1);
     }
   }, [wrapperRef])
 
@@ -25,7 +30,7 @@ export default function Budbo() {
     const carouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } })
     const carouselTextX = imgRef.current.clientWidth - window.innerWidth + 1440
     const height = wrapperRef.current.clientHeight;
-    const percent = window.innerWidth >= 1000 ? "300%" : "600%";
+    const percent = window.innerWidth >= 1000 ? "500%" : "700%";
 
     carouselTimeline
       .to(imgRef.current, { x: -(carouselTextX), duration: 5 })
@@ -44,9 +49,47 @@ export default function Budbo() {
     return [carouselTimeline, scrollTrigger]
   }
 
+  const textCarousel = () => {
+    const textCarouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+    const percent = window.innerWidth >= 1000 ? "250%" : "500%";
+    textCarouselTimeline
+      .to(
+        textCarouselRef.current,
+        {
+          translateY: `-${100/3}%`,
+          duration: 1
+        },
+        1
+      )
+      .to(
+        textCarouselRef.current,
+        {
+          translateY: `-${200/3}%`,
+          duration: 1
+        },
+        "<+=3"
+
+      )
+      .to(
+        textCarouselRef.current,
+        {
+          x: 0,
+          duration: 2
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: wrapperRef.current,
+      start: 'bottom bottom',
+      end: percent,
+      scrub: 0,
+      animation: textCarouselTimeline,
+    });
+    return [textCarouselTimeline, scrollTrigger];
+  }
+
   return (
     <div ref={wrapperRef} className="w-[100vw] h-[100vh] overflow-hidden flexx flex-col text-center font-sysui pt-24">
-      <div className="text-[60px]">
+      <div ref={weAreRef} className="text-[60px]">
         <span>
           We are
         </span>&nbsp;
@@ -55,9 +98,11 @@ export default function Budbo() {
         </span>
       </div>
       <div className="h-[45px] overflow-y-hidden">
-        <p className="text-[30px]">...and we’ve been expecting you! Join the Revolution, invest today!</p>
-        <p className="text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
-        <p className="text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
+        <div ref={textCarouselRef} className="flex flex-col">
+          <p className="text-[30px]">...and we’ve been expecting you! Join the Revolution, invest today!</p>
+          <p className="text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
+          <p className="text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
+        </div>
       </div>
       <div className="flex flex-col lg:gap-[108px] gap-4 mt-10">
         <div ref={imgRef} className="flex lg:gap-[45px] gap-3 items-center justify-center w-[360%]">
