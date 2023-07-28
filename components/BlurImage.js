@@ -9,10 +9,9 @@ export default function BlurImage({ src, alt, width, height, className }) {
       key={alt}
       alt={alt}
       src={src}
-      fill={true}
       width={width}
       height={height}
-      objectFit="cover"
+      // objectFit="cover"
       className={`
           duration-700 ease-in-out group-hover:opacity-75 ovverflow-hidden
           ${className}

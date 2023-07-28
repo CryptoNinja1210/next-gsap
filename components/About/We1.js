@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 // import { Icon } from '@iconify/react';
 
 const  	We1 = () => {
@@ -87,7 +88,7 @@ const  	We1 = () => {
 		<div className="w-full text-center font-sysui">
 			<div className="relative h-[1700px] top-[-350px] lg:top-0">
 				<div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute lg:top-[60px] top-1 left-[16%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/coins/bitcoin.png"
 						alt="bitcoin"
 						width={190}
@@ -96,7 +97,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[1370px] lg:top-[240px] left-[22%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/Current APR.png"
 						alt="bitcoin"
 						width={336}
@@ -104,7 +105,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[120px] right-[21%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/Your Crypto Wallet.png"
 						alt="bitcoin"
 						width={732}
@@ -112,7 +113,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[210px] left-[22%] pointer-events-none z-[-1]">
-					<Image
+					<BlurImage
 						src="/about/circle.svg"
 						alt="bitcoin"
 						width={724}
@@ -120,7 +121,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[455px] right-[19%] z-[-1] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/coins/tether-coin.png"
 						alt="bitcoin"
 						width={102}
@@ -128,7 +129,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[700px] left-[34%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/coins/budbo-coin.png"
 						alt="bitcoin"
 						width={152}
@@ -136,13 +137,13 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[1600px] lg:top-[620px] left-[8%] lg:left-[42%] pointer-events-none flex flex-col gap-[25px]">
-					<Image
+					<BlurImage
 						src="/about/owl5-1 1.gif"
 						alt="bitcoin"
 						width={342}
 						height={235}
 					/>
-					<Image
+					<BlurImage
 						src="/about/Exchange-rate.png"
 						alt="bitcoin"
 						width={342}
@@ -150,7 +151,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[7] = ref)} className="absolute top-[560px] right-[18%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/dropdown.png"
 						alt="bitcoin"
 						width={343}
@@ -158,7 +159,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[1000px] right-[14%] pointer-events-none -z-1">
-					<Image
+					<BlurImage
 						src="/about/coins/sol.png"
 						alt="bitcoin"
 						width={160}
@@ -166,7 +167,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[9] = ref)} className="absolute top-[970px] left-[17%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/Your Referal Link & Code.png"
 						alt="bitcoin"
 						width={732}
@@ -174,7 +175,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[10] = ref)} className="absolute top-[440px] left-[19%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/Exchange-rate.png"
 						alt="bitcoin"
 						width={332}
@@ -182,7 +183,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[11] = ref)} className="absolute top-[1420px] left-[38%] pointer-events-none">
-					<Image
+					<BlurImage
 						src="/about/coins/binance.png"
 						alt="bitcoin"
 						width={160}
@@ -190,7 +191,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[12] = ref)} className="absolute top-[1310px] left-[23%] pointer-events-none -z-1">
-					<Image
+					<BlurImage
 						src="/about/coins/eth-coin.png"
 						alt="bitcoin"
 						width={152}
@@ -198,7 +199,7 @@ const  	We1 = () => {
 					/>
 				</div>
 				<div ref={(ref) => (fadingImgRef.current[13] = ref)} className="absolute top-[1520px] right-[770px] pointer-events-none -z-1">
-					<Image
+					<BlurImage
 						src="/about/budbo 1.gif"
 						alt="bitcoin"
 						width={160}

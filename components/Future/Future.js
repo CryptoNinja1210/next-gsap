@@ -4,6 +4,7 @@ import animatedCheckbox from "./checkbox.json"
 import { useEffect, useRef } from "react";
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import BlurImage from "../BlurImage";
 
 
 const interactivity = {
@@ -35,7 +36,7 @@ const Future = ({ }) => {
 
 	return (
 		<div className="h-full bg-black dark:bg-black text-white  text-center font-sysui">
-			<h2 className="text-[60px] font-semibold mt-[120px] mb-[90px]">Start your adventure.</h2>
+			<h2 className="lg:text-[60px] text-[40px] font-semibold mt-[120px] mb-[90px]">Start your adventure.</h2>
 			<div className="w-full">
 				<div className="flex flex-col lg:h-[240px] content-center flex-wrap justify-start">
 					{choices.map((choice, i) =>
@@ -51,7 +52,7 @@ const Future = ({ }) => {
 				</div>
 			</div>
 			<div className="lg:my-[80px] my-5">
-				<Image
+				<BlurImage
 					src="/screenshot/owlanim.gif"
 					alt="Owl Animation"
 					width={382}

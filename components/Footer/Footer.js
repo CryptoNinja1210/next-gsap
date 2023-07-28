@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BlurImage from "../BlurImage";
 
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
     <footer className="lg:px-[280px] px-16 font-sysui mb-10">
       <div className="h-[52px] border-b-[1px] border-secondary-graylight mb-[47px]"/>
       <div className="flex justify-start items-center gap-[10px] md:gap-[40px] mb-[40px]">
-        <Image
+        <BlurImage
             src="/logo_txt.svg"
             alt=""
             width={150}

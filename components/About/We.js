@@ -4,6 +4,7 @@ import Acount from "../Growth/Account";
 import { useEffect, useRef } from "react";
 import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import BlurImage from "../BlurImage";
 
 const We = () => {
   const fadingImgRef = useRef([]);
@@ -105,22 +106,22 @@ const We = () => {
         </h1>
         <p className="text-[30px] font-bold mt-10">for Recreational and Medical Cannabis - Shop 1000s of local dispensaries</p>
         <div className="flex my-[270px] justify-center items-center">
-          {/* <div className="relative">
+          <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-[24px] pointer-events-none">
               <Icon icon="tabler:location-filled" color="#6E2DFA" width="24" height="24" />
             </div>
             <input className="pl-[72px] pr-[240px] px-[24px] py-[28px] lg:w-[773px] w-[395px] h-8 bg-white border-none shadow-md flex rounded-l-[12px] rounded-r-[80px]
             text-[18px] text-black focus:outline-none transition-all font-sysui border-0 outline-none"
               placeholder="Enter your city or address to get started" />
-            <button className="absolute inset-y-0 lg:inset-y-[12px] h-[56px] right-[12px] flex items-center px-[24px] py-[16px] transition-all
+            <button className="absolute inset-y-0  h-[56px] right-[0px] flex items-center px-[24px] py-[16px] transition-all
               rounded-l-[12px] rounded-r-[80px] bg-primary-purple hover:bg-primary-purple50 text-white">
               Start Shopping ➔
             </button>
-          </div> */}
+          </div>
         </div>
         <div className="relative top-[-8840px]">
-          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] left-[50px] lg:left-[70%] pointer-events-none -z-1">
-            <Image
+          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] left-[50px] lg:left-[50%] pointer-events-none -z-1">
+            <BlurImage
               src="/about/homebook 3.png"
               alt="homebook3"
               width={1002}
@@ -128,7 +129,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8570px] lg:top-[8700px] left-[23px] lg:left-[340px] pointer-events-none -z-1">
-            <Image
+            <BlurImage
               src="/about/summary.png"
               alt="summary"
               width={343}
@@ -136,7 +137,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (fadingImgRef.current[1] = ref)}  className="w-[860px] lg:w-[1440px] absolute top-[8900px] left-[200px] lg:right-[-400px] hover:right-[-10px] transition-all duration-1000">
-            <Image
+            <BlurImage
               src="/about/reatiler.png"
               alt="reatiler list"
               width={1440}
@@ -144,7 +145,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute lg:top-[8500px] top-[8600px] left-[411px] pointer-events-none z-[-2]">
-            <Image
+            <BlurImage
               src="/about/circle.svg"
               alt="circle bg"
               width={700}
@@ -152,7 +153,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute lg:top-[9480px] top-[8700px] right-[560px] pointer-events-none -z-1">
-            <Image
+            <BlurImage
               src="/about/account.png"
               alt="account"
               width={300}
@@ -160,7 +161,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute lg:top-[9650px] top-[8700px] right-[185px] pointer-events-none z-[-2]">
-            <Image
+            <BlurImage
               src="/about/circle.svg"
               alt="circle bg"
               width={1050}
@@ -168,7 +169,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (bookRef.current[1] = ref)} className="absolute lg:top-[9800px] top-[9400px] left-[-26px] pointer-events-none -z-1">
-            <Image
+            <BlurImage
               src="/about/retailer.png"
               alt="retailer"
               width={1156}
@@ -176,7 +177,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute lg:top-[9858px] top-[9700px] left-[30%] lg:right-[76px] pointer-events-none -z-1">
-            <Image
+            <BlurImage
               src="/about/image 495.png"
               alt="image 495"
               width={870}
@@ -184,7 +185,7 @@ const We = () => {
             />
           </div>
           <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-full lg:w-[1200px] absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
-            <Image
+            <BlurImage
               src="/about/checkout.gif"
               alt="checkout"
               width={1200}
@@ -192,7 +193,7 @@ const We = () => {
             />
           </div>
         </div>
-        <div className="lg:h-[2460px] h-[1000px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
+        <div className="lg:h-[2460px] h-[1300px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
       </div>
       <div className="relative my-[120px]  text-center">
         <h2 className="text-[60px]">
@@ -202,7 +203,7 @@ const We = () => {
           Software-as-a-Service
         </h1>
         <div ref={(ref) => (bookRef.current[2] = ref)} className="">
-          <Image
+          <BlurImage
             src="/about/connectbook5 2.png"
             alt="connectbook5"
             width={1040}

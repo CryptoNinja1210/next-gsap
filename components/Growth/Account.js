@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import BlurImage from "../BlurImage";
 
 export default function Acount() {
   const paramList = [
@@ -180,7 +181,7 @@ export default function Acount() {
         ))}
 
         <div className="absolute left-[15vw] top-[15%]">
-          <Image
+          <BlurImage
             src="/coin.svg"
             alt="BUBO Coin"
             width={window.innerWidth > 1024 ? 100 : 60}
@@ -188,7 +189,7 @@ export default function Acount() {
           />
         </div>
         <div className="absolute right-[12vw] top-[42%] rotate-45 opacity-80">
-          <Image
+          <BlurImage
             src="/coin.svg"
             alt="BUBO Coin"
             width={window.innerWidth > 1024 ? 80 : 50}
@@ -196,7 +197,7 @@ export default function Acount() {
           />
         </div>
         <div className="absolute left-[10vw] top-[75%] -rotate-45 opacity-30">
-          <Image
+          <BlurImage
             src="/coin.svg"
             alt="BUBO Coin"
             width={window.innerWidth > 1024 ? 25 : 15}
@@ -204,7 +205,7 @@ export default function Acount() {
           />
         </div>
         <div className="absolute right-[15vw] top-[90%] -rotate-45 opacity-30">
-          <Image
+          <BlurImage
             src="/coin.svg"
             alt="BUBO Coin"
             width={window.innerWidth > 1024 ? 25 : 15}
@@ -212,9 +213,9 @@ export default function Acount() {
           />
         </div>
         <h2 className="text-[60px] lg:text-[100px] font-bold bg-linear bg-clip-text text-transparent
-        absolute left-[8vw] top-[25%]">$</h2>
+        absolute left-[8vw] top-[25%] opacity-60">$</h2>
         <h2 className="text-[60px] lg:text-[100px] font-bold bg-linear bg-clip-text text-transparent
-        absolute right-[20vw] top-[12%]">$</h2>
+        absolute right-[20vw] top-[12%] opacity-70">$</h2>
         <h2 className="text-[50px] lg:text-[80px] font-bold bg-linear bg-clip-text text-transparent
         absolute right-[15vw] top-[30%] opacity-80">$</h2>
         <h2 className="text-[20px] lg:text-[40px] font-bold bg-linear bg-clip-text text-transparent

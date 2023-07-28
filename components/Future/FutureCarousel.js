@@ -1,6 +1,7 @@
 import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import BlurImage from "../BlurImage";
 
 const { useRef, useEffect } = require("react");
 
@@ -84,23 +85,23 @@ const FutureCarousel = () => {
 
   return (
     <div ref={containerRef} id="future" className="bg-black dark:bg-black text-white p-5 pb-[200px] text-center font-sysui h-[100vh] flex flex-col w-full overflow-hidden">
-      <h1 className="text-[58px] lg:text-[88px] text-center font-semibold my-auto">
+      <h1 className="text-[38px] lg:text-[88px] text-center font-semibold my-auto">
         Your future awaits...
       </h1>
-      <div ref={imagesRef} className="flex flex-nowrap w-[600%] lg:w-[200%] items-stretch">
+      <div ref={imagesRef} className="flex flex-nowrap w-[800%] lg:w-[200%] items-stretch">
         {IMAGES.map((x, i) => (
-          <section key={"carousel_" + x.id}>
-            <Image
+          <div key={"carousel_" + x.id}>
+            <BlurImage
               src={x.src}
               alt="Purple Line"
               width={x.w}
               height={x.h}
               className="object-cover"
             />
-          </section>
+          </div>
         ))}
         {IMAGES.map((x, i) => (
-          <section key={"carousel_2_" + x.id}>
+          <div key={"carousel_2_" + x.id}>
             <Image
               src={x.src}
               alt="Purple Line"
@@ -108,7 +109,7 @@ const FutureCarousel = () => {
               height={x.h}
               className="object-cover"
             />
-          </section>
+          </div>
         ))}
       </div>
     </div>

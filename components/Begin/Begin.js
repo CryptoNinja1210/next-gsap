@@ -2,6 +2,7 @@ import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 const Begin = ({ isDesktop, clientHeight }) => {
 
@@ -129,13 +130,13 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			.fromTo(
 				topleftText.current,
 				{ fontSize: fontSize_big, translateY: 0, duration: 1, },
-				{ fontSize: 20, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
+				{ fontSize: 0, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
 				1
 			)
 			.fromTo(
 				toprightText.current,
 				{ fontSize: fontSize_big, translateY: 0, duration: 1, },
-				{ fontSize: 20, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
+				{ fontSize: 0, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
 				"<"
 			);
 		const scrollTrigger = ScrollTrigger.create({
@@ -149,7 +150,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	}
 
 	const revealLeftsideTextTranslate = window.innerWidth > 1200 ? {
-		translateX: -100,
+		translateX: -350, //leftPhone && leftPhone.current && leftPhone.current.clientWidth/2,
 		translateY: 0,
 	} : {
 		translateX: 0,
@@ -157,11 +158,19 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	}
 
 	const revealRightsideTextTranslate = window.innerWidth > 1200 ? {
-		translateX: -100,
+		translateX: 300, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
 		translateY: 0,
 	} : {
 		translateX: -50,
 		translateY: -200,
+	}
+
+	const leftAndRightHidingText = window.innerWidth > 1200 ? {
+		translateX: 0, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
+		translateY: 0,
+	} : {
+		translateX: 0, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
+		translateY: 100,
 	}
 
 	const revealsideText = () => {
@@ -181,12 +190,12 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			)
 			.to(
 				leftsideText.current,
-				{ fontSize: 10, opacity: 0, translateY: 50, duration: 1, },
+				{ fontSize: 0, opacity: 0, ...leftAndRightHidingText, duration: 1, },
 				2
 			)
 			.to(
 				rightsideText.current,
-				{ fontSize: 10, opacity: 0, y: 70, duration: 1, },
+				{ fontSize: 0, opacity: 0, ...leftAndRightHidingText, duration: 1, },
 				"<"
 			)
 			.fromTo(
@@ -245,7 +254,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 				<span ref={topleftText} className=" pr-5 whitespace-nowrap">
 					Recession-proof
 				</span>
-				<Image
+				<BlurImage
 					src="/begin/cart_5.png"
 					alt="Left_phone"
 					className="object-contain z-40"
@@ -266,7 +275,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 				<span ref={toprightText} className="pl-5 whitespace-nowrap">
 					your portfolio
 				</span>
-				<Image
+				<BlurImage
 					src="/begin/puff_6.png"
 					alt="Right_phone"
 					className="object-contain z-40"

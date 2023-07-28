@@ -2,6 +2,7 @@ import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 
 
@@ -97,82 +98,82 @@ export default function Budbo() {
           Budbo
         </span>
       </div>
-      <div className="h-[45px] overflow-y-hidden">
+      <div className="h-[20px] md:h-[30px] lg:h-[45px] overflow-y-hidden">
         <div ref={textCarouselRef} className="flex flex-col">
-          <p className="text-[30px]">...and we’ve been expecting you! Join the Revolution, invest today!</p>
-          <p className="text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
-          <p className="text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
+          <p className="text-[16px] md:text-[24px] lg:text-[30px]">...and we’ve been expecting you! Join the Revolution, invest today!</p>
+          <p className="text-[16px] md:text-[24px] lg:text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
+          <p className="text-[16px] md:text-[24px] lg:text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
         </div>
       </div>
       <div className="flex flex-col k lg:gap-[108px] gap-4 mt-10">
         <div ref={imgRef} className="flex lg:gap-[45px] gap-3 items-center justify-center w-[1080%] lg:w-[360%]">
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 120.jpg"
             alt="leaderboard"
             width={293}
             height={200}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 122.jpg"
             alt="leaderboard"
             width={210}
             height={257}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 125.jpg"
             alt="leaderboard"
             width={293}
             height={200}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 126.jpg"
             alt="leaderboard"
             width={210}
             height={257}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 127.jpg"
             alt="leaderboard"
             width={293}
             height={200}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 134.jpg"
             alt="leaderboard"
             width={293}
             height={200}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.57 1.png"
             alt="leaderboard"
             width={690}
             height={175}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.57 2.png"
             alt="leaderboard"
             width={686}
             height={175}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.57 3.png"
             alt="leaderboard"
             width={698}
             height={184}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.54 1.png"
             alt="leaderboard"
             width={698}
             height={184}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.54 2.png"
             alt="leaderboard"
             width={696}
             height={184}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.54 3.png"
             alt="leaderboard"
             width={691}
@@ -182,76 +183,76 @@ export default function Budbo() {
         <div ref={img2Ref} className="relative lg:left-[-260%] left-[-980%] flex lg:gap-[45px] gap-3 items-center justify-center w-[1080%] lg:w-[360%]">
 
 
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 2.15 2.png"
             alt="leaderboard"
             width={691}
             height={181}
           />
 
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 2.15 1.png"
             alt="leaderboard"
             width={690}
             height={175}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.56 2.png"
             alt="leaderboard"
             width={686}
             height={175}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.56 2.png"
             alt="leaderboard"
             width={691}
             height={181}
           />
 
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 1.56 7.png"
             alt="leaderboard"
             width={698}
             height={184}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Screen Shot 2022-12-21 at 2.07 1.png"
             alt="leaderboard"
             width={696}
             height={184}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 138.jpg"
             alt="leaderboard"
             width={293}
             height={200}
           />
 
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 128.jpg"
             alt="leaderboard"
             width={293}
             height={198}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 130.png"
             alt="leaderboard"
             width={210}
             height={258}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 132.png"
             alt="leaderboard"
             width={293}
             height={198}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 131.png"
             alt="leaderboard"
             width={210}
             height={258}
           />
-          <Image
+          <BlurImage
             src="/about/budbo/Rectangle 129.png"
             alt="leaderboard"
             width={210}
@@ -259,7 +260,7 @@ export default function Budbo() {
           />
         </div>
         <div ref={phoneRef} className="absolute bottom-[-10px] left-0 right-0 items-end justify-center mb-0 pb-0">
-          <Image
+          <BlurImage
             src="/about/puff 4.png"
             alt="leaderboard"
             width={789}

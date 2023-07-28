@@ -3,6 +3,7 @@ import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import BlurImage from "../BlurImage";
 
 const members = [
   {
@@ -100,7 +101,7 @@ const Team = ({ battle }) => {
       <div ref={teamPhoto} className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
         {members.map(item =>
           <div key={'client_' + item.file} className="">
-            <Image
+            <BlurImage
               src={`/team/${item.file}.png`}
               alt="team"
               width={135}

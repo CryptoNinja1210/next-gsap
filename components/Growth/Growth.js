@@ -3,6 +3,7 @@ import Account from "./Account";
 import { useEffect, useRef } from "react";
 import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import BlurImage from "../BlurImage";
 
 const Growth = () => {
 	const explosiveTitle = useRef(null);
@@ -74,7 +75,7 @@ const Growth = () => {
 				</button>
 				<div id="left-phone"
 					className="absolute lg:left-[-10%] left-[-18%] lg:top-[750px] top-[100px]">
-					<Image
+					<BlurImage
 						src="/begin/cart_5.png"
 						alt="Left phone"
 						width={window.innerWidth * .25}
@@ -83,7 +84,7 @@ const Growth = () => {
 				</div>
 				<div id="right-phone"
 					className="absolute lg:right-[-8%] right-[-15%] lg:top-[865px] top-[100px]">
-					<Image
+					<BlurImage
 						// className="absolute right-[100px]"
 						src="/begin/puff_6.png"
 						alt="Right phone"

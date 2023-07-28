@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import BlurImage from "../BlurImage";
 
 const Reason = () => {
   const bookRef = useRef([]);
@@ -150,7 +151,7 @@ const Reason = () => {
             </div>
             <div className="w-full h-max flex  justify-center items-start">
               <div ref={(ref) => (bookRef.current[0] = ref)}>
-                <Image
+                <BlurImage
                   src="/reason/homebook 1.png"
                   alt="homebook1"
                   width={872}
@@ -159,7 +160,7 @@ const Reason = () => {
                 />
               </div>
               <div ref={handphoneRef}>
-                <Image
+                <BlurImage
                   src="/reason/Image.png"
                   alt="homephone"
                   width={257}
@@ -183,7 +184,7 @@ const Reason = () => {
             Supercharge your portfolio.
           </h1>
           <div className="absolute translate-y-20">
-            <Image
+            <BlurImage
               src="/reason/Ellipse 7.svg"
               alt="ellipse"
               width={2068}
@@ -192,7 +193,7 @@ const Reason = () => {
             />
           </div>
           <div ref={superChargeImgRef} className="flex justify-center relative z-10 pt-10">
-            <Image
+            <BlurImage
               src="/reason/checkout 2.png"
               alt="checkout2"
               width={685}
@@ -213,7 +214,7 @@ const Reason = () => {
             </span>
           </div>
         </div>
-        <div className="pt-[100px]">
+        <div className="pt-[200px]">
           <h1 className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
             Business intelligence.
           </h1>
@@ -224,7 +225,7 @@ const Reason = () => {
           </div>
           <div className="lg:flex justify-center items-start my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
-              <Image
+              <BlurImage
                 src="/reason/connectbook5 1.png"
                 alt="connectbook"
                 width={1178}
@@ -232,7 +233,7 @@ const Reason = () => {
                 className="w-[700px] lg:w-[1178px]"
               />
               <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[100px] lg:w-[212px]">
-                <Image
+                <BlurImage
                   src="/reason/connectphone 1.png"
                   alt="connectphone"
                   width={212}
@@ -255,7 +256,7 @@ const Reason = () => {
           </div>
         </div>
         <div className="">
-          <h1 className="text-[54px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
+          <h1 className="text-[44px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
             Problem solver.
             <br />
             Industry evolver.
@@ -263,7 +264,7 @@ const Reason = () => {
           <div className="lg:flex justify-center items-end my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
               <div className="w-[543px] lg:w-[1085px]">
-                <Image
+                <BlurImage
                   src="/reason/traxbook 1.png"
                   alt="traxbook"
                   width={1085}
@@ -271,7 +272,7 @@ const Reason = () => {
                 />
               </div>
               <div className="absolute lg:translate-x-[-140px] w-[80px] lg:w-[163px] translate-y-[15px]">
-                <Image
+                <BlurImage
                   src="/reason/traxchain 1.png"
                   alt="traxchain"
                   width={163}
@@ -284,7 +285,7 @@ const Reason = () => {
               <div className="text-[18px] font-medium lg:mb-[150px]">
                 Visibility into the entire cannabis supply chain from
                 <br />
-                <span className="bg-linear bg-clip-text text-transparent text-[64px] italic">seed to soul.</span>
+                <span className="bg-linear bg-clip-text text-transparent text-[45px] lg:text-[64px] italic">seed to soul.</span>
               </div>
               <div className="font-medium text-[16px] lg:pl-[40px]">
                 <p className="text-[28px] mb-[30px]">Blockchain powered telematic logistic solutions</p>
@@ -308,7 +309,7 @@ const Reason = () => {
           <div className="lg:px-[72px] mb-[150px] text-[24px] font-semibold">
             Our aim in approximately two years is to have an annual recurring revenue(ARR) of a minimum of $5 million and a valuation of approximately $45-$50 million, giving Budding Technologies, Inc. the ability to go to market either via a private or public offering, or acquisition.
             <br /><br />
-            <ul className="list-disc pl-[120px]">
+            <ul className="list-disc pl-[40px] md:pl-[70px] lg:pl-[100px]">
               <li>Explosive revenue growth from dispensaries, retailers, growers, manufacturers, and couriers</li>
               <li>Expansion throughout the world with advisors and team members in Canada, Germany, Israel, Thailand, and Portugal.</li>
             </ul>
@@ -325,8 +326,8 @@ const Reason = () => {
         </div>
         <h2 className="lg:text-center  text-[18px] lg:text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
         <div className="relative flex lg:flex-row flex-col justify-center mb-[50px]">
-          <div className="w-lg:1/5 w-3/5 flex lg:m-auto">
-            <Image
+          <div className="w-lg:1/5 w-3/5 flex m-auto">
+            <BlurImage
               src="/team/1_active.png"
               alt="team"
               objectFit="contain"
@@ -334,7 +335,7 @@ const Reason = () => {
               height={378}
             />
           </div>
-          <div className="w-4/5 text-left justify-start lg:px-[48px]">
+          <div className="lg:w-4/5 w-full text-left justify-start lg:px-[48px]">
             <h3 className="text-center lg:text-start text-4xl lg:text-[50px]">Luke Patterson</h3>
             <h5 className="text-center lg:text-start my-5 lg:text-[28px] text-4xl text-primary-purple">CEO (Co-Founder)</h5>
             <p className="p-0 m-0 font-medium text-[20px] w-full text-primary-graydark50">
@@ -352,7 +353,7 @@ const Reason = () => {
         </div>
         <div className="lg:flex flex-row-reverse  justify-center items-center gap-[60px]">
           <div className="lg:w-1/2">
-            <Image
+            <BlurImage
               src="/team/Dr Uma Image.png"
               alt="team"
               width={632}
