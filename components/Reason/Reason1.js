@@ -58,7 +58,7 @@ const Reason = () => {
     return [revealSuperTimeline, scrollTrigger];
   }
   return (
-    <div className="bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
+    <div id="reason" className="bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
       <div className="bg-reason xl:py-[85px] xl:px-[38px]">
         <h2 className="font-semibold text-[50px] mb-[40px]">Budbo is a global brand in emerging markets<br />and technologies.</h2>
         <p className="max-w-[862px] text-[24px] font-medium">
