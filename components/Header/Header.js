@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Fragment, useState } from "react";
 import { Icon } from '@iconify/react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { useTheme } from "next-themes";
 
 const menues = [
   { name: 'Home', href: '#' },
@@ -20,10 +21,13 @@ const menues = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
   return (
-    <nav className="w-full fixed top-0 z-50 select-none bg-white/70 backdrop-blur-xl transition-all duration-300">
-      <div className="hidden md:flex py-[8px] px-[18px] md:px-[48px] row-auto justify-between border-b-[1px] border-secondary-graylight">
-        <button className="py-[2px] px-[8px] bg-white border-[1px] text-primary-graydark
+    <nav className="w-full fixed top-0 z-50 select-none dark:bg-gray-dark-2  bg-white/70 backdrop-blur-xl transition-all duration-300">
+      <div className="hidden md:flex py-[8px] px-[18px] md:px-[48px] row-auto justify-between border-b-[1px]  dark:border-purple border-secondary-graylight">
+        <button  onClick={() => theme == "dark"? setTheme('light'): setTheme("dark")} className="py-[2px] px-[8px] dark:bg-gray-dark-2 bg-white border-[1px] text-primary-graydark
         border-secondary-graylight rounded-[8px] text-xs font-sysui font-bold leading-4">+ ADD YOUR LOCATION</button>
         <div className="flex md:gap-[24px] gap-[14px]">
           <div className="hidden lg:flex items-center gap-[8px]">
@@ -60,7 +64,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="py-[24px] px-[18px] md:px-[48px] row-auto flex justify-between border-b-[1px] border-secondary-graylight">
+      <div className="py-[24px] px-[18px] md:px-[48px] row-auto flex justify-between border-b-[1px] dark:border-purple border-secondary-graylight">
         <div className="flex gap-[24px] h-[48px]">
           <a href="#home" className="hidden md:flex link mt-[-10px]">
             <Image
@@ -95,7 +99,7 @@ const Header = () => {
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
               </svg>
             </div>
-            <input className="pl-[48px] px-[24px] py-[14px] h-[48px] max-w-[416px] bg-white border-[1px] border-primary-purple10 gap-[16px] rounded-[8px]
+            <input className="pl-[48px] px-[24px] py-[14px] h-[48px] max-w-[416px] dark:bg-gray-dark-2 bg-white border-[1px] border-primary-purple10 gap-[16px] rounded-[8px]
               text-[18px] text-black focus:border-primary-graydark50 focus:outline-none transition-all font-sysui"
               placeholder="Products, retailers & more..." />
           </div>
