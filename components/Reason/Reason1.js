@@ -8,20 +8,51 @@ import { Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Reason = () => {
+  const bookRef = useRef([]);
+  const handphoneRef = useRef([]);
   const superChargeRef = useRef(null);
   const superChargeTextRef = useRef(null);
   const superChargeImgRef = useRef(null);
   const superChargeDescriptionRef = useRef(null);
 
   useEffect(() => {
+    const [revealBookTimeline0, revealBookScrollTrigger0] = revealBook(0);
     const [revealSuperImgTimeline, revealSuperImgScrollTrigger] = revealSuperCharge();
 
     return () => {
+      revealBookScrollTrigger0 && revealBookScrollTrigger0.kill();
+      revealBookTimeline0 && revealBookTimeline0.progress(1);
       revealSuperImgScrollTrigger && revealSuperImgScrollTrigger.kill();
       revealSuperImgTimeline && revealSuperImgTimeline.progress(1);
     }
   })
 
+  const fadingImg = (index) => {
+    const fadingImgTimeline = gsap.timeline({
+      defaults: { ease: Linear.easeNone }
+    });
+    fadingImgTimeline
+      .fromTo(
+        fadingImgRef.current[index],
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1,
+          duration: 1
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: fadingImgRef.current[index],
+      start: "center bottom",
+      end: "center center",
+      scrub: 0,
+      animation: fadingImgTimeline
+    });
+    return [fadingImgTimeline, scrollTrigger];
+  }
+
+  
   const revealSuperCharge = () => {
     const revealSuperTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     const halfWidth = superChargeImgRef.current.clientWidth / 2;
@@ -57,6 +88,29 @@ const Reason = () => {
     });
     return [revealSuperTimeline, scrollTrigger];
   }
+
+  const revealBook = (index) => {
+    const revealBookTimeline = gsap.timeline({
+      defaults: { ease: Linear.easeNone }
+    });
+    revealBookTimeline
+      .from(
+        bookRef.current[index],
+        {
+          rotateX: 90,
+          duration: 1
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: bookRef.current[index],
+      start: "top bottom+=-300px",
+      end: "center center",
+      scrub: 0,
+      animation: revealBookTimeline
+    });
+    return [revealBookTimeline, scrollTrigger];
+  }
+
   return (
     <div id="reason" className="mt-[63px] lg:mt-0 bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
       <div className="bg-reason xl:py-[85px] xl:px-[38px]">
@@ -95,20 +149,24 @@ const Reason = () => {
               </p>
             </div>
             <div className="w-full h-max flex  justify-center items-start">
-              <Image
-                src="/reason/homebook 1.png"
-                alt="homebook1"
-                width={872}
-                height={418}
-                className="lg:w-[872px] w-[518px]"
-              />
-              <Image
-                src="/reason/Image.png"
-                alt="homephone"
-                width={257}
-                height={416}
-                className="w-[150px] lg:w-[257px]"
-              />
+              <div ref={(ref) => (bookRef.current[0] = ref)}>
+                <Image
+                  src="/reason/homebook 1.png"
+                  alt="homebook1"
+                  width={872}
+                  height={418}
+                  className="lg:w-[872px] w-[518px]"
+                />
+              </div>
+              <div ref={handphoneRef}>
+                <Image
+                  src="/reason/Image.png"
+                  alt="homephone"
+                  width={257}
+                  height={416}
+                  className="w-[150px] lg:w-[257px]"
+                />
+              </div>
             </div>
           </div>
           <div className="lg:m-[70%] m-auto flex justify-center my-[32px] gap-[20px]">
