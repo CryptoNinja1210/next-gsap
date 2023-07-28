@@ -84,7 +84,7 @@ const FutureCarousel = () => {
 
   return (
     <div ref={containerRef} id="future" className="bg-black dark:bg-black text-white p-5 pb-[200px] text-center font-sysui h-[100vh] flex flex-col w-full overflow-hidden">
-      <h1 className="text-[58px] lg:text-[88px] text-center font-semibold my-auto">
+      <h1 className="text-[38px] lg:text-[88px] text-center font-semibold my-auto">
         Your future awaits...
       </h1>
       <div ref={imagesRef} className="flex flex-nowrap w-[600%] lg:w-[200%] items-stretch">
