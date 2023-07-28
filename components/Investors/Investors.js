@@ -26,7 +26,7 @@ const Investors = () => {
   return (
     <div id="investor" className="flex w-full">
       <div className="w-full m-auto px-4 font-sysui lg:px-[160px] lg:py-[70px] items-center">
-        <div className="text-center font-semibold lg:text-[54px] text-[33px] my-[56px]">
+        <div className="text-center font-semibold lg:text-[54px] text-[30px] my-[56px]">
           <span>Hear from some of our</span>
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">Investors</span>

@@ -85,7 +85,7 @@ const We1 = () => {
 
 	return (
 		<div className="w-full text-center font-sysui">
-			<div className="relative h-[1700px]">
+			<div className="relative h-[1700px] top-[-350px] lg:top-0">
 				<div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute lg:top-[60px] top-1 left-[16%] pointer-events-none">
 					<Image
 						src="/about/coins/bitcoin.png"
@@ -135,7 +135,7 @@ const We1 = () => {
 						height={152}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[620px] left-[42%] pointer-events-none flex flex-col gap-[25px]">
+				<div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[1600px] lg:top-[620px] left-[8%] lg:left-[42%] pointer-events-none flex flex-col gap-[25px]">
 					<Image
 						src="/about/owl5-1 1.gif"
 						alt="bitcoin"

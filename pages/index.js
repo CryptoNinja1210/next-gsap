@@ -57,20 +57,20 @@ export default function Home() {
         {isLoading ? (
           <Loader />
         ) : (
-          <div className="w-screen overflow-hidden min-w-[460px]">
+          <div className="w-screen overflow-hidden min-w-[360px]">
             <Header />
             <ProgressIndicator />
             {/* <Cursor isDesktop={isDesktop} /> */}
-            <main className="">
-              <Title />
+             <main className="">
+              {/*<Title />
               <Begin />
-              <Growth />
+              <Growth />*/}
               <Logo />
               <Role />
               <We />
               <div className="h-[5200px]" />
               <Shows />
-              <div className="h-[3000px]" />
+              <div className="h-[3000px]"/>
               <Token />
               <WeTop />
               <We1 />
