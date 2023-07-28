@@ -19,10 +19,6 @@ const Title = ({ clientHeight }) => {
   const stopTitle = () => {
     const stopTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     stopTimeline
-      .from(
-        targetSection.current,
-        { opacity: 0, duration: 1, stagger: 0.5 }
-      )
       .to(
         ownerClient.current,
         {

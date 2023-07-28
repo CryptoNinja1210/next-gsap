@@ -7,12 +7,14 @@ export default function Acount() {
   const parameterRef = useRef([]);
 
   useEffect(() => {
+    const countScolltrigger0 = countUp(0);
     const [fadeOutParameterTimeline0, fadeOutParameterScrollTrigger0] = fadeOutParameter(0);
     const [fadeOutParameterTimeline1, fadeOutParameterScrollTrigger1] = fadeOutParameter(1);
     const [fadeOutParameterTimeline2, fadeOutParameterScrollTrigger2] = fadeOutParameter(2);
     const [fadeOutParameterTimeline3, fadeOutParameterScrollTrigger3] = fadeOutParameter(3);
     const [fadeOutParameterTimeline4, fadeOutParameterScrollTrigger4] = fadeOutParameter(4);
     return () => {
+      countScolltrigger0 && countScolltrigger0.kill();
       fadeOutParameterScrollTrigger0 && fadeOutParameterScrollTrigger0.kill();
       fadeOutParameterTimeline0 && fadeOutParameterTimeline0.progress(1);
       fadeOutParameterScrollTrigger1 && fadeOutParameterScrollTrigger1.kill();
@@ -30,6 +32,7 @@ export default function Acount() {
     const fadeOutParameterTimeline = gsap.timeline({
       defaults: { ease: Linear.easeNone }
     });
+
     fadeOutParameterTimeline
       .fromTo(
         parameterRef.current[index],
@@ -43,7 +46,7 @@ export default function Acount() {
         }
       )
       .to(
-        parameterRef.current[index], 
+        parameterRef.current[index],
         {
           opacity: 0,
           duration: 1
@@ -57,6 +60,29 @@ export default function Acount() {
       animation: fadeOutParameterTimeline
     });
     return [fadeOutParameterTimeline, scrollTrigger];
+  }
+
+  const countUp = (index) => {
+    const numbers = [1000, 8500, 40000, 100000, 289000000];
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: parameterRef.current[index],
+      start: "top bottom",
+      // endTrigger: parameterRef.current[index + 1],
+      end: "center center",
+      scrub: 0,
+      onUpdate: (self) => {
+        const progress = Math.max(2, Math.ceil(self.progress * 100));
+        console.log(
+          "progress:",
+          self.progress,
+          "direction:",
+          self.direction,
+          "velocity",
+          self.getVelocity()
+        );
+      }
+    });
+    return scrollTrigger;
   }
 
   return (
