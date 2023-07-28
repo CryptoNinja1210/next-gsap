@@ -1,33 +1,59 @@
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { Dialog } from '@headlessui/react'
 import { useTheme } from "next-themes";
 
 const menues = [
   { name: 'Home', href: '#' },
-  { name: 'Discover/Match',  href: '#'},
-  { name: 'Nearby',  href: '#'},
-  { name: 'Products', href: '#'},
-  { name: 'Brands', href: '#'},
-  { name: 'Retailers', href: '#'},
-  { name: 'Dashborads', href: '#'},
-  { name: 'My Orders', href: '#'},
-  { name: 'Wallet', href: '#'},
-  { name: 'Earn Tokens', href: '#'},
-  { name: 'Profile', href: '#'},
-  { name: 'Settings', href: '#'},
+  { name: 'Discover/Match', href: '#' },
+  { name: 'Nearby', href: '#' },
+  { name: 'Products', href: '#' },
+  { name: 'Brands', href: '#' },
+  { name: 'Retailers', href: '#' },
+  { name: 'Dashborads', href: '#' },
+  { name: 'My Orders', href: '#' },
+  { name: 'Wallet', href: '#' },
+  { name: 'Earn Tokens', href: '#' },
+  { name: 'Profile', href: '#' },
+  { name: 'Settings', href: '#' },
 ]
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   const { systemTheme, theme, setTheme } = useTheme();
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const roles = document.getElementById('roles');
+      const we = document.getElementById('we');
+      const header = document.getElementById('header');
+
+      (roles.getBoundingClientRect().top > 0) && setTheme('light');
+      (roles.getBoundingClientRect().top < 0) && setTheme('dark');
+      // (we.getBoundingClientRect().top < 0) && theme == 'dark' && setTheme('light');
+      // (roles.getBoundingClientRect().top < 0 && we.getBoundingClientRect().top < 0 && )
+      // (0 && we.getBoundingClientRect().top < 0) && setTheme('light')
+      // (roles.getBoundingClientRect().top > 0) && setTheme('light');
+      // (we.getBoundingClientRect().top < 0) && setTheme('light');
+      // (we.getBoundingClientRect().top > 0) && setTheme('dark');
+
+
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <nav className="w-full fixed top-0 z-50 select-none dark:bg-gray-dark-2  bg-white/70 backdrop-blur-xl transition-all duration-300">
       <div className="hidden md:flex py-[8px] px-[18px] md:px-[48px] row-auto justify-between border-b-[1px]  dark:border-purple border-secondary-graylight">
-        <button  onClick={() => theme == "dark"? setTheme('light'): setTheme("dark")} className="py-[2px] px-[8px] dark:bg-gray-dark-2 bg-white border-[1px] text-primary-graydark
+        <button className="py-[2px] px-[8px] dark:bg-gray-dark-2 bg-white border-[1px] text-primary-graydark
         border-secondary-graylight rounded-[8px] text-xs font-sysui font-bold leading-4">+ ADD YOUR LOCATION</button>
         <div className="flex md:gap-[24px] gap-[14px]">
           <div className="hidden lg:flex items-center gap-[8px]">

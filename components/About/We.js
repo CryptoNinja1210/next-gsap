@@ -95,7 +95,7 @@ const We = () => {
   }
 
   return (
-    <div className="relative text-center font-sysui my-[130px]">
+    <div id="we" className="relative text-center font-sysui my-[130px]">
       <div>
         <h2 className="text-[60px] leading-4">
           We are
