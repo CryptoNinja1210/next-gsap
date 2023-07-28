@@ -56,7 +56,7 @@ const Title = ({ clientHeight }) => {
       ;
     const scrollTrigger = ScrollTrigger.create({
       trigger: targetSection.current,
-      start: "bottom bottom",
+      start: "top top",
       end: "150%",
       scrub: 0,
       pin: true,
@@ -66,7 +66,7 @@ const Title = ({ clientHeight }) => {
   }
 
   return (
-    <section className="text-center text-[50px] md:text-[100px] lg:text-[140px] w-full h-[100vh] relative select-none flex flex-col items-center justify-center font-passion" ref={targetSection}>
+    <section className="text-center text-[50px] md:text-[100px] lg:text-[140px] w-full h-[100vh] relative select-none flex flex-col items-center justify-center font-medium" ref={targetSection}>
       <div
         ref={quoteRef}
         className="w-full"

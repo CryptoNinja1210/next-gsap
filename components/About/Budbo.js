@@ -35,7 +35,7 @@ export default function Budbo() {
     carouselTimeline
       .to(imgRef.current, { x: -(carouselTextX), duration: 5 })
       .to(img2Ref.current, { x: carouselTextX, duration: 5 }, "<")
-      .from(phoneRef.current, { y: height, duration: 2 })
+      .from(phoneRef.current, { y: height, duration: 2 }, "<+=3.5")
       .to(phoneRef.current, { bottom: -10, duration: 2 });
 
     const scrollTrigger = ScrollTrigger.create({

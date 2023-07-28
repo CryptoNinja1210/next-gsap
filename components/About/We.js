@@ -95,7 +95,7 @@ const We = () => {
   }
 
   return (
-    <div id="we" className="relative h-[100vh] text-center font-sysui my-[130px]">
+    <div id="we" className="relative h-[100vh] text-center font-sysui lg:my-[130px]">
       <div>
         <h1 className="text-[60px] font-medium">
           We are
@@ -105,21 +105,21 @@ const We = () => {
         </h1>
         <p className="text-[30px] font-bold mt-10">for Recreational and Medical Cannabis - Shop 1000s of local dispensaries</p>
         <div className="flex my-[270px] justify-center items-center">
-          <div className="relative">
+          {/* <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-[24px] pointer-events-none">
               <Icon icon="tabler:location-filled" color="#6E2DFA" width="24" height="24" />
             </div>
             <input className="pl-[72px] pr-[240px] px-[24px] py-[28px] lg:w-[773px] w-[395px] h-8 bg-white border-none shadow-md flex rounded-l-[12px] rounded-r-[80px]
             text-[18px] text-black focus:outline-none transition-all font-sysui border-0 outline-none"
               placeholder="Enter your city or address to get started" />
-            <button className="absolute inset-y-[12px] right-[12px] flex items-center px-[24px] py-[16px] transition-all
+            <button className="absolute inset-y-0 lg:inset-y-[12px] h-[56px] right-[12px] flex items-center px-[24px] py-[16px] transition-all
               rounded-l-[12px] rounded-r-[80px] bg-primary-purple hover:bg-primary-purple50 text-white">
               Start Shopping ➔
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="relative top-[-8840px]">
-          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] lg:right-16 left-[50px] pointer-events-none -z-1">
+          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] left-[50px] lg:left-[70%] pointer-events-none -z-1">
             <Image
               src="/about/homebook 3.png"
               alt="homebook3"
@@ -183,7 +183,7 @@ const We = () => {
               height={403}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-full absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
+          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-full lg:w-[1200px] absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
             <Image
               src="/about/checkout.gif"
               alt="checkout"
@@ -192,7 +192,7 @@ const We = () => {
             />
           </div>
         </div>
-        <div className="h-[2460px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
+        <div className="lg:h-[2460px] h-[1000px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
       </div>
       <div className="relative my-[120px]  text-center">
         <h2 className="text-[60px]">
@@ -210,7 +210,7 @@ const We = () => {
           />
         </div>
         <div className="flex justify-center mt-[100px] mb-[26px]">
-          <div className="text-[48px] w-[860px]">
+          <div className="text-[40px] lg:text-[48px] w-[860px]">
             <span>Explosive potential for revenue growth</span>&nbsp;
             <span className="italic font-medium bg-linear bg-clip-text text-transparent">Saas</span>&nbsp;
             <span>through monthly recurring revenue model</span>

@@ -112,9 +112,9 @@ const Reason = () => {
   }
 
   return (
-    <div id="reason" className="mt-[63px] lg:mt-0 bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
+    <div id="reason" className="lg:mt-0 bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
       <div className="bg-reason xl:py-[85px] xl:px-[38px]">
-        <h2 className="font-semibold text-[50px] mb-[40px]">Budbo is a global brand in emerging markets<br />and technologies.</h2>
+        <h2 className="font-semibold text-[35px] lg:text-[50px] mb-[40px]">Budbo is a global brand in emerging markets<br />and technologies.</h2>
         <p className="max-w-[862px] text-[24px] font-medium">
           We are innovative, stubborn, and find purpose only within the pursuit of our goals. The Budbo suite of cannabis products has outpaced the future with curiosity, sleek user experiences, and an exceptional token reward system.
           <br /><br />

@@ -36,6 +36,8 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		}
 	}, [wrapperRef]);
 
+	const fontSize_big = window.innerWidth > 1200 ? 48 : 24;
+
 	const getRevealSt = () => {
 		const revealPhone = gsap.timeline({ defaults: { ease: Linear.easeNone } });
 		revealPhone
@@ -126,14 +128,14 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		hidingTopText
 			.fromTo(
 				topleftText.current,
-				{ fontSize: 60, x: 0, y: 0, duration: 1, },
-				{ fontSize: 20, opacity: 0, x: -150, y: 64 + 68, duration: 1, },
+				{ fontSize: fontSize_big, translateY: 0, duration: 1, },
+				{ fontSize: 20, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
 				1
 			)
 			.fromTo(
 				toprightText.current,
-				{ fontSize: 60, x: 0, y: 0, duration: 1, },
-				{ fontSize: 20, opacity: 0, x: 100, y: 64 + 68, duration: 1, },
+				{ fontSize: fontSize_big, translateY: 0, duration: 1, },
+				{ fontSize: 20, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
 				"<"
 			);
 		const scrollTrigger = ScrollTrigger.create({
@@ -146,47 +148,63 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		return [hidingTopText, scrollTrigger];
 	}
 
+	const revealLeftsideTextTranslate = window.innerWidth > 1200 ? {
+		translateX: -100,
+		translateY: 0,
+	} : {
+		translateX: 0,
+		translateY: -200,
+	}
+
+	const revealRightsideTextTranslate = window.innerWidth > 1200 ? {
+		translateX: -100,
+		translateY: 0,
+	} : {
+		translateX: -50,
+		translateY: -200,
+	}
+
 	const revealsideText = () => {
 		const revealsideText = gsap.timeline({ defaults: { ease: Linear.easeNone } });
 		revealsideText
 			.fromTo(
 				leftsideText.current,
-				{ fontSize: 0, opacity: 0, x: -150, y: 100, duration: 1, },
-				{ fontSize: 60, opacity: 1, x: -400, y: 0, duration: 0.5, },
+				{ fontSize: 0, opacity: 0, duration: 1, translateX: 0, translateY: 0 },
+				{ fontSize: fontSize_big, opacity: 1, duration: 0.5, ...revealLeftsideTextTranslate },
 				0.5
 			)
 			.fromTo(
 				rightsideText.current,
-				{ fontSize: 0, opacity: 0, x: 80, y: 70, duration: 1, },
-				{ fontSize: 60, opacity: 1, x: 220, y: 0, duration: 0.5, },
+				{ fontSize: 0, opacity: 0, duration: 1, translateX: 0, translateY: 0 },
+				{ fontSize: fontSize_big, opacity: 1, duration: 0.5, ...revealRightsideTextTranslate },
 				"<"
 			)
 			.to(
 				leftsideText.current,
-				{ fontSize: 10, opacity: 0, x: -150, y: 100, duration: 1, },
+				{ fontSize: 10, opacity: 0, translateY: 50, duration: 1, },
 				2
 			)
 			.to(
 				rightsideText.current,
-				{ fontSize: 10, opacity: 0, x: 80, y: 70, duration: 1, },
+				{ fontSize: 10, opacity: 0, y: 70, duration: 1, },
 				"<"
 			)
 			.fromTo(
 				middlesideText.current,
 				{ fontSize: 20, opacity: 0, width: 0, },
-				{ fontSize: 60, opacity: 1, width: 300, duration: 0.5, },
+				{ fontSize: fontSize_big, opacity: 1, width: 300, duration: 0.5, },
 				"<+=0.5"
 			)
 			.fromTo(
 				middlesideText.current,
-				{ fontSize: 60, },
+				{ fontSize: fontSize_big, },
 				{ fontSize: 20, opacity: 0, width: 0, y: 0, duration: 1.5, },
 				"<+=1"
 			)
 			.to(
 				leftPhone.current,
 				{
-					x: - (window.innerWidth - leftPhone.current.clientWidth),
+					x: - window.innerWidth,
 					duration: 1,
 				},
 				"<+=1.5"
@@ -201,8 +219,8 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			)
 			.fromTo(
 				middleExitText.current,
-				{ fontSize: 20, opacity: 0, skewY: 0, rotateY: 0, },
-				{ fontSize: 120, opacity: 1, skewY: -40, rotateY: -60, duration: 0.5, },
+				{ fontSize: 24, opacity: 0, skewY: 0, rotateY: 0, },
+				{ fontSize: window.innerWidth >1200 ? 120 : 50, opacity: 1, skewY: -40, rotateY: -60, duration: 0.5, },
 				"<"
 			)
 			.to(
@@ -222,9 +240,9 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	}
 
 	return (
-		<div ref={wrapperRef} className="text-4xl bg-transparent lg:text-5xl relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden font-passion">
+		<div ref={wrapperRef} className="text-2xl md:text-3xl lg:text-5xl bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden">
 			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
-				<span ref={topleftText} className=" pr-5 text-primary-purple whitespace-nowrap">
+				<span ref={topleftText} className=" pr-5 whitespace-nowrap">
 					Recession-proof
 				</span>
 				<Image
@@ -234,18 +252,18 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					width={512}
 					height={687}
 				/>
-				<span ref={leftsideText} className="z-30 absolute right-9 top-[138px] whitespace-nowrap text-primary-purple">
+				<span ref={leftsideText} className="z-30 absolute right-9 top-[138px] whitespace-nowrap">
 					Let&apos;s begin
 				</span>
 			</div>
-			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] whitespace-nowrap text-primary-purple">
+			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] whitespace-nowrap">
 				<span>together</span>
 			</div>
-			<p ref={middleExitText} className="absolute w-full h-full flex z-50 pt-[20%] justify-center items-center  whitespace-nowrap text-primary-purple text-6xl">
+			<p ref={middleExitText} className="absolute w-full h-full flex z-50 pt-[20%] justify-center items-center  whitespace-nowrap text-2xl md:text-3xl lg:text-5xl">
 				Public exit experience
 			</p>
 			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5">
-				<span ref={toprightText} className="pl-5 text-primary-purple whitespace-nowrap">
+				<span ref={toprightText} className="pl-5 whitespace-nowrap">
 					your portfolio
 				</span>
 				<Image
@@ -255,7 +273,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 					width={380}
 					height={510}
 				/>
-				<span ref={rightsideText} className="z-30 absolute left-9 top-[138px] whitespace-nowrap text-primary-purple">
+				<span ref={rightsideText} className="z-30 absolute left-9 top-[138px] whitespace-nowrap">
 					your adventure
 				</span>
 			</div>
