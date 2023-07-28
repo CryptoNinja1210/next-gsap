@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 // import { Icon } from '@iconify/react';
 
-const We1 = () => {
+const  	We1 = () => {
 
   const wrapperRef = useRef(null);
 	const fadingImgRef = useRef([]);
@@ -95,7 +95,7 @@ const We1 = () => {
 						className="w-[120px] lg:w-[190px] h-[120px] lg:h-[190px]"
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[240px] left-[22%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[1370px] lg:top-[240px] left-[22%] pointer-events-none">
 					<Image
 						src="/about/Current APR.png"
 						alt="bitcoin"
