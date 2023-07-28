@@ -127,7 +127,7 @@ const We = () => {
               height={480}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8700px] left-[23px] lg:left-[340px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8570px] lg:top-[8700px] left-[23px] lg:left-[340px] pointer-events-none -z-1">
             <Image
               src="/about/summary.png"
               alt="summary"
@@ -135,7 +135,7 @@ const We = () => {
               height={816}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[1] = ref)} className="absolute top-[8900px] right-[-400px] hover:right-[-10px] transition-all duration-1000">
+          <div ref={(ref) => (fadingImgRef.current[1] = ref)}  className="w-[860px] lg:w-[1440px] absolute top-[8900px] left-[200px] lg:right-[-400px] hover:right-[-10px] transition-all duration-1000">
             <Image
               src="/about/reatiler.png"
               alt="reatiler list"
@@ -143,7 +143,7 @@ const We = () => {
               height={443}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute top-[8500px] left-[411px] pointer-events-none z-[-2]">
+          <div ref={(ref) => (fadingImgRef.current[2] = ref)} className="absolute lg:top-[8500px] top-[8600px] left-[411px] pointer-events-none z-[-2]">
             <Image
               src="/about/circle.svg"
               alt="circle bg"
@@ -151,7 +151,7 @@ const We = () => {
               height={700}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[9480px] right-[560px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute lg:top-[9480px] top-[8700px] right-[560px] pointer-events-none -z-1">
             <Image
               src="/about/account.png"
               alt="account"
@@ -159,7 +159,7 @@ const We = () => {
               height={276}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[9650px] right-[185px] pointer-events-none z-[-2]">
+          <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute lg:top-[9650px] top-[8700px] right-[185px] pointer-events-none z-[-2]">
             <Image
               src="/about/circle.svg"
               alt="circle bg"
@@ -167,7 +167,7 @@ const We = () => {
               height={1050}
             />
           </div>
-          <div ref={(ref) => (bookRef.current[1] = ref)} className="absolute top-[9800px] left-[-26px] pointer-events-none -z-1">
+          <div ref={(ref) => (bookRef.current[1] = ref)} className="absolute lg:top-[9800px] top-[9400px] left-[-26px] pointer-events-none -z-1">
             <Image
               src="/about/retailer.png"
               alt="retailer"
@@ -175,7 +175,7 @@ const We = () => {
               height={554}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute top-[9858px] right-[76px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[5] = ref)} className="absolute lg:top-[9858px] top-[9700px] left-[30%] lg:right-[76px] pointer-events-none -z-1">
             <Image
               src="/about/image 495.png"
               alt="image 495"
@@ -183,7 +183,7 @@ const We = () => {
               height={403}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute top-[10435px] left-1/2 -translate-x-1/2 -z-1">
+          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-full absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
             <Image
               src="/about/checkout.gif"
               alt="checkout"
@@ -195,10 +195,10 @@ const We = () => {
         <div className="h-[2460px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
       </div>
       <div className="relative my-[120px]  text-center">
-        <h2 className="text-[60px] leading-4">
+        <h2 className="text-[60px]">
           We are
         </h2>
-        <h1 className="italic text-[90px] font-medium bg-linear bg-clip-text text-transparent mb-[120px]">
+        <h1 className="italic lg:text-[90px] text-[70px] font-medium bg-linear bg-clip-text text-transparent mb-[120px]">
           Software-as-a-Service
         </h1>
         <div ref={(ref) => (bookRef.current[2] = ref)} className="">

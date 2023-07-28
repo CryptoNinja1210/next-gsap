@@ -86,7 +86,7 @@ const We1 = () => {
 	return (
 		<div className="w-full text-center font-sysui">
 			<div className="relative h-[1700px]">
-				<div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[60px] left-[16%] pointer-events-none">
+				<div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute lg:top-[60px] top-1 left-[16%] pointer-events-none">
 					<Image
 						src="/about/coins/bitcoin.png"
 						alt="bitcoin"
