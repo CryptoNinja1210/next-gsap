@@ -52,18 +52,17 @@ const Growth = () => {
 	}
 	return (
 		<>
-			<div className=" my-[100px] font-normal leading-normal font-sysui text-center relative">
+			<div className=" my-[100px] font-normal font-sysui text-center relative">
 				<h6 ref={explosiveTitle} className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] text-center mb-16 bg-linear bg-clip-text text-transparent font-passion ">
 					Explosive revenue growth
 				</h6>
 				<Account />
 			</div>
-			<div className="relative py-[100px] font-normal leading-normal font-sysui text-center">
-				<h1 className="lg:px-[4rem] text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] my-[120px]" id="saas-model">
-					Proven SaaS model <br/>
-					Patent-pending technology
+			<div className="relative lg:py-[100px] font-normal leading-normalfont-sysui text-center">
+				<h1 className="lg:px-[4rem] text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] lg:my-[220px]" id="saas-model">
+					Proven SaaS model • Patent-pending technology
 				</h1>
-				<h5 className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] mb-[40px]">Don&apos;t miss another opportunity</h5>
+				<h5 className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] mb-[30px]">Don&apos;t miss another opportunity</h5>
 				<div className="text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[3.5rem] mb-[95px]">
 					<span>Invest with confidence in the next</span>&nbsp;
 					<span className="bg-linear bg-clip-text text-transparent italic font-medium">Big thing</span>
@@ -74,7 +73,7 @@ const Growth = () => {
 					<p className="text-[13px]">Invest for as little as $195</p>
 				</button>
 				<div id="left-phone"
-					className="absolute lg:left-[-10%] left-[-18%] top-[700px]">
+					className="absolute lg:left-[-10%] left-[-18%] lg:top-[750px] top-[100px]">
 					<Image
 						src="/begin/cart_5.png"
 						alt="Left phone"
@@ -83,13 +82,13 @@ const Growth = () => {
 					/>
 				</div>
 				<div id="right-phone"
-					className="absolute lg:right-[-8%] right-[-15%] lg:top-[865px] top-[700px]">
+					className="absolute lg:right-[-8%] right-[-15%] lg:top-[865px] top-[100px]">
 					<Image
 						// className="absolute right-[100px]"
 						src="/begin/puff_6.png"
 						alt="Right phone"
-						width={window.innerWidth * .2}
-						height={window.innerWidth * .3}
+						width={window.innerWidth * .20}
+						height={window.innerWidth * .30}
 					/>
 				</div>
 			</div>

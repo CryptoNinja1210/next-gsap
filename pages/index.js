@@ -68,6 +68,7 @@ export default function Home() {
               <Logo />
               <Role />
               <We />
+              <div className="h-[5200px]" />
               <Shows />
               <div className="h-[3000px]" />
               <Token />
