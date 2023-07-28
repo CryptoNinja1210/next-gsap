@@ -255,7 +255,7 @@ const Reason = () => {
           </div>
         </div>
         <div className="">
-          <h1 className="text-[54px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
+          <h1 className="text-[44px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
             Problem solver.
             <br />
             Industry evolver.
