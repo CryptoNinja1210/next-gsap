@@ -89,7 +89,7 @@ const FutureCarousel = () => {
       </h1>
       <div ref={imagesRef} className="flex flex-nowrap w-[800%] lg:w-[200%] items-stretch">
         {IMAGES.map((x, i) => (
-          <section key={"carousel_" + x.id}>
+          <div key={"carousel_" + x.id}>
             <Image
               src={x.src}
               alt="Purple Line"
@@ -97,10 +97,10 @@ const FutureCarousel = () => {
               height={x.h}
               className="object-cover"
             />
-          </section>
+          </div>
         ))}
         {IMAGES.map((x, i) => (
-          <section key={"carousel_2_" + x.id}>
+          <div key={"carousel_2_" + x.id}>
             <Image
               src={x.src}
               alt="Purple Line"
@@ -108,7 +108,7 @@ const FutureCarousel = () => {
               height={x.h}
               className="object-cover"
             />
-          </section>
+          </div>
         ))}
       </div>
     </div>
