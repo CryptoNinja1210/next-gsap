@@ -96,8 +96,8 @@ const Shows = () => {
   }
 
   return (
-    <div ref={wrapperRef} className="relative my-40">
-      <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-6 left-[19%] ">
+    <div ref={wrapperRef} className="relative lg:top-0 top-[-350px] my-40">
+      <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute lg:top-6 left-[19%] ">
         <Image
           src="/about/Main User Dropdown.png"
           alt="main-user dropdown"
@@ -121,7 +121,7 @@ const Shows = () => {
           height={1094}
         />
       </div>
-      <div ref={(ref) => (bookRef.current[0] = ref)} className="absolute top-[112px] left-[44%] ">
+      <div ref={(ref) => (bookRef.current[0] = ref)} className="w-[550px] lg:w-[1439px] absolute top-[640px] lg:top-[112px] right-3 lg:left-[44%] ">
         <Image
           src="/about/connectbook5 4.png"
           alt="com"
@@ -129,7 +129,7 @@ const Shows = () => {
           height={689}
         />
       </div>
-      <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="absolute top-[665px] left-[26.6%] ">
+      <div ref={(ref) => (fadingImgRef.current[3] = ref)} className="lg:w-[241px] w-[159px] absolute top-[800px] lg:top-[665px] left-[26.6%] ">
         <Image
           src="/about/map 4.png"
           alt="phone"
@@ -161,7 +161,7 @@ const Shows = () => {
           height={636}
         />
       </div>
-      <div ref={(ref) => (bookRef.current[1] = ref)} className="absolute top-[2106px] right-[43.25%] ">
+      <div ref={(ref) => (bookRef.current[1] = ref)} className="lg:w-[1439px] w-[789px] absolute top-[2000px] lg:top-[2106px] lg:right-[43.25%] ">
         <Image
           src="/about/connectbook5 4.png"
           alt="com2"
@@ -177,7 +177,7 @@ const Shows = () => {
           height={1099}
         />
       </div>
-      <div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[2431px] left-[53.5%] ">
+      <div ref={(ref) => (fadingImgRef.current[8] = ref)} className="absolute top-[2431px] left-[15%] lg:left-[53.5%] ">
         <Image
           src="/about/Dashboard Chart Card.png"
           alt="chart card"

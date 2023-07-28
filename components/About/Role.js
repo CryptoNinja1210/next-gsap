@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 
 const Role = () => {
@@ -6,7 +7,7 @@ const Role = () => {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <div id="roles" className="bg-black text-white pt-[136px] pb-[200px] text-center font-sysui">
+    <div id="roles" className="bg-black text-white lg:py-[150px] pt-[100px]  text-center font-sysui">
       <h1 className="text-[3rem] sm:text-[5rem] my-[75px] leading-none">
         Mover. Maker.<br />Boundary breaker.
       </h1>
