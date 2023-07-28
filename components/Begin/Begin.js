@@ -186,7 +186,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			.to(
 				leftPhone.current,
 				{
-					x: - (window.innerWidth - leftPhone.current.clientWidth),
+					x: - window.innerWidth,
 					duration: 1,
 				},
 				"<+=1.5"
