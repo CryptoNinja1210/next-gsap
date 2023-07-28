@@ -40,11 +40,11 @@ const Reason2 = () => {
   }
 
   return (
-    <div ref={wrapperRef} className="left-0 w-full h-[100vh] flex flex-col items-center text-center">
+    <div ref={wrapperRef} className="w-full h-[100vh] flex flex-col items-center text-center">
       <h2 ref={textRef} className="text-[32px] w-full font-semibold leading-none">
         Reason #2 – Budbo is the first holistic ecosystem that touches every stakeholder of the cannabis industry.
       </h2>
-      <div ref={imgRef} className="flex justify-center items-center w-[70%] my-auto">
+      <div ref={imgRef} className="flex justify-center items-stretch w-full my-auto p-2">
         <Image
           src="/reason/Table.png"
           alt="traxchain"
