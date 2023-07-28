@@ -31,8 +31,8 @@ const Reason2 = () => {
       );
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
-      start: "top center",
-      end: "10%",
+      start: "top bottom",
+      end: "center bottom",
       scrub: 0,
       animation: revealImgTimeline
     });

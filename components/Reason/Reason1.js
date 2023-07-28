@@ -8,20 +8,51 @@ import { Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Reason = () => {
+  const bookRef = useRef([]);
+  const handphoneRef = useRef([]);
   const superChargeRef = useRef(null);
   const superChargeTextRef = useRef(null);
   const superChargeImgRef = useRef(null);
   const superChargeDescriptionRef = useRef(null);
 
   useEffect(() => {
+    const [revealBookTimeline0, revealBookScrollTrigger0] = revealBook(0);
     const [revealSuperImgTimeline, revealSuperImgScrollTrigger] = revealSuperCharge();
 
     return () => {
+      revealBookScrollTrigger0 && revealBookScrollTrigger0.kill();
+      revealBookTimeline0 && revealBookTimeline0.progress(1);
       revealSuperImgScrollTrigger && revealSuperImgScrollTrigger.kill();
       revealSuperImgTimeline && revealSuperImgTimeline.progress(1);
     }
   })
 
+  const fadingImg = (index) => {
+    const fadingImgTimeline = gsap.timeline({
+      defaults: { ease: Linear.easeNone }
+    });
+    fadingImgTimeline
+      .fromTo(
+        fadingImgRef.current[index],
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1,
+          duration: 1
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: fadingImgRef.current[index],
+      start: "center bottom",
+      end: "center center",
+      scrub: 0,
+      animation: fadingImgTimeline
+    });
+    return [fadingImgTimeline, scrollTrigger];
+  }
+
+  
   const revealSuperCharge = () => {
     const revealSuperTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     const halfWidth = superChargeImgRef.current.clientWidth / 2;
@@ -57,8 +88,31 @@ const Reason = () => {
     });
     return [revealSuperTimeline, scrollTrigger];
   }
+
+  const revealBook = (index) => {
+    const revealBookTimeline = gsap.timeline({
+      defaults: { ease: Linear.easeNone }
+    });
+    revealBookTimeline
+      .from(
+        bookRef.current[index],
+        {
+          rotateX: 90,
+          duration: 1
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: bookRef.current[index],
+      start: "top center+=400px",
+      end: "center center",
+      scrub: 0,
+      animation: revealBookTimeline
+    });
+    return [revealBookTimeline, scrollTrigger];
+  }
+
   return (
-    <div id="reason" className="bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
+    <div id="reason" className="mt-[63px] lg:mt-0 bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
       <div className="bg-reason xl:py-[85px] xl:px-[38px]">
         <h2 className="font-semibold text-[50px] mb-[40px]">Budbo is a global brand in emerging markets<br />and technologies.</h2>
         <p className="max-w-[862px] text-[24px] font-medium">
@@ -95,20 +149,24 @@ const Reason = () => {
               </p>
             </div>
             <div className="w-full h-max flex  justify-center items-start">
-              <Image
-                src="/reason/homebook 1.png"
-                alt="homebook1"
-                width={872}
-                height={418}
-                className="lg:w-[872px] w-[518px]"
-              />
-              <Image
-                src="/reason/Image.png"
-                alt="homephone"
-                width={257}
-                height={416}
-                className="w-[150px] lg:w-[257px]"
-              />
+              <div ref={(ref) => (bookRef.current[0] = ref)}>
+                <Image
+                  src="/reason/homebook 1.png"
+                  alt="homebook1"
+                  width={872}
+                  height={418}
+                  className="lg:w-[872px] w-[518px]"
+                />
+              </div>
+              <div ref={handphoneRef}>
+                <Image
+                  src="/reason/Image.png"
+                  alt="homephone"
+                  width={257}
+                  height={416}
+                  className="w-[150px] lg:w-[257px]"
+                />
+              </div>
             </div>
           </div>
           <div className="lg:m-[70%] m-auto flex justify-center my-[32px] gap-[20px]">
@@ -121,7 +179,7 @@ const Reason = () => {
           </div>
         </div>
         <div ref={superChargeRef} className=" w-full h-[100vh] flex flex-col gap-5">
-          <h1 ref={superChargeTextRef} className="text-[70px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
+          <h1 ref={superChargeTextRef} className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
             Supercharge your portfolio.
           </h1>
           <div className="absolute translate-y-20">
@@ -155,8 +213,8 @@ const Reason = () => {
             </span>
           </div>
         </div>
-        <div className="py-[50px]">
-          <h1 className="text-[70px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
+        <div className="pt-[100px]">
+          <h1 className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
             Business intelligence.
           </h1>
           <div className="text-[#97979A] text-[24px] font-medium lg:text-center py-[5px]">
@@ -197,7 +255,7 @@ const Reason = () => {
           </div>
         </div>
         <div className="">
-          <h1 className="text-[64px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
+          <h1 className="text-[54px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
             Problem solver.
             <br />
             Industry evolver.
@@ -243,7 +301,7 @@ const Reason = () => {
           <div className="mx-auto w-[1100px] h-[50px] border-b-[1px] my-[100px] border-secondary-graylight"></div>
         </div>
         <Reason2 />
-        <div className="py-[100px]">
+        <div className="py-10 lg:py-[100px]">
           <h2 className="text-[32px] font-semibold leading-none lg:px-[156px] text-center mb-[60px]">
             Reason #3 – Exit strategy and exit opportunities.
           </h2>
@@ -260,12 +318,12 @@ const Reason = () => {
           <Team battle={true}/>
         </div>
       </div>
-      <div className="w-full mx-auto bg-reason lg:after:py-[85px] m-auto">
-        <div className="lg:text-center font-semibold text-[64px]">
+      <div className="w-full mx-auto bg-reason lg:py-[85px] m-auto">
+        <div className="lg:text-center font-semibold text-[45px] lg:text-[64px]">
           <span>Meet your new&nbsp;</span>
-          <span className="bg-linear bg-clip-text text-transparent text-[128px]">Team</span>
+          <span className="bg-linear bg-clip-text text-transparent lg:text-[128px] text-[45px]">Team</span>
         </div>
-        <h2 className="lg:text-center   text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
+        <h2 className="lg:text-center  text-[18px] lg:text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
         <div className="relative flex lg:flex-row flex-col justify-center mb-[50px]">
           <div className="w-lg:1/5 w-3/5 flex lg:m-auto">
             <Image
@@ -287,7 +345,7 @@ const Reason = () => {
         <Team />
       </div>
       <div className="lg:p-[12px]">
-        <div className="text-[64px] font-semibold my-[24px]">
+        <div className="w-full lg:text-[64px] text-[40px] font-semibold my-[24px]">
           <span>Team member</span>
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">SPOTLIGHT</span>
