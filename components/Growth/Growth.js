@@ -58,7 +58,7 @@ const Growth = () => {
 				</h6>
 				<Account />
 			</div>
-			<div className="relative lg:py-[100px] font-normal font-sysui text-center">
+			<div className="relative lg:py-[100px] font-normal leading-normalfont-sysui text-center">
 				<h1 className="lg:px-[4rem] text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] lg:my-[220px]" id="saas-model">
 					Proven SaaS model • Patent-pending technology
 				</h1>
