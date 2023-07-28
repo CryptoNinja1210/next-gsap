@@ -87,7 +87,7 @@ const FutureCarousel = () => {
       <h1 className="text-[38px] lg:text-[88px] text-center font-semibold my-auto">
         Your future awaits...
       </h1>
-      <div ref={imagesRef} className="flex flex-nowrap w-[600%] lg:w-[200%] items-stretch">
+      <div ref={imagesRef} className="flex flex-nowrap w-[800%] lg:w-[200%] items-stretch">
         {IMAGES.map((x, i) => (
           <section key={"carousel_" + x.id}>
             <Image
