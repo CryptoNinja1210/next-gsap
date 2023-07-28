@@ -9,7 +9,6 @@ export default function BlurImage({ src, alt, width, height, className }) {
       key={alt}
       alt={alt}
       src={src}
-      fill={true}
       width={width}
       height={height}
       // objectFit="cover"
