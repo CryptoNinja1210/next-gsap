@@ -213,7 +213,7 @@ const Reason = () => {
             </span>
           </div>
         </div>
-        <div className="pt-[100px]">
+        <div className="pt-[200px]">
           <h1 className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
             Business intelligence.
           </h1>
@@ -284,7 +284,7 @@ const Reason = () => {
               <div className="text-[18px] font-medium lg:mb-[150px]">
                 Visibility into the entire cannabis supply chain from
                 <br />
-                <span className="bg-linear bg-clip-text text-transparent text-[64px] italic">seed to soul.</span>
+                <span className="bg-linear bg-clip-text text-transparent text-[40] lg:text-[64px] italic">seed to soul.</span>
               </div>
               <div className="font-medium text-[16px] lg:pl-[40px]">
                 <p className="text-[28px] mb-[30px]">Blockchain powered telematic logistic solutions</p>
@@ -308,7 +308,7 @@ const Reason = () => {
           <div className="lg:px-[72px] mb-[150px] text-[24px] font-semibold">
             Our aim in approximately two years is to have an annual recurring revenue(ARR) of a minimum of $5 million and a valuation of approximately $45-$50 million, giving Budding Technologies, Inc. the ability to go to market either via a private or public offering, or acquisition.
             <br /><br />
-            <ul className="list-disc pl-[120px]">
+            <ul className="list-disc pl-[40px] md:pl-[70px] lg:pl-[100px]">
               <li>Explosive revenue growth from dispensaries, retailers, growers, manufacturers, and couriers</li>
               <li>Expansion throughout the world with advisors and team members in Canada, Germany, Israel, Thailand, and Portugal.</li>
             </ul>
@@ -325,7 +325,7 @@ const Reason = () => {
         </div>
         <h2 className="lg:text-center  text-[18px] lg:text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
         <div className="relative flex lg:flex-row flex-col justify-center mb-[50px]">
-          <div className="w-lg:1/5 w-3/5 flex lg:m-auto">
+          <div className="w-lg:1/5 w-3/5 flex m-auto">
             <Image
               src="/team/1_active.png"
               alt="team"
@@ -334,7 +334,7 @@ const Reason = () => {
               height={378}
             />
           </div>
-          <div className="w-4/5 text-left justify-start lg:px-[48px]">
+          <div className="lg:w-4/5 w-full text-left justify-start lg:px-[48px]">
             <h3 className="text-center lg:text-start text-4xl lg:text-[50px]">Luke Patterson</h3>
             <h5 className="text-center lg:text-start my-5 lg:text-[28px] text-4xl text-primary-purple">CEO (Co-Founder)</h5>
             <p className="p-0 m-0 font-medium text-[20px] w-full text-primary-graydark50">

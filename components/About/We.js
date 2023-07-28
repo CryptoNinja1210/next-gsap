@@ -105,21 +105,21 @@ const We = () => {
         </h1>
         <p className="text-[30px] font-bold mt-10">for Recreational and Medical Cannabis - Shop 1000s of local dispensaries</p>
         <div className="flex my-[270px] justify-center items-center">
-          {/* <div className="relative">
+          <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-[24px] pointer-events-none">
               <Icon icon="tabler:location-filled" color="#6E2DFA" width="24" height="24" />
             </div>
             <input className="pl-[72px] pr-[240px] px-[24px] py-[28px] lg:w-[773px] w-[395px] h-8 bg-white border-none shadow-md flex rounded-l-[12px] rounded-r-[80px]
             text-[18px] text-black focus:outline-none transition-all font-sysui border-0 outline-none"
               placeholder="Enter your city or address to get started" />
-            <button className="absolute inset-y-0 lg:inset-y-[12px] h-[56px] right-[12px] flex items-center px-[24px] py-[16px] transition-all
+            <button className="absolute inset-y-0  h-[56px] right-[0px] flex items-center px-[24px] py-[16px] transition-all
               rounded-l-[12px] rounded-r-[80px] bg-primary-purple hover:bg-primary-purple50 text-white">
               Start Shopping ➔
             </button>
-          </div> */}
+          </div>
         </div>
         <div className="relative top-[-8840px]">
-          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] left-[50px] lg:left-[70%] pointer-events-none -z-1">
+          <div ref={(ref) => (bookRef.current[0] = ref)} className="overflow-hidden w-[697px] lg:w-[1002px] absolute top-[8300px] left-[50px] lg:left-[50%] pointer-events-none -z-1">
             <Image
               src="/about/homebook 3.png"
               alt="homebook3"
