@@ -113,8 +113,10 @@ const Logo = () => {
       .from(
         phone_1.current[e],
         {
-          x: window.innerWidth,
-          y: window.innerHeight,
+          translateX: window.innerWidth * 0.75,
+          translateY: 400,
+          // x: window.innerWidth,
+          // y: window.innerHeight,
           opacity: 1,
           transformOrigin: "100% 100%",
           duration: 2,
@@ -172,7 +174,7 @@ const Logo = () => {
       .to(
         phone_1.current[e],
         {
-          translateX: -1000,
+          translateX: -window.innerWidth * 0.75,
           translateY: 400,
           opacity: 1,
           duration: 2,
@@ -213,13 +215,14 @@ const Logo = () => {
           />
         </div>
         {[...Array(8)].map((_, index) => (
-          <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className={`z-40 absolute ${
-            rotateViewportX > 0 ?
-              ` left-[${rotateViewportX}px] top-0  ` : 
-              rotateViewportX == 0 ? 
-                ` left-0 right-0 top-0 bottom-0 ` : 
-                ` top-[${-rotateViewportX}px] left-0  `
-          } w-[80px] md:w-[120px] lg:w-[150px]`}>
+          <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className={`z-40 absolute inset-y-0 ${true ? `inset-x-[${rotateViewportX}px]` : `inset-x-0`} w-[60px] md:w-[120px] lg:w-[180px]`}>
+          {/* ${
+          rotateViewportX > 0 ?
+            ` left-[${rotateViewportX}px] right-[${rotateViewportX}px] top-0 bottom-0 ` : 
+            rotateViewportX == 0 ?
+              ` left-0 right-0 top-0 bottom-0 ` : 
+              ` top-[${-rotateViewportX}px] bottom-[${-rotateViewportX}px] left-0 right-0 `
+          } */}
           {/* translate-x-[${rotateViewportX}px] */}
             <BlurImage
               src="/screenshot/map 3.png"
