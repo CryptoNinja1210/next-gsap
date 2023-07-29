@@ -64,7 +64,7 @@ const Future = ({ }) => {
 				<div className=" m-auto p-5 rounded-3xl flex flex-col gap-[100px] bg-linear bg-opacity-50">
 					<h3 className="lg:text-[80px] text-4xl font-semibold ">Invest with confidence today</h3>
 					<button className="h-[52px] lg:h-[80px] px-[48px] m-auto bg-primary-purple hover:bg-primary-purple50 transition-all rounded-xl">
-						I’m joining the Budbo Team
+						I&apos;m joining the Budbo Team
 					</button>
 				</div>
 			</div>
