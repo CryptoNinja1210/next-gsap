@@ -61,25 +61,23 @@ export default function Home() {
             <Header />
             <ProgressIndicator />
             {/* <Cursor isDesktop={isDesktop} /> */}
-             <main className="">
-              <Title />
-              <Begin />
-              <Growth />
-              <Logo />
-              <Role />
-              <We />
-              <div className="lg:h-[5200px] h-[4300px]" />
-              <Shows />
-              <div className="h-[3000px]"/>
-              <Token />
-              <WeTop />
-              <We1 />
-              <Budbo />
-              <Reason />
-              <Investors />
-              <FutureCarousel />
-              <Future />
-            </main>
+            <Title />
+            <Begin />
+            <Growth />
+            <Logo />
+            <Role />
+            <We />
+            <div className="lg:h-[5200px] h-[4300px]" />
+            <Shows />
+            <div className="h-[3000px]"/>
+            <Token />
+            <WeTop />
+            <We1 />
+            <Budbo />
+            <Reason />
+            <Investors />
+            <FutureCarousel />
+            <Future />
             <Footer />
             <Scripts />
           </div>
