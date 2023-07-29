@@ -17,157 +17,6 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	const middleExitText = useRef(null);
 
 	useEffect(() => {
-
-		const revealLeftsideTextTranslate = window.innerWidth > 1200 ? {
-			translateX: -350, //leftPhone && leftPhone.current && leftPhone.current.clientWidth/2,
-			translateY: 0,
-		} : {
-			translateX: 0,
-			translateY: -200,
-		}
-	
-		const revealRightsideTextTranslate = window.innerWidth > 1200 ? {
-			translateX: 300, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
-			translateY: 0,
-		} : {
-			translateX: -50,
-			translateY: -200,
-		}
-	
-		const leftAndRightHidingText = window.innerWidth > 1200 ? {
-			translateX: 0, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
-			translateY: 0,
-		} : {
-			translateX: 0, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
-			translateY: 100,
-		}
-
-		const getTopText = () => {
-			const topText = gsap.timeline({
-				defaults: { ease: Linear.easeNone },
-			});
-			topText
-				.fromTo(
-					topleftText.current,
-					{ fontSize: 0, },
-					{ fontSize: fontSize_big, duration: 1, },
-				)
-				.fromTo(
-					toprightText.current,
-					{ fontSize: 0, },
-					{ fontSize: fontSize_big, duration: 1, },
-					"<"
-				);
-			const scrollTrigger = ScrollTrigger.create({
-				trigger: wrapperRef.current,
-				start: "center bottom",
-				end: "bottom bottom",
-				scrub: 0,
-				animation: topText,
-			});
-			return [topText, scrollTrigger];
-		}
-
-		const hidingTop = () => {
-			const hidingTopText = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-			hidingTopText
-				.fromTo(
-					topleftText.current,
-					{ fontSize: fontSize_big, translateY: 0, duration: 1, },
-					{ fontSize: 0, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
-					1
-				)
-				.fromTo(
-					toprightText.current,
-					{ fontSize: fontSize_big, translateY: 0, duration: 1, },
-					{ fontSize: 0, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
-					"<"
-				);
-			const scrollTrigger = ScrollTrigger.create({
-				trigger: wrapperRef.current,
-				start: "bottom bottom",
-				end: "35%",
-				scrub: 0,
-				animation: hidingTopText,
-			});
-			return [hidingTopText, scrollTrigger];
-		}
-
-		const revealsideText = () => {
-			const revealsideText = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-			revealsideText
-				.fromTo(
-					leftsideText.current,
-					{ fontSize: 0, opacity: 0, duration: 1, translateX: 0, translateY: 0 },
-					{ fontSize: fontSize_big, opacity: 1, duration: 0.5, ...revealLeftsideTextTranslate },
-					0.5
-				)
-				.fromTo(
-					rightsideText.current,
-					{ fontSize: 0, opacity: 0, duration: 1, translateX: 0, translateY: 0 },
-					{ fontSize: fontSize_big, opacity: 1, duration: 0.5, ...revealRightsideTextTranslate },
-					"<"
-				)
-				.to(
-					leftsideText.current,
-					{ fontSize: 0, opacity: 0, ...leftAndRightHidingText, duration: 1, },
-					2
-				)
-				.to(
-					rightsideText.current,
-					{ fontSize: 0, opacity: 0, ...leftAndRightHidingText, duration: 1, },
-					"<"
-				)
-				.fromTo(
-					middlesideText.current,
-					{ fontSize: fontSize_big / 2, opacity: 0, width: 0, },
-					{ fontSize: fontSize_big, opacity: 1, width: 300, duration: 0.5, },
-					"<+=0.5"
-				)
-				.fromTo(
-					middlesideText.current,
-					{ fontSize: fontSize_big, },
-					{ fontSize: fontSize_big / 2, opacity: 0, width: 0, y: 0, duration: 1.5, },
-					"<+=1"
-				)
-				.to(
-					leftPhone.current,
-					{
-						x: - window.innerWidth,
-						duration: 1,
-					},
-					"<+=1.5"
-				)
-				.to(
-					rightPhone.current,
-					{
-						x: window.innerWidth,
-						duration: 2,
-					},
-					"<"
-				)
-				.fromTo(
-					middleExitText.current,
-					{ fontSize: 24, opacity: 0, skewY: 0, rotateY: 0, },
-					{ fontSize: window.innerWidth >1200 ? 120 : 50, opacity: 1, skewY: -40, rotateY: -60, duration: 0.5, },
-					"<"
-				)
-				.to(
-					middleExitText.current,
-					{ translateY: -window.innerHeight, duration: 1, skewY: 40, rotateY: 0, },
-					"<+=0.3"
-				)
-				;
-			const scrollTrigger = ScrollTrigger.create({
-				trigger: wrapperRef.current,
-				start: "bottom bottom",
-				end: "350%",
-				scrub: 0,
-				animation: revealsideText,
-			});
-			return [revealsideText, scrollTrigger];
-		}
-
 		const [revealTimeline, revealScrollTrigger] = getRevealSt();
 		const [topTextTimeline, topTextScrollTrigger] = getTopText();
 		const [stopPhoneTimeline, stopPhoneScrollTrigger] = stopPhone();
@@ -186,7 +35,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			revealsideTextScrollTrigger && revealsideTextScrollTrigger.kill();
 			revealsideTextTimeline && revealsideTextTimeline.progress(1);
 		}
-	});
+	}, [wrapperRef]);
 
 	const fontSize_big = `${1.5*window.innerWidth/1508 + 1644/1508}rem`
 
@@ -220,6 +69,32 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		return [revealPhone, scrollTrigger];
 	}
 
+	const getTopText = () => {
+		const topText = gsap.timeline({
+			defaults: { ease: Linear.easeNone },
+		});
+		topText
+			.fromTo(
+				topleftText.current,
+				{ fontSize: 0, },
+				{ fontSize: fontSize_big, duration: 1, },
+			)
+			.fromTo(
+				toprightText.current,
+				{ fontSize: 0, },
+				{ fontSize: fontSize_big, duration: 1, },
+				"<"
+			);
+		const scrollTrigger = ScrollTrigger.create({
+			trigger: wrapperRef.current,
+			start: "center bottom",
+			end: "bottom bottom",
+			scrub: 0,
+			animation: topText,
+		});
+		return [topText, scrollTrigger];
+	}
+
 	const stopPhone = () => {
 		const stopPhone = gsap.timeline({
 			defaults: { ease: Linear.easeNone },
@@ -249,6 +124,130 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			animation: stopPhone,
 		});
 		return [stopPhone, scrollTrigger];
+	}
+
+	const hidingTop = () => {
+		const hidingTopText = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+		hidingTopText
+			.fromTo(
+				topleftText.current,
+				{ fontSize: fontSize_big, translateY: 0, duration: 1, },
+				{ fontSize: 0, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
+				1
+			)
+			.fromTo(
+				toprightText.current,
+				{ fontSize: fontSize_big, translateY: 0, duration: 1, },
+				{ fontSize: 0, opacity: 0, translateY: leftPhone.current.clientHeight/2, duration: 1, },
+				"<"
+			);
+		const scrollTrigger = ScrollTrigger.create({
+			trigger: wrapperRef.current,
+			start: "bottom bottom",
+			end: "35%",
+			scrub: 0,
+			animation: hidingTopText,
+		});
+		return [hidingTopText, scrollTrigger];
+	}
+
+	const revealLeftsideTextTranslate = window.innerWidth > 1200 ? {
+		translateX: -350, //leftPhone && leftPhone.current && leftPhone.current.clientWidth/2,
+		translateY: 0,
+	} : {
+		translateX: 0,
+		translateY: -200,
+	}
+
+	const revealRightsideTextTranslate = window.innerWidth > 1200 ? {
+		translateX: 300, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
+		translateY: 0,
+	} : {
+		translateX: -50,
+		translateY: -200,
+	}
+
+	const leftAndRightHidingText = window.innerWidth > 1200 ? {
+		translateX: 0, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
+		translateY: 0,
+	} : {
+		translateX: 0, //rightPhone && rightPhone.current && rightPhone.current.clientWidth/2,
+		translateY: 100,
+	}
+
+	const revealsideText = () => {
+		const revealsideText = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+		revealsideText
+			.fromTo(
+				leftsideText.current,
+				{ fontSize: 0, opacity: 0, duration: 1, translateX: 0, translateY: 0 },
+				{ fontSize: fontSize_big, opacity: 1, duration: 0.5, ...revealLeftsideTextTranslate },
+				0.5
+			)
+			.fromTo(
+				rightsideText.current,
+				{ fontSize: 0, opacity: 0, duration: 1, translateX: 0, translateY: 0 },
+				{ fontSize: fontSize_big, opacity: 1, duration: 0.5, ...revealRightsideTextTranslate },
+				"<"
+			)
+			.to(
+				leftsideText.current,
+				{ fontSize: 0, opacity: 0, ...leftAndRightHidingText, duration: 1, },
+				2
+			)
+			.to(
+				rightsideText.current,
+				{ fontSize: 0, opacity: 0, ...leftAndRightHidingText, duration: 1, },
+				"<"
+			)
+			.fromTo(
+				middlesideText.current,
+				{ fontSize: fontSize_big / 2, opacity: 0, width: 0, },
+				{ fontSize: fontSize_big, opacity: 1, width: 300, duration: 0.5, },
+				"<+=0.5"
+			)
+			.fromTo(
+				middlesideText.current,
+				{ fontSize: fontSize_big, },
+				{ fontSize: fontSize_big / 2, opacity: 0, width: 0, y: 0, duration: 1.5, },
+				"<+=1"
+			)
+			.to(
+				leftPhone.current,
+				{
+					x: - window.innerWidth,
+					duration: 1,
+				},
+				"<+=1.5"
+			)
+			.to(
+				rightPhone.current,
+				{
+					x: window.innerWidth,
+					duration: 2,
+				},
+				"<"
+			)
+			.fromTo(
+				middleExitText.current,
+				{ fontSize: 24, opacity: 0, skewY: 0, rotateY: 0, },
+				{ fontSize: window.innerWidth >1200 ? 120 : 50, opacity: 1, skewY: -40, rotateY: -60, duration: 0.5, },
+				"<"
+			)
+			.to(
+				middleExitText.current,
+				{ translateY: -window.innerHeight, duration: 1, skewY: 40, rotateY: 0, },
+				"<+=0.3"
+			)
+			;
+		const scrollTrigger = ScrollTrigger.create({
+			trigger: wrapperRef.current,
+			start: "bottom bottom",
+			end: "350%",
+			scrub: 0,
+			animation: revealsideText,
+		});
+		return [revealsideText, scrollTrigger];
 	}
 
 	return (
