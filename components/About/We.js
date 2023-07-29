@@ -128,7 +128,7 @@ const We = () => {
               height={480}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8570px] lg:top-[8300px] left-[23px] lg:left-[340px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8670px] lg:top-[8300px] left-[-33px] lg:left-[340px] pointer-events-none -z-1">
             <BlurImage
               src="/about/summary.png"
               alt="summary"
@@ -184,7 +184,7 @@ const We = () => {
               height={403}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-[400px] lg:w-[1200px] absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
+          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="absolute  w-[400px] lg:w-[1200px]  lg:top-[10535px] top-[9000px] left-0 lg:left-1/2 -translate-x-1/2 -z-1">
             <BlurImage
               src="/about/checkout.gif"
               alt="checkout"
