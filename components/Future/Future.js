@@ -35,8 +35,8 @@ const choices = [
 const Future = ({ }) => {
 
 	return (
-		<div className="h-full bg-black dark:bg-black text-white  text-center font-sysui">
-			<h2 className="lg:text-[60px] text-[40px] font-semibold mt-[120px] mb-[90px]">Start your adventure.</h2>
+		<div className="h-[100vh] bg-black dark:bg-black text-white  text-center font-sysui w-[100vw]">
+			<h2 className="lg:text-[60px] text-[40px] font-semibold pt-[120px] mb-[90px]">Start your adventure.</h2>
 			<div className="w-full">
 				<div className="flex flex-col lg:h-[240px] content-center flex-wrap justify-start">
 					{choices.map((choice, i) =>
