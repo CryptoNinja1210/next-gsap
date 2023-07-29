@@ -232,8 +232,8 @@ const Begin = ({  }) => {
 
 	return (
 		<div ref={wrapperRef} className={`text-[${1.5*window.innerWidth/1508 + 1644/1508}rem] bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-between items-end gap-[50px] overflow-hidden`}>
-			<div ref={leftPhone} id="left-phone" className="relative flex flex-col text-right gap-5 scale-125 translate-x-20 translate-y-10">
-				<span ref={topleftText} className=" pr-5 whitespace-nowrap">
+			<div ref={leftPhone} id="left-phone" className="relative left-[-35%] lg:left-0 lg:bottom-0 bottom-[40%] flex flex-col text-right gap-5 scale-125 translate-x-20 translate-y-10">
+				<span ref={topleftText} className="translate-x-10 md:translate-x-0 pr-5 whitespace-nowrap">
 					Recession-proof
 				</span>
 				<BlurImage
@@ -246,18 +246,18 @@ const Begin = ({  }) => {
 					width={768}
 					height={636}
 				/>
-				<span ref={leftsideText} className="z-30 absolute right-9 top-[138px] whitespace-nowrap">
+				<span ref={leftsideText} className="z-30 absolute lg:right-9 right-[-16px] top-[158px] lg:top-[138px] whitespace-nowrap">
 					Let&apos;s begin
 				</span>
 			</div>
-			<div ref={middlesideText} className="text-2xl md:text-3xl lg:text-5xl">
+			<div ref={middlesideText} className="text-2xl md:text-3xl lg:text-5xl absolute bottom-[50%] lg:bottom-[20%] right-[40%]">
 				<span>together</span>
 			</div>
 			<p ref={middleExitText} className="absolute w-full h-full z-50 pt-[20%] flex justify-center items-center whitespace-nowrap text-2xl md:text-3xl lg:text-5xl">
 				Public exit experience
 			</p>
-			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5" style={{ transform: "translateY(35%)" }}>
-				<span ref={toprightText} className="pl-5 whitespace-nowrap">
+			<div ref={rightPhone} id="right-phone" className="relative lg:right-0 right-[-17%] bottom-[40%] lg:bottom-0  flex flex-col text-left gap-5" style={{ transform: "translateY(35%)" }}>
+				<span ref={toprightText} className="pl-5 whitespace-nowrap ">
 					your portfolio
 				</span>
 				<BlurImage
@@ -270,7 +270,7 @@ const Begin = ({  }) => {
 					width={792}
 					height={844}
 				/>
-				<span ref={rightsideText} className="z-30 absolute left-9 top-[138px] whitespace-nowrap">
+				<span ref={rightsideText} className="z-30 absolute lg:left-9 top-[138px] whitespace-nowrap">
 					your adventure
 				</span>
 			</div>
