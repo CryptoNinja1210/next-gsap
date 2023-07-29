@@ -40,7 +40,7 @@ const Token = () => {
     //   );
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
-      start: "bottom bottom",
+      start: "center center",
       end: "150%",
       scrub: 0,
       pin: true,
