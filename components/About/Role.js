@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import BlurImage from "../BlurImage";
 

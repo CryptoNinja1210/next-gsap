@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { Dialog } from '@headlessui/react'
@@ -30,8 +29,6 @@ const Header = () => {
       const roles = document.getElementById('roles');
       const we = document.getElementById('we');
       const reason = document.getElementById('reason');
-      const header = document.getElementById('header');
-      const future = document.getElementById('future');
       const investor = document.getElementById('investor');
 
       (roles.getBoundingClientRect().top > 0) && setTheme('light');
@@ -40,15 +37,12 @@ const Header = () => {
       (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
       (investor.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().bottom > 0) && setTheme('light');
       (investor.getBoundingClientRect().bottom <= 0) && setTheme('dark');
-
-      // (roles.getBoundingClientRect().top < 0 && we.getBoundingClientRect().top < 0 && )
-
-
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, [setTheme]);
+
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const currentTheme = theme === 'system' ? systemTheme : theme;
@@ -220,7 +214,7 @@ const Header = () => {
                       </div>
                     </div>
                     <div>
-                      <p className="font-bold font-Gilroy my-5  text-center">380 W 62nd Ave, Denver, CO</p>
+                      <p className="font-bold my-5 text-center">380 W 62nd Ave, Denver, CO</p>
                     </div>
                     <div>
                     <button className="flex justify-center mx-auto my-5 py-[9px] px-[15px] dark:bg-gray-dark-2 bg-white border-[1px] text-primary-graydark border-secondary-graylight rounded-[8px] text-xs font-sysui font-bold leading-4">

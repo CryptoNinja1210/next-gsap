@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Icon } from '@iconify/react';
 import Acount from "../Growth/Account";
 import { useEffect, useRef } from "react";

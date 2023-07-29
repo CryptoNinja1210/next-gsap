@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Account from "./Account";
 import { useEffect, useRef } from "react";
 import { Linear, gsap } from "gsap";

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import BlurImage from "../BlurImage";
@@ -16,25 +15,25 @@ export default function Acount() {
       heading2: '($1.1billion global industry CAGR 15.4%)'
     },
     {
-      number: 0,
+      number: 1000,
       bannerWidth: 'w-[60%] sm:w-[45%] lg:w-[35%]',
       heading1: 'Growers',
       heading2: '($1.8 billion globally, CAGR 21.4%)'
     },
     {
-      number: 0,
+      number: 8500,
       bannerWidth: 'w-[80%] sm:w-[60%] lg:w-[50%]',
       heading1: 'Dispensaries and Retailers',
       heading2: '($13.2 billion globally, CAGR 25.5%)'
     },
     {
-      number: 0,
+      number: 40000,
       bannerWidth: 'w-[80%] sm:w-[60%] lg:w-[50%]',
       heading1: 'Product Manufacturers',
       heading2: '($18.38 billion globally, CAGR 21.15%)'
     },
     {
-      number: 0,
+      number: 100000,
       bannerWidth: 'w-[90%] sm:w-[80%] lg:w-[70%]',
       heading1: 'Consumers and Patients',
       heading2: '($323.9 billion globally, CAGR 21.4%)'
@@ -137,7 +136,7 @@ export default function Acount() {
       fadeOutParameterScrollTrigger4 && fadeOutParameterScrollTrigger4.kill();
       fadeOutParameterTimeline4 && fadeOutParameterTimeline4.progress(1);
     }
-  })
+  },[])
 
   const fadeOutParameter = (index) => {
     const fadeOutParameterTimeline = gsap.timeline({
