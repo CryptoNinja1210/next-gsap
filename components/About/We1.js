@@ -86,7 +86,7 @@ const  	We1 = () => {
 
 	return (
 		<div className="w-full text-center font-sysui">
-			<div className="relative h-[1700px] top-[-350px] lg:top-0">
+			<div className="relative h-[1700px] top-[-300px] lg:top-0">
 				<div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute lg:top-[60px] top-1 left-[16%] pointer-events-none">
 					<BlurImage
 						src="/about/coins/bitcoin.png"
