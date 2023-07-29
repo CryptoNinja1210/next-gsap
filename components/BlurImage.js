@@ -17,7 +17,7 @@ export default function BlurImage({ src, alt, width, height, className }) {
           ${className}
           ${
             isLoading
-              ? "scale-110 blur-2xl grayscale"
+              ? "scale-110 blur-2xl grayscale rounded-2xl"
               : "scale-100 blur-0 grayscale-0"
           })`}
       onLoadingComplete={() => setLoading(false)}
