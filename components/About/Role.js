@@ -28,7 +28,7 @@ const Role = () => {
         <span>Simply</span>&nbsp;
         <span className="italic">savvy.</span>
       </div>
-      <div className="p-5 lg:py-20">
+      <div className="m-5 lg:my-0">
         <BlurImage
           src="/about/ez.gif"
           alt="savvy"

@@ -95,7 +95,7 @@ const We = () => {
   }
 
   return (
-    <div id="we" className="dark:bg-white dark:text-white relative h-[100vh] text-center font-sysui lg:my-[130px] ">
+    <div id="we" className="dark:bg-white dark:text-white relative h-[100vh] text-center font-sysui ">
       <div>
         <h1 className="lg:text-[60px] text-[40px] font-medium">
           We are
