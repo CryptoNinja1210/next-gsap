@@ -7,7 +7,7 @@ const members = [
     name: 'Jack Finkelstei',
     investrole: 'Lead Investor',
     role: 'CEO - Liquimedlock, Inc.',
-    words: 'I am the CEO and founder of a Canadian and US medical packaging company that offers unique supply chain products to labs, pharmacies, licensed producers and dispensaries in the cannabis industry. I’ve been a long time investor in Budbo. What first attracted me to Budbo was the matching technology and the ability for ancillary businesses, such as myself, to use the Budbo platform on the B2B side.',
+    words: 'I am the CEO and founder of a Canadian and US medical packaging company that offers unique supply chain products to labs, pharmacies, licensed producers and dispensaries in the cannabis industry. I&apos;ve been a long time investor in Budbo. What first attracted me to Budbo was the matching technology and the ability for ancillary businesses, such as myself, to use the Budbo platform on the B2B side.',
     banner: 'jack_w'
   },
   {
