@@ -123,27 +123,27 @@ const Reason = () => {
   return (
     <div id="reason" className="lg:mt-0 bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
       <div className="bg-reason xl:py-[85px] xl:px-[38px]">
-        <h2 className="font-semibold text-[35px] lg:text-[50px] mb-[40px]">Budbo is a global brand in emerging markets<br />and technologies.</h2>
-        <p className="max-w-[862px] text-[24px] font-medium">
+        <h2 className="font-semibold text-[29px] lg:text-[50px] mb-[40px]">Budbo is a global brand in emerging markets<br />and technologies.</h2>
+        <p className="max-w-[862px] text-[18px] lg:text-[24px] font-medium">
           We are innovative, stubborn, and find purpose only within the pursuit of our goals. The Budbo suite of cannabis products has outpaced the future with curiosity, sleek user experiences, and an exceptional token reward system.
           <br /><br />
           It&apos;s time to begin your adventure, invest in Budbo today.
         </p>
       </div>
-      <div className="mx-auto w-[1100px] h-[90px] border-b-[1px] my-[38px] border-secondary-graylight"></div>
+      <div className="mx-auto w-[1100px] border-b-[1px] my-[38px] border-secondary-graylight"></div>
       <div>
-        <div className="text-[32px] lg:text-[64px] font-semibold leading-none lg:mx-[80px] my-[40px] r">
+        <div className="text-[19px] lg:text-[50px] font-semibold leading-none lg:mx-[80px] my-[40px] r">
           <span>Let&apos;s talk</span>&nbsp;
-          <span className=" text-[50px] lg:px-[34px] lg:text-[128px] text-transparent bg-linear bg-clip-text">Reasons</span>&nbsp;
+          <span className=" text-[40px] lg:px-[34px] lg:text-[118px] text-transparent bg-linear bg-clip-text">Reasons</span>&nbsp;
           <span>to invest</span>
         </div>
-        <p className="text-[18px] lg:px-[30px] w-full lg:text-[32px] mb-[92px]">
+        <p className="text-[19px] lg:px-[30px] w-full lg:text-[32px] mb-[92px]">
           Reason #1 – Not another Cannabis startup; Budbo is a technology company that has built the ecosystem that benefits dispensaries, growers, manufacturers, couriers, patients, and consumers.
         </p>
         <div className="flex flex-wrap space-y-8 content-center">
           <div className="lg:flex  w-full items-start">
             <div className="mb-8 lg:text-center">
-              <p className="bg-linear bg-clip-text text-transparent font-bold text-[52px] leading-none pb-[40px]">
+              <p className="bg-linear bg-clip-text text-transparent font-bold text-[38px] lg:text-[42px] leading-none pb-[40px]">
                 Your future.<br />
                 Your money.<br />
                 Your adventure.<br />
@@ -187,8 +187,8 @@ const Reason = () => {
             </button>
           </div>
         </div>
-        <div ref={superChargeRef} className=" w-full h-[100vh] flex flex-col gap-5">
-          <h1 ref={superChargeTextRef} className="text-[27px] md:text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
+        <div ref={superChargeRef} className=" w-full h-[100vh] flex flex-col items-stretch gap-5">
+          <h1 ref={superChargeTextRef} className="text-[27px] md:text-[60px] lg:text-[70px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
             Supercharge your portfolio.
           </h1>
           <div className="absolute translate-y-20">
@@ -208,7 +208,7 @@ const Reason = () => {
               height={515}
             />
           </div>
-          <div ref={superChargeDescriptionRef} className="text-[22px] lg:px-[135px]">
+          <div ref={superChargeDescriptionRef} className="m-auto lg-text-[36px] text-[20px] lg:px-[135px]">
             <span className="bg-linear bg-clip-text text-transparent">289,000,000</span>
             &nbsp;
             <span>patients and recreational users worldwide can now</span>
@@ -222,11 +222,11 @@ const Reason = () => {
             </span>
           </div>
         </div>
-        <div className="pt-[200px]">
-          <h1 className="text-[34px] md:text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
+        <div className="lg:pt-[200px]">
+          <h1 className="text-[34px] md:text-[60px] lg:text-[70px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
             Business intelligence.
           </h1>
-          <div className="text-[#97979A] text-[24px] font-medium lg:text-center py-[5px]">
+          <div className="text-[#97979A] text-[19px] lg:text-[24px] font-medium lg:text-center py-[5px]">
             <span>Built by dispensaries for dispensaries, Budbo‘s retailer dashboard and key analytics <br /></span>&nbsp;
             <span className="bg-linear bg-clip-text text-transparent italic" >empower</span>&nbsp;
             <span>our dispensary clients to sell more products with pro-active decision making.</span>
@@ -266,7 +266,7 @@ const Reason = () => {
           </div>
         </div>
         <div className="">
-          <h1 className="text-[44px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
+          <h1 className="text-[42px] lg:text-[70px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
             Problem solver.
             <br />
             Industry evolver.
@@ -295,10 +295,10 @@ const Reason = () => {
               <div className="text-[18px] font-medium lg:mb-[150px]">
                 Visibility into the entire cannabis supply chain from
                 <br />
-                <span className="bg-linear bg-clip-text text-transparent text-[45px] lg:text-[64px] italic">seed to soul.</span>
+                <span className="bg-linear bg-clip-text text-transparent text-[45px] lg:text-[54px] italic">seed to soul.</span>
               </div>
               <div className="font-medium text-[16px] lg:pl-[40px]">
-                <p className="text-[28px] mb-[30px]">Blockchain powered telematic logistic solutions</p>
+                <p className="lg:text-[28px] text-[19px] mb-[30px]">Blockchain powered telematic logistic solutions</p>
                 <ul className="list-disc lg:pl-[30px]">
                   <li>Commercial fleet and delivery tracking.</li>
                   <li>Immutable lab results, compliance reporting.</li>
@@ -309,14 +309,14 @@ const Reason = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-[1100px] h-[50px] border-b-[1px] my-[100px] border-secondary-graylight"></div>
+          <div className="mx-auto w-[1100px]  lg:h-[50px] border-b-[1px] my-10 lg:my-[100px] border-secondary-graylight"></div>
         </div>
         <Reason2 />
         <div className="py-10 lg:py-[100px]">
           <h2 className="text-[32px] font-semibold leading-none lg:px-[156px] text-center mb-[60px]">
             Reason #3 – Exit strategy and exit opportunities.
           </h2>
-          <div className="lg:px-[72px] mb-[150px] text-[24px] font-semibold">
+          <div className="lg:px-[72px] mb-[150px] lg:text-[28px] text-[19px] font-semibold">
             Our aim in approximately two years is to have an annual recurring revenue(ARR) of a minimum of $5 million and a valuation of approximately $45-$50 million, giving Budding Technologies, Inc. the ability to go to market either via a private or public offering, or acquisition.
             <br /><br />
             <ul className="list-disc pl-[40px] md:pl-[70px] lg:pl-[100px]">
@@ -367,10 +367,10 @@ const Reason = () => {
               src="/team/Dr Uma Image.png"
               alt="team"
               width={632}
-              height={488}
+              height={470}
             />
           </div>
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 lg:text-[28px] text-[19px]">
             <div>
               Our patent-pending product matching feature is on the cutting edge of scientific research.  The AI driven algorithm is improving everyday with the help of one of Budbo&apos;s key members, Dr. Uma Dhanablan.
               <br /><br />

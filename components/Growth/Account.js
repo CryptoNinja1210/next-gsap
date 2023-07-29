@@ -42,7 +42,6 @@ export default function Acount() {
 
   useEffect(() => {
 
-    
   const countUp = (index) => {
 
     const paramList = [
@@ -81,7 +80,6 @@ export default function Acount() {
     const scrollTrigger = ScrollTrigger.create({
       trigger: parameterRef.current[index],
       start: "bottom bottom",
-      // endTrigger: parameterRef.current[index + 1],
       end: "center center",
       scrub: 0,
       onUpdate: (self) => {
