@@ -90,10 +90,14 @@ export default function Budbo() {
           translateY: -textCarouselRef1.current.clientHeight - textCarouselRef2.current.clientHeight,
           duration: 1
         },
-        "<+=1"
+        "<+=2"
       )
-      .to(
+      .fromTo(
         textCarouselRef3.current,
+        {
+          opacity: 0,
+          translateY: -textCarouselRef1.current.clientHeight0
+        },
         {
           opacity: 1,
           translateY: -textCarouselRef1.current.clientHeight - textCarouselRef2.current.clientHeight,
