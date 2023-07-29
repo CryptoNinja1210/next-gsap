@@ -13,7 +13,7 @@ export default function BlurImage({ src, alt, width, height, className }) {
       height={height}
       // objectFit="cover"
       className={`
-          duration-700 ease-in-out group-hover:opacity-75 ovverflow-hidden
+          duration-700 ease-in-out group-hover:opacity-75 overflow-hidden
           ${className}
           ${
             isLoading
