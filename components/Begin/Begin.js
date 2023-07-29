@@ -232,45 +232,49 @@ const Begin = ({  }) => {
 
 	return (
 		<div ref={wrapperRef} className={`text-[${1.5*window.innerWidth/1508 + 1644/1508}rem] bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-between items-end gap-[50px] overflow-hidden`}>
-			<div ref={leftPhone} id="left-phone" className="relative left-[-35%] lg:left-0 lg:bottom-0 bottom-[40%] flex flex-col text-right gap-5 scale-125 translate-x-20 translate-y-10">
-				<span ref={topleftText} className="translate-x-10 md:translate-x-0 pr-5 whitespace-nowrap">
+			<div ref={leftPhone} id="left-phone" className="relative left-[-55%] lg:left-0 lg:bottom-0 bottom-[30%] flex flex-col text-right gap-5 scale-125 translate-x-20 translate-y-10">
+				<span ref={topleftText} className="text-3xl lg:text-5xl translate-x-10 md:translate-x-0 pr-5 whitespace-nowrap">
 					Recession-proof
 				</span>
-				<BlurImage
-					// src="/begin/cart_5.png"
-					src="/begin/left_1.png"
-					alt="Left_phone"
-					className="object-contain z-40"
-					// width={512}
-					// height={687}
-					width={768}
-					height={636}
-				/>
-				<span ref={leftsideText} className="z-30 absolute lg:right-9 right-[-16px] top-[158px] lg:top-[138px] whitespace-nowrap">
+				<div className="lg:w-full lg:h-full  w-[300px] h-[250px]">
+					<BlurImage
+						// src="/begin/cart_5.png"
+						src="/begin/left_1.png"
+						alt="Left_phone"
+						className="object-contain z-40"
+						// width={512}
+						// height={687}
+						width={768}
+						height={636}
+					/>
+				</div>
+				<span ref={leftsideText} className="z-30 absolute lg:right-9 right-[10%] top-[210px] lg:top-[138px] whitespace-nowrap text-4xl lg:text-5xl">
 					Let&apos;s begin
 				</span>
 			</div>
-			<div ref={middlesideText} className="text-2xl md:text-3xl lg:text-5xl absolute bottom-[50%] lg:bottom-[20%] right-[40%]">
-				<span>together</span>
+			<div ref={middlesideText} className="absolute bottom-[60%] lg:bottom-[20%] right-[30%] lg:right-[40%]">
+				<span className="text-5xl">together</span>
 			</div>
-			<p ref={middleExitText} className="absolute w-full h-full z-50 pt-[20%] flex justify-center items-center whitespace-nowrap text-2xl md:text-3xl lg:text-5xl">
+			<p ref={middleExitText} className="absolute translate-y-[80px] w-full h-full z-50 pt-[20%] flex justify-center items-center whitespace-nowrap text-4xl lg:text-5xl">
 				Public exit experience
 			</p>
-			<div ref={rightPhone} id="right-phone" className="relative lg:right-0 right-[-17%] bottom-[40%] lg:bottom-[-20%] flex flex-col text-left gap-5" style={{ transform: "translateY(35%)" }}>
-				<span ref={toprightText} className="pl-5 whitespace-nowrap ">
+			<div ref={rightPhone} id="right-phone" className="relative lg:right-0 right-[37%] bottom-[30%] lg:bottom-[40%] flex flex-col text-left gap-5" style={{ transform: "translateY(35%)" }}>
+				<span ref={toprightText} className="pl-5 whitespace-nowrap text-4xl lg:text-5xl">
 					your portfolio
 				</span>
-				<BlurImage
-					// src="/begin/puff_6.png"
-					src="/begin/right_1.png"
-					alt="Right_phone"
-					className="object-contain z-40"
-					// width={380}
-					// height={510}
-					width={792}
-					height={844}
-				/>
-				<span ref={rightsideText} className="z-30 absolute lg:left-9 top-[138px] whitespace-nowrap">
+				<div className="lg:w-full lg:-full w-[380px] h-[400px]">
+					<BlurImage
+						// src="/begin/puff_6.png"
+						src="/begin/right_1.png"
+						alt="Right_phone"
+						className="object-contain z-40"
+						// width={380}
+						// height={510}
+						width={792}
+						height={844}
+					/>
+				</div>
+				<span ref={rightsideText} className=" text-5xl z-30 absolute lg:left-9 left-[20%] top-[210px] lg:top-[138px] whitespace-nowrap">
 					your adventure
 				</span>
 			</div>
