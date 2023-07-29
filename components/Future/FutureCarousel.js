@@ -84,11 +84,11 @@ const FutureCarousel = () => {
   }
 
   return (
-    <div ref={containerRef} id="future" className="bg-black dark:bg-black text-white p-5 pb-[200px] text-center font-sysui h-[100vh] flex flex-col w-[100vw] overflow-hidden">
-      <h1 className="text-[38px] lg:text-[88px] text-center font-semibold my-auto">
+    <div  ref={containerRef}  className="relative bg-black dark:bg-black text-white p-5 py-[200px] text-center font-sysui h-[100vh] flex flex-col w-[100vw]  ">
+      <h1 className="text-[38px] lg:text-[88px] text-center font-semibold">
         Your future awaits...
       </h1>
-      <div ref={imagesRef} className="flex flex-nowrap w-[800%] lg:w-[200%] items-stretch">
+      <div ref={imagesRef} className="flex flex-nowrap lg:mt-[100px] lg:py-0 l py-[30%] w-[800%] lg:w-[400%] items-stretch">
         {IMAGES.map((x, i) => (
           <div key={"carousel_" + x.id}>
             <BlurImage

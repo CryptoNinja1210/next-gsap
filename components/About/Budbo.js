@@ -52,7 +52,7 @@ export default function Budbo() {
 
   const textCarousel = () => {
     const textCarouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-    const percent = window.innerWidth >= 1000 ? "250%" : "500%";
+    const percent = window.innerWidth >= 1000 ? "200%" : "500%";
     textCarouselTimeline
       .to(
         textCarouselRef.current,
@@ -90,7 +90,7 @@ export default function Budbo() {
 
   return (
     <div ref={wrapperRef} className="w-[100vw] h-[100vh] overflow-hidden flexx flex-col text-center font-sysui pt-24">
-      <div ref={weAreRef} className="text-[40px] lg:text-[60px]">
+      <div ref={weAreRef} className="text-[40px] lg:text-[60px] lg:mt-2 mt-[33%]">
         <span>
           We are
         </span>&nbsp;
@@ -100,9 +100,9 @@ export default function Budbo() {
       </div>
       <div className="h-[20px] md:h-[30px] lg:h-[45px] overflow-y-hidden">
         <div ref={textCarouselRef} className="flex flex-col">
-          <p className="text-[16px] md:text-[24px] lg:text-[30px]">...and we’ve been expecting you! Join the Revolution, invest today!</p>
-          <p className="text-[16px] md:text-[24px] lg:text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
-          <p className="text-[16px] md:text-[24px] lg:text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
+          <p className="text-[16px] md:text-[24px] lg:text-[30px]">...and we&apos;ve been expecting you! Join the Revolution, invest today!</p>
+          <p className="text-[16px] md:text-[24px] lg:text-[30px]">‘Tinder&apos; for buying cannabis? Yea, we did that.</p>
+          <p className="text-[16px] md:text-[24px] lg:text-[30px]">We&apos;ve been expecting you! Join the Revolution, invest today!</p>
         </div>
       </div>
       <div className="flex flex-col k lg:gap-[108px] gap-4 mt-10">

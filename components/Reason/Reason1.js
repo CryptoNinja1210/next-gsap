@@ -128,13 +128,13 @@ const Reason = () => {
         <p className="max-w-[862px] text-[24px] font-medium">
           We are innovative, stubborn, and find purpose only within the pursuit of our goals. The Budbo suite of cannabis products has outpaced the future with curiosity, sleek user experiences, and an exceptional token reward system.
           <br /><br />
-          It’s time to begin your adventure, invest in Budbo today.
+          It&apos;s time to begin your adventure, invest in Budbo today.
         </p>
       </div>
       <div className="mx-auto w-[1100px] h-[90px] border-b-[1px] my-[38px] border-secondary-graylight"></div>
       <div>
         <div className="text-[32px] lg:text-[64px] font-semibold leading-none lg:mx-[80px] my-[40px] r">
-          <span>Let’s talk</span>&nbsp;
+          <span>Let&apos;s talk</span>&nbsp;
           <span className=" text-[50px] lg:px-[34px] lg:text-[128px] text-transparent bg-linear bg-clip-text">Reasons</span>&nbsp;
           <span>to invest</span>
         </div>
@@ -148,14 +148,14 @@ const Reason = () => {
                 Your future.<br />
                 Your money.<br />
                 Your adventure.<br />
-                You’re Budbo.<br />
+                You&apos;re Budbo.<br />
               </p>
               <p className="text-[18px] lg:text-center lg:w-[369px]">
-                When you invest in Budbo, you’re investing in a company poised for endless scalability and explosive revenue growth potential.
+                When you invest in Budbo, you&apos;re investing in a company poised for endless scalability and explosive revenue growth potential.
                 <br /><br />
                 Budbo is far more than just an app.
                 <br />
-                It’s the first step of your new journey.
+                It&apos;s the first step of your new journey.
               </p>
             </div>
             <div className="w-full h-max flex  justify-center items-start">
@@ -189,7 +189,7 @@ const Reason = () => {
           </div>
         </div>
         <div ref={superChargeRef} className=" w-full h-[100vh] flex flex-col gap-5">
-          <h1 ref={superChargeTextRef} className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
+          <h1 ref={superChargeTextRef} className="text-[27px] md:text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
             Supercharge your portfolio.
           </h1>
           <div className="absolute translate-y-20">
@@ -224,7 +224,7 @@ const Reason = () => {
           </div>
         </div>
         <div className="pt-[200px]">
-          <h1 className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
+          <h1 className="text-[34px] md:text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
             Business intelligence.
           </h1>
           <div className="text-[#97979A] text-[24px] font-medium lg:text-center py-[5px]">
@@ -243,7 +243,7 @@ const Reason = () => {
                   className="w-[700px] lg:w-[1178px]"
                 />
               </div>
-              <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[100px] lg:w-[212px]">
+              <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[80px] lg:w-[212px]">
                 <BlurImage
                   src="/reason/connectphone 1.png"
                   alt="connectphone"
@@ -282,7 +282,7 @@ const Reason = () => {
                   height={520}
                 />
               </div>
-              <div className="absolute lg:translate-x-[-140px] w-[80px] lg:w-[163px] translate-y-[15px]">
+              <div className="absolute lg:translate-x-[-140px] w-[70px] lg:w-[163px] translate-y-[15px]">
                 <BlurImage
                   src="/reason/traxchain 1.png"
                   alt="traxchain"
@@ -357,7 +357,7 @@ const Reason = () => {
         <Team />
       </div>
       <div className="lg:p-[12px]">
-        <div className="w-full lg:text-[64px] text-[40px] font-semibold my-[24px]">
+        <div className="w-full lg:text-[64px] text-[28px] font-semibold my-[24px]">
           <span>Team member</span>
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">SPOTLIGHT</span>
@@ -373,12 +373,12 @@ const Reason = () => {
           </div>
           <div className="lg:w-1/2">
             <div>
-              Our patent-pending product matching feature is on the cutting edge of scientific research.  The AI driven algorithm is improving everyday with the help of one of Budbo’s key members, Dr. Uma Dhanablan.
+              Our patent-pending product matching feature is on the cutting edge of scientific research.  The AI driven algorithm is improving everyday with the help of one of Budbo&apos;s key members, Dr. Uma Dhanablan.
               <br /><br />
               <ul className="list-disc pl-[36px]">
                 <li>Dr. Dhanabalan is a highly respected and educated physician and known to most as Dr Uma. She completed her Bachelor of Arts degree with High Honors from Rutgers University and her Medical Degree from the University of Medicine & Dentistry in Newark, New Jersey. </li>
                 <br />
-                <li>She completed her Family Practice Residency at the Medical University of South Carolina, in Charleston, South Carolina. She has her Master’s in Public Health and completed her Occupational & Environmental Medicine Residency and Fellowship in Heavy Metals at the Harvard School of Public Health in Boston, Massachusetts. She is a Fellow of the American Academy of Family Physicians.</li>
+                <li>She completed her Family Practice Residency at the Medical University of South Carolina, in Charleston, South Carolina. She has her Master&apos;s in Public Health and completed her Occupational & Environmental Medicine Residency and Fellowship in Heavy Metals at the Harvard School of Public Health in Boston, Massachusetts. She is a Fellow of the American Academy of Family Physicians.</li>
                 <br />
                 <li>She is a Diplomat in Cannabinoid Medicine Certified by the American Academy of Cannabinoid Medicine, and a Medical Review Officer Certified by  Medical Review Officer Certification Council. </li>
               </ul>

@@ -96,7 +96,7 @@ const WeTop = () => {
         <p className="text-[25px] md:text-[30px] lg:text-[40px]">Rewards ecosystem to give back and incentivize our users</p>
       </div>
       <div className="w-full flex my-auto justify-center items-baseline">
-        <div ref={leftPhone} className="z-40 w-[80px] md:w-[110px] lg:w-[158px] h-[358px]">
+        <div ref={leftPhone} className="z-40 w-0  lg:w-[158px] lg:h-[358px]">
           <BlurImage
             src="/about/leaderboard 2.png"
             alt="left phone - leaderboard"
@@ -112,7 +112,7 @@ const WeTop = () => {
             height={487}
           />
         </div>
-        <div ref={rightPhone} className="z-40  w-[80px] md:w-[110px] lg:w-[158px] h-[358px]">
+        <div ref={rightPhone} className="z-40 w-0  lg:w-[158px] lg:h-[358px]">
           <BlurImage
             src="/about/driver2 2.png"
             alt="right phone - driver2"

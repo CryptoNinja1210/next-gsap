@@ -138,7 +138,7 @@ const Shows = () => {
           height={488}
         />
       </div>
-      <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[964px] left-[65%] ">
+      <div ref={(ref) => (fadingImgRef.current[4] = ref)} className="absolute top-[964px] left-[70%] lg:left-[65%] ">
         <BlurImage
           src="/about/map 4.png"
           alt="phone2"
@@ -154,7 +154,7 @@ const Shows = () => {
           height={488}
         />
       </div>
-      <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="lg:w-[354px] w-[230px] absolute top-[1570px] right-[70%] lg:right-[12%] ">
+      <div ref={(ref) => (fadingImgRef.current[6] = ref)} className="lg:w-[354px] w-[230px] absolute top-[1570px] right-[10%] lg:right-[12%] ">
         <BlurImage
           src="/about/Heat Zone.png"
           alt="heat zone"

@@ -38,8 +38,8 @@ const Header = () => {
       (roles.getBoundingClientRect().top < 0) &&(we.getBoundingClientRect().top > 0 ) && setTheme('dark');
       (we.getBoundingClientRect().top < 0 ) && (reason.getBoundingClientRect().top > 0) && setTheme('light');
       (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
-      (investor.getBoundingClientRect().top < 0) && (future.getBoundingClientRect().top > 0) && setTheme('light');
-      (future.getBoundingClientRect().top < 0) && setTheme('dark');
+      (investor.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().bottom > 0) && setTheme('light');
+      (investor.getBoundingClientRect().bottom <= 0) && setTheme('dark');
 
       // (roles.getBoundingClientRect().top < 0 && we.getBoundingClientRect().top < 0 && )
 
@@ -153,6 +153,9 @@ const Header = () => {
             </button>
             <p className="hidden xl:flex text-primary-graydark text-[16px] font-medium">0.00 USD</p>
           </div>
+
+        {/* phone header/ */}
+
           <button onClick={() => setMobileMenuOpen(true)}
             className="h-[48px] w-[48px] ml-[-20px] flex md:hidden justify-center items-center rounded-full text-black transition-all">
             <Icon icon="tabler:menu-deep" color="black" width="36" height="36" />
@@ -218,7 +221,12 @@ const Header = () => {
                       </div>
                     </div>
                     <div>
-                      <span className="font-bold"></span>
+                      <p className="font-bold font-Gilroy my-5  text-center">380 W 62nd Ave, Denver, CO</p>
+                    </div>
+                    <div>
+                    <button className="flex justify-center mx-auto my-5 py-[9px] px-[15px] dark:bg-gray-dark-2 bg-white border-[1px] text-primary-graydark border-secondary-graylight rounded-[8px] text-xs font-sysui font-bold leading-4">
+                      CHANGE LOCATION
+                    </button>
                     </div>
                   </div>
                 </div>

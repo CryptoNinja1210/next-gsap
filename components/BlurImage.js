@@ -13,11 +13,11 @@ export default function BlurImage({ src, alt, width, height, className }) {
       height={height}
       // objectFit="cover"
       className={`
-          duration-700 ease-in-out group-hover:opacity-75 ovverflow-hidden
+          duration-700 ease-in-out group-hover:opacity-75 overflow-hidden
           ${className}
           ${
             isLoading
-              ? "scale-110 blur-2xl grayscale"
+              ? "scale-110 blur-2xl grayscale rounded-2xl"
               : "scale-100 blur-0 grayscale-0"
           })`}
       onLoadingComplete={() => setLoading(false)}
