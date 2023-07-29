@@ -256,7 +256,7 @@ const Begin = ({  }) => {
 			<p ref={middleExitText} className="absolute w-full h-full z-50 pt-[20%] flex justify-center items-center whitespace-nowrap text-2xl md:text-3xl lg:text-5xl">
 				Public exit experience
 			</p>
-			<div ref={rightPhone} id="right-phone" className="relative lg:right-0 right-[-17%] bottom-[40%] lg:bottom-0  flex flex-col text-left gap-5" style={{ transform: "translateY(35%)" }}>
+			<div ref={rightPhone} id="right-phone" className="relative lg:right-0 right-[-17%] bottom-[40%] lg:bottom-[-20%] flex flex-col text-left gap-5" style={{ transform: "translateY(35%)" }}>
 				<span ref={toprightText} className="pl-5 whitespace-nowrap ">
 					your portfolio
 				</span>
