@@ -75,9 +75,9 @@ html {
   color: #fff;
 }
 
-.section-container {
-  @apply 2xl:container xl:px-20 md:px-12 px-4 mx-auto;
-}
+// .section-container {
+//   @apply 2xl:container xl:px-20 md:px-12 px-4 mx-auto;
+// }
 
 a,
 input[type="checkbox"] {
@@ -264,7 +264,7 @@ input[type="checkbox"] {
               #7000ff 100%
             );
             background-size: 200% 100%;
-            -webkit-background-clip: text;
+            // -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
             &:hover {
@@ -285,7 +285,7 @@ input[type="checkbox"] {
     transform-origin: left;
     will-change: transform;
     transform: scaleX(0);
-    @apply w-full bg-white;
+    // @apply w-full bg-white;
   }
 }
 
@@ -295,7 +295,7 @@ input[type="checkbox"] {
     theme("colors.indigo.light"),
     theme("colors.indigo.dark")
   );
-  -webkit-background-clip: text;
+  // -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -827,8 +827,4 @@ $bg: #f4faff;
 
 #mouth-frown{
   visibility: hidden;
-}
-
-.font-passion {
-  font-family: 'Passion One', cursive;
 }

@@ -16,9 +16,6 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	const middlesideText = useRef(null);
 	const middleExitText = useRef(null);
 
-	
-
-
 	useEffect(() => {
 
 		const revealLeftsideTextTranslate = window.innerWidth > 1200 ? {
@@ -189,7 +186,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			revealsideTextScrollTrigger && revealsideTextScrollTrigger.kill();
 			revealsideTextTimeline && revealsideTextTimeline.progress(1);
 		}
-	}, [fontSize_big]);
+	});
 
 	const fontSize_big = `${1.5*window.innerWidth/1508 + 1644/1508}rem`
 
@@ -223,8 +220,6 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		return [revealPhone, scrollTrigger];
 	}
 
-	
-
 	const stopPhone = () => {
 		const stopPhone = gsap.timeline({
 			defaults: { ease: Linear.easeNone },
@@ -255,11 +250,6 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		});
 		return [stopPhone, scrollTrigger];
 	}
-
-	
-
-	
-	
 
 	return (
 		<div ref={wrapperRef} className={`text-[${1.5*window.innerWidth/1508 + 1644/1508}rem] bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden`}>

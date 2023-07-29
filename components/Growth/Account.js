@@ -137,7 +137,7 @@ export default function Acount() {
       fadeOutParameterScrollTrigger4 && fadeOutParameterScrollTrigger4.kill();
       fadeOutParameterTimeline4 && fadeOutParameterTimeline4.progress(1);
     }
-  },[])
+  })
 
   const fadeOutParameter = (index) => {
     const fadeOutParameterTimeline = gsap.timeline({
