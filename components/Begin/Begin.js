@@ -37,7 +37,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		}
 	}, [wrapperRef]);
 
-	const fontSize_big = window.innerWidth > 1200 ? 48 : 24;
+	const fontSize_big = `${1.5*window.innerWidth/1508 + 1644/1508}rem`
 
 	const getRevealSt = () => {
 		const revealPhone = gsap.timeline({ defaults: { ease: Linear.easeNone } });
@@ -74,13 +74,15 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			defaults: { ease: Linear.easeNone },
 		});
 		topText
-			.from(
+			.fromTo(
 				topleftText.current,
-				{ fontSize: 0, height: 0, marginRight: 120, duration: 1, }
+				{ fontSize: 0, },
+				{ fontSize: fontSize_big, duration: 1, },
 			)
-			.from(
+			.fromTo(
 				toprightText.current,
-				{ fontSize: 0, height: 0, marginLeft: 50, duration: 1, },
+				{ fontSize: 0, },
+				{ fontSize: fontSize_big, duration: 1, },
 				"<"
 			);
 		const scrollTrigger = ScrollTrigger.create({
@@ -200,14 +202,14 @@ const Begin = ({ isDesktop, clientHeight }) => {
 			)
 			.fromTo(
 				middlesideText.current,
-				{ fontSize: 20, opacity: 0, width: 0, },
+				{ fontSize: fontSize_big / 2, opacity: 0, width: 0, },
 				{ fontSize: fontSize_big, opacity: 1, width: 300, duration: 0.5, },
 				"<+=0.5"
 			)
 			.fromTo(
 				middlesideText.current,
 				{ fontSize: fontSize_big, },
-				{ fontSize: 20, opacity: 0, width: 0, y: 0, duration: 1.5, },
+				{ fontSize: fontSize_big / 2, opacity: 0, width: 0, y: 0, duration: 1.5, },
 				"<+=1"
 			)
 			.to(
@@ -249,10 +251,10 @@ const Begin = ({ isDesktop, clientHeight }) => {
 	}
 
 	return (
-		<div ref={wrapperRef} className="text-2xl md:text-3xl lg:text-5xl bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden">
+		<div ref={wrapperRef} className={`text-[${1.5*window.innerWidth/1508 + 1644/1508}rem] bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden`}>
 			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
 				<span ref={topleftText} className=" pr-5 whitespace-nowrap">
-					Recession-proof
+					Recession-proof	
 				</span>
 				<BlurImage
 					src="/begin/cart_5.png"
