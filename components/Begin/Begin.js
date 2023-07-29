@@ -16,31 +16,42 @@ const Begin = ({  }) => {
 	const middleExitText = useRef(null);
 
 	useEffect(() => {
-		const [revealTimeline, revealScrollTrigger] = getRevealSt();
+		
+	const stopPhone = () => {
+		const scrollTrigger = ScrollTrigger.create({
+			trigger: wrapperRef.current,
+			start: "bottom bottom",
+			end: `350%`,
+			scrub: 0,
+			pin: true,
+		});
+		return scrollTrigger;
+	}
+
+		const [revealPhoneTimeline, revealScrollTrigger] = getRevealSt();
 		const [topTextTimeline, topTextScrollTrigger] = getTopText();
-		const [stopPhoneTimeline, stopPhoneScrollTrigger] = stopPhone();
+		const stopPhoneScrollTrigger = stopPhone();
 		const [hidingTopTextTimeline, hidingTopTextScrollTrigger] = hidingTop();
 		const [revealsideTextTimeline, revealsideTextScrollTrigger] = revealsideText();
 
 		return () => {
 			revealScrollTrigger && revealScrollTrigger.kill();
-			revealTimeline && revealTimeline.progress(1);
+			revealPhoneTimeline && revealPhoneTimeline.progress(1);
 			topTextScrollTrigger && topTextScrollTrigger.kill();
 			topTextTimeline && topTextTimeline.progress(1);
 			stopPhoneScrollTrigger && stopPhoneScrollTrigger.kill();
-			stopPhoneTimeline && stopPhoneTimeline.progress(1);
 			hidingTopTextScrollTrigger && hidingTopTextScrollTrigger.kill();
 			hidingTopTextTimeline && hidingTopTextTimeline.progress(1);
 			revealsideTextScrollTrigger && revealsideTextScrollTrigger.kill();
 			revealsideTextTimeline && revealsideTextTimeline.progress(1);
 		}
-	}, [wrapperRef]);
+	});
 
 	const fontSize_big = `${1.5*window.innerWidth/1508 + 1644/1508}rem`
 
 	const getRevealSt = () => {
-		const revealPhone = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-		revealPhone
+		const revealPhoneTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+		revealPhoneTimeline
 			.from(
 				leftPhone.current,
 				{
@@ -61,18 +72,18 @@ const Begin = ({  }) => {
 		const scrollTrigger = ScrollTrigger.create({
 			trigger: wrapperRef.current,
 			start: "top bottom",
-			end: "bottom bottom",
+			end: "top top",
 			scrub: 0,
-			animation: revealPhone,
+			animation: revealPhoneTimeline,
 		});
-		return [revealPhone, scrollTrigger];
+		return [revealPhoneTimeline, scrollTrigger];
 	}
 
 	const getTopText = () => {
-		const topText = gsap.timeline({
+		const topTextTimeline = gsap.timeline({
 			defaults: { ease: Linear.easeNone },
 		});
-		topText
+		topTextTimeline
 			.fromTo(
 				topleftText.current,
 				{ fontSize: 0, },
@@ -89,41 +100,11 @@ const Begin = ({  }) => {
 			start: "center bottom",
 			end: "bottom bottom",
 			scrub: 0,
-			animation: topText,
+			animation: topTextTimeline,
 		});
-		return [topText, scrollTrigger];
+		return [topTextTimeline, scrollTrigger];
 	}
 
-	const stopPhone = () => {
-		const stopPhone = gsap.timeline({
-			defaults: { ease: Linear.easeNone },
-		});
-		const leftPhoneY = window.innerHeight - leftPhone.current.clientHeight;
-		const rightPhoneY = window.innerHeight - rightPhone.current.clientHeight;
-		stopPhone
-			.to(
-				leftPhone.current.querySelector("Image"),
-				{
-					y: leftPhoneY
-				}
-			)
-			.to(
-				rightPhone.current.querySelector("Image"),
-				{
-					y: rightPhoneY
-				},
-				"<"
-			);
-		const scrollTrigger = ScrollTrigger.create({
-			trigger: wrapperRef.current,
-			start: "bottom bottom",
-			end: `350%`,
-			scrub: 0,
-			pin: true,
-			animation: stopPhone,
-		});
-		return [stopPhone, scrollTrigger];
-	}
 
 	const hidingTop = () => {
 		const hidingTopText = gsap.timeline({ defaults: { ease: Linear.easeNone } });
@@ -201,14 +182,14 @@ const Begin = ({  }) => {
 			)
 			.fromTo(
 				middlesideText.current,
-				{ fontSize: fontSize_big / 2, opacity: 0, width: 0, },
-				{ fontSize: fontSize_big, opacity: 1, width: 300, duration: 0.5, },
+				{ fontSize: fontSize_big / 2, opacity: 0, },
+				{ fontSize: fontSize_big, opacity: 1, duration: 0.5, },
 				"<+=0.5"
 			)
 			.fromTo(
 				middlesideText.current,
 				{ fontSize: fontSize_big, },
-				{ fontSize: fontSize_big / 2, opacity: 0, width: 0, y: 0, duration: 1.5, },
+				{ fontSize: fontSize_big / 2, opacity: 0, duration: 1.5, },
 				"<+=1"
 			)
 			.to(
@@ -250,38 +231,44 @@ const Begin = ({  }) => {
 	}
 
 	return (
-		<div ref={wrapperRef} className={`text-[${1.5*window.innerWidth/1508 + 1644/1508}rem] bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden`}>
-			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
+		<div ref={wrapperRef} className={`text-[${1.5*window.innerWidth/1508 + 1644/1508}rem] bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-between items-end gap-[50px] overflow-hidden`}>
+			<div ref={leftPhone} id="left-phone" className="relative flex flex-col text-right gap-5 scale-125 translate-x-20 translate-y-10">
 				<span ref={topleftText} className=" pr-5 whitespace-nowrap">
 					Recession-proof
 				</span>
 				<BlurImage
-					src="/begin/cart_5.png"
+					// src="/begin/cart_5.png"
+					src="/begin/left_1.png"
 					alt="Left_phone"
 					className="object-contain z-40"
-					width={512}
-					height={687}
+					// width={512}
+					// height={687}
+					width={768}
+					height={636}
 				/>
 				<span ref={leftsideText} className="z-30 absolute right-9 top-[138px] whitespace-nowrap">
 					Let&apos;s begin
 				</span>
 			</div>
-			<div ref={middlesideText} className="z-50 flex justify-center items-center align-middle mb-[150px] p-0 left-[-50px] whitespace-nowrap">
+			<div ref={middlesideText} className="text-2xl md:text-3xl lg:text-5xl">
 				<span>together</span>
 			</div>
-			<p ref={middleExitText} className="absolute w-full h-full flex z-50 pt-[20%] justify-center items-center  whitespace-nowrap text-2xl md:text-3xl lg:text-5xl">
+			<p ref={middleExitText} className="absolute w-full h-full z-50 pt-[20%] flex justify-center items-center whitespace-nowrap text-2xl md:text-3xl lg:text-5xl">
 				Public exit experience
 			</p>
-			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5">
+			<div ref={rightPhone} id="right-phone" className=" flex flex-col text-left gap-5" style={{ transform: "translateY(35%)" }}>
 				<span ref={toprightText} className="pl-5 whitespace-nowrap">
 					your portfolio
 				</span>
 				<BlurImage
-					src="/begin/puff_6.png"
+					// src="/begin/puff_6.png"
+					src="/begin/right_1.png"
 					alt="Right_phone"
 					className="object-contain z-40"
-					width={380}
-					height={510}
+					// width={380}
+					// height={510}
+					width={792}
+					height={844}
 				/>
 				<span ref={rightsideText} className="z-30 absolute left-9 top-[138px] whitespace-nowrap">
 					your adventure
