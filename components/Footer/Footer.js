@@ -3,7 +3,7 @@ import BlurImage from "../BlurImage";
 
 const Footer = () => {
   return (
-    <footer className="lg:px-[280px] px-16 font-sysui w-[100vw] py-5">
+    <footer className="lg:px-[280px] px-16 font-sysui w-[100vw] dark:text-black dark:bg-white py-5">
       <div className="h-[52px] border-b-[1px] border-secondary-graylight mb-[47px]"/>
       <div className="flex justify-start items-center gap-[10px] md:gap-[40px] mb-[40px]">
         <BlurImage

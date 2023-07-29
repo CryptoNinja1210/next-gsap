@@ -52,7 +52,7 @@ export default function Budbo() {
 
   const textCarousel = () => {
     const textCarouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-    const percent = window.innerWidth >= 1000 ? "250%" : "500%";
+    const percent = window.innerWidth >= 1000 ? "200%" : "500%";
     textCarouselTimeline
       .to(
         textCarouselRef.current,

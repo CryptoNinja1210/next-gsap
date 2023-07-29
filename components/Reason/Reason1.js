@@ -189,7 +189,7 @@ const Reason = () => {
           </div>
         </div>
         <div ref={superChargeRef} className=" w-full h-[100vh] flex flex-col gap-5">
-          <h1 ref={superChargeTextRef} className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
+          <h1 ref={superChargeTextRef} className="text-[27px] md:text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
             Supercharge your portfolio.
           </h1>
           <div className="absolute translate-y-20">
@@ -224,7 +224,7 @@ const Reason = () => {
           </div>
         </div>
         <div className="pt-[200px]">
-          <h1 className="text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
+          <h1 className="text-[34px] md:text-[60px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
             Business intelligence.
           </h1>
           <div className="text-[#97979A] text-[24px] font-medium lg:text-center py-[5px]">
@@ -357,7 +357,7 @@ const Reason = () => {
         <Team />
       </div>
       <div className="lg:p-[12px]">
-        <div className="w-full lg:text-[64px] text-[40px] font-semibold my-[24px]">
+        <div className="w-full lg:text-[64px] text-[28px] font-semibold my-[24px]">
           <span>Team member</span>
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">SPOTLIGHT</span>

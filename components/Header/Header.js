@@ -38,8 +38,8 @@ const Header = () => {
       (roles.getBoundingClientRect().top < 0) &&(we.getBoundingClientRect().top > 0 ) && setTheme('dark');
       (we.getBoundingClientRect().top < 0 ) && (reason.getBoundingClientRect().top > 0) && setTheme('light');
       (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
-      (investor.getBoundingClientRect().top < 0) && (future.getBoundingClientRect().top > 0) && setTheme('light');
-      (future.getBoundingClientRect().top < 0) && setTheme('dark');
+      (investor.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().bottom > 0) && setTheme('light');
+      (investor.getBoundingClientRect().bottom <= 0) && setTheme('dark');
 
       // (roles.getBoundingClientRect().top < 0 && we.getBoundingClientRect().top < 0 && )
 
