@@ -23,7 +23,7 @@ const members = [
 
 const Investors = () => {
   return (
-    <div id="investor" className="flex w-[100vw]">
+    <div id="investor" className="dark:bg-white text-black flex w-[100vw]">
       <div className="w-full m-auto px-4 font-sysui lg:px-[160px] lg:py-[70px] items-center">
         <div className="text-center font-semibold lg:text-[54px] text-[30px] my-[56px]">
           <span>Hear from some of our</span>
