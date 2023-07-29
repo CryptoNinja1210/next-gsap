@@ -69,12 +69,12 @@ const FutureCarousel = () => {
     const carouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     const carouselTextX = imagesRef.current.clientWidth - window.innerWidth
     carouselTimeline
-      .to(imagesRef.current, { x: -(carouselTextX + 90), duration: 1 });
+      .to(imagesRef.current, { x: -(carouselTextX ), duration: 1 });
 
     // const width = `${imagesRef.current.clientWidth / window.innerHeight}%`
     const scrollTrigger = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: "top top",
+      start: "bottom bottom",
       end: "200%",
       scrub: 0,
       pin: true,
@@ -84,7 +84,7 @@ const FutureCarousel = () => {
   }
 
   return (
-    <div ref={containerRef} id="future" className="bg-black dark:bg-black text-white p-5 pb-[200px] text-center font-sysui h-[100vh] flex flex-col w-full overflow-hidden">
+    <div ref={containerRef} id="future" className="bg-black dark:bg-black text-white p-5 pb-[200px] text-center font-sysui h-[100vh] flex flex-col w-[100vw] overflow-hidden">
       <h1 className="text-[38px] lg:text-[88px] text-center font-semibold my-auto">
         Your future awaits...
       </h1>

@@ -18,6 +18,9 @@ const Reason = () => {
 
   useEffect(() => {
     const [revealBookTimeline0, revealBookScrollTrigger0] = revealBook(0);
+    const [revealBookTimeline1, revealBookScrollTrigger1] = revealBook(1);
+    const [revealBookTimeline2, revealBookScrollTrigger2] = revealBook(2);
+    const [revealBookTimeline3, revealBookScrollTrigger3] = revealBook(3);
     const [revealSuperImgTimeline, revealSuperImgScrollTrigger] = revealSuperCharge();
 
     return () => {
@@ -25,6 +28,12 @@ const Reason = () => {
       revealBookTimeline0 && revealBookTimeline0.progress(1);
       revealSuperImgScrollTrigger && revealSuperImgScrollTrigger.kill();
       revealSuperImgTimeline && revealSuperImgTimeline.progress(1);
+      revealBookScrollTrigger1 && revealBookScrollTrigger1.kill();
+      revealBookTimeline1 && revealBookTimeline1.progress(1);
+      revealBookScrollTrigger2 && revealBookScrollTrigger2.kill();
+      revealBookTimeline2 && revealBookTimeline2.progress(1);
+      revealBookScrollTrigger3 && revealBookScrollTrigger3.kill();
+      revealBookTimeline3 && revealBookTimeline3.progress(1);
     }
   })
 
@@ -225,13 +234,15 @@ const Reason = () => {
           </div>
           <div className="lg:flex justify-center items-start my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
-              <BlurImage
-                src="/reason/connectbook5 1.png"
-                alt="connectbook"
-                width={1178}
-                height={564}
-                className="w-[700px] lg:w-[1178px]"
-              />
+              <div ref={(ref) => (bookRef.current[2] = ref)}>
+                <BlurImage
+                  src="/reason/connectbook5 1.png"
+                  alt="connectbook"
+                  width={1178}
+                  height={564}
+                  className="w-[700px] lg:w-[1178px]"
+                />
+              </div>
               <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[100px] lg:w-[212px]">
                 <BlurImage
                   src="/reason/connectphone 1.png"
@@ -263,7 +274,7 @@ const Reason = () => {
           </h1>
           <div className="lg:flex justify-center items-end my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
-              <div className="w-[543px] lg:w-[1085px]">
+              <div ref={(ref) => (bookRef.current[3] = ref)} className="w-[543px] lg:w-[1085px]">
                 <BlurImage
                   src="/reason/traxbook 1.png"
                   alt="traxbook"
@@ -351,8 +362,8 @@ const Reason = () => {
           &nbsp;
           <span className="bg-linear bg-clip-text text-transparent">SPOTLIGHT</span>
         </div>
-        <div className="lg:flex flex-row-reverse  justify-center items-center gap-[60px]">
-          <div className="lg:w-1/2">
+        <div className="lg:flex flex-row-reverse justify-center items-center gap-[60px]">
+          <div className="lg:w-1/2 p-auto m-auto">
             <BlurImage
               src="/team/Dr Uma Image.png"
               alt="team"
