@@ -75,14 +75,6 @@ const Logo = () => {
           duration: 5,
         }
       )
-      .to(
-        logoRef.current,
-        {
-          width: 250,
-          duration: 3,
-        },
-        11
-      )
       .fromTo(
         logoTextRef.current,
         {
@@ -94,7 +86,7 @@ const Logo = () => {
           translateY: 300,
           duration: 3,
         },
-        "<"
+        11
       );
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
@@ -205,7 +197,7 @@ const Logo = () => {
             className="m-auto"
           />
         </div>
-        <div ref={logoTextRef} id="logo-text" className="absolute mx-auto  mb-[120px]">
+        <div ref={logoTextRef} id="logo-text" className="absolute mx-auto mb-[120px] w-[200px] md:w-[400px] ">
           <BlurImage
             src="/logo_txt_only.svg"
             alt="Purple "
