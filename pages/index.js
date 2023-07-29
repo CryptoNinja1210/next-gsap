@@ -57,7 +57,7 @@ export default function Home() {
         {isLoading ? (
           <Loader />
         ) : (
-          <div className="w-screen overflow-hidden min-w-[400px]">
+          <div className="w-screen overflow-hidden">
             <Header />
             <ProgressIndicator />
             {/* <Cursor isDesktop={isDesktop} /> */}

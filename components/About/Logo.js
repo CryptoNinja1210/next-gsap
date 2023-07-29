@@ -187,34 +187,37 @@ const Logo = () => {
 
   return (
     <div ref={wrapperRef} className="text-center relative h-[100vh] w-[100vw] flex flex-col justify-center items-center">
-      <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px] h-[209px]">
-        <BlurImage
-          src="/logo.svg"
-          alt="Logo"
-          width={560}
-          height={585}
-          className="m-auto"
-        />
-      </div>
-      <div ref={logoTextRef} id="logo-text" className="absolute mx-auto  mb-[120px]">
-        <BlurImage
-          src="/logo_txt_only.svg"
-          alt="Purple "
-          width={476}
-          height={200}
-          className="m-auto"
-        />
-      </div>
-      {[...Array(8)].map((_, index) => (
-        <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className="z-40 inset-0 absolute ">
+      <div className="relative w-full h-[60vh] md:h-[80vh] lg:h-[100vh] flex flex-col justify-center items-center">
+        <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px] h-[209px]">
           <BlurImage
-            src="/screenshot/map 3.png"
-            alt="Logo Phone"
-            width={200}
-            height={405}
+            src="/logo.svg"
+            alt="Logo"
+            width={560}
+            height={585}
+            className="m-auto"
           />
         </div>
-      ))}
+        <div ref={logoTextRef} id="logo-text" className="absolute mx-auto  mb-[120px]">
+          <BlurImage
+            src="/logo_txt_only.svg"
+            alt="Purple "
+            width={476}
+            height={200}
+            className="m-auto"
+          />
+        </div>
+        {[...Array(8)].map((_, index) => (
+          <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className="z-40 inset-0 absolute">
+            <BlurImage
+              src="/screenshot/map 3.png"
+              alt="Logo Phone"
+              width={201}
+              height={405}
+              className="w-[100px] lg:w-[201px]"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   )
 };

@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/icon.png" />
           <meta name="theme-color" content="#7000FF" />
           <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true}></link>
           <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet"></link>
           {/* <script src="https://cdn.tailwindcss.com"></script> */}
         </Head>
