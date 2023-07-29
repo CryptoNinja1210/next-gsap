@@ -49,8 +49,8 @@ const Token = () => {
     return [tokenTimeline, scrollTrigger];
   }
   return (
-    <div ref={wrapperRef} className="h-[100vh] w-[100vw] flex justify-center items-center">
-      <div ref={imgRef} className="pointer-events-none w-[404px] h-[404px]">
+    <div ref={wrapperRef} className="h-[50vh] w-[100vw] flex justify-center items-center">
+      <div ref={imgRef} className="pointer-events-none lg:w-[404px] w-[204px] h-[404px]">
         <BlurImage
           src="/about/token.png"
           alt="budbo token"

@@ -128,7 +128,7 @@ const We = () => {
               height={480}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8570px] lg:top-[8700px] left-[23px] lg:left-[340px] pointer-events-none -z-1">
+          <div ref={(ref) => (fadingImgRef.current[0] = ref)} className="absolute top-[8570px] lg:top-[8300px] left-[23px] lg:left-[340px] pointer-events-none -z-1">
             <BlurImage
               src="/about/summary.png"
               alt="summary"
@@ -136,7 +136,7 @@ const We = () => {
               height={816}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[1] = ref)}  className="w-[860px] lg:w-[1440px] absolute top-[8900px] left-[200px] lg:right-[-400px] hover:right-[-10px] transition-all duration-1000">
+          <div ref={(ref) => (fadingImgRef.current[1] = ref)}  className="w-[860px] lg:w-[1440px] absolute top-[8900px] left-[200px] lg:right-[-300px] hover:right-[-10px] transition-all duration-1000">
             <BlurImage
               src="/about/reatiler.png"
               alt="reatiler list"
@@ -168,7 +168,7 @@ const We = () => {
               height={1050}
             />
           </div>
-          <div ref={(ref) => (bookRef.current[1] = ref)} className="absolute lg:top-[9800px] top-[9400px] left-[-26px] pointer-events-none -z-1">
+          <div ref={(ref) => (bookRef.current[1] = ref)} className="absolute lg:top-[9600px] top-[9400px] left-[-26px] pointer-events-none -z-1">
             <BlurImage
               src="/about/retailer.png"
               alt="retailer"
@@ -184,7 +184,7 @@ const We = () => {
               height={403}
             />
           </div>
-          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-full lg:w-[1200px] absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
+          <div ref={(ref) => (fadingImgRef.current[6] = ref)} className=" w-[400px] lg:w-[1200px] absolute  lg:top-[10535px] top-[9900px] left-1/2 -translate-x-1/2 -z-1">
             <BlurImage
               src="/about/checkout.gif"
               alt="checkout"

@@ -190,7 +190,7 @@ const  	We1 = () => {
 						height={160}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[12] = ref)} className="absolute top-[130px] lg:top-[1310px] left-[23%] pointer-events-none -z-1">
+				<div ref={(ref) => (fadingImgRef.current[12] = ref)} className="absolute top-[430px] lg:top-[1310px] left-[23%] pointer-events-none -z-1">
 					<BlurImage
 						src="/about/coins/eth-coin.png"
 						alt="bitcoin"
@@ -198,7 +198,7 @@ const  	We1 = () => {
 						height={152}
 					/>
 				</div>
-				<div ref={(ref) => (fadingImgRef.current[13] = ref)} className="absolute top-[1520px] right-[770px] pointer-events-none -z-1">
+				<div ref={(ref) => (fadingImgRef.current[13] = ref)} className="absolute top-[430px] lg:top-[1520px] right-[770px] pointer-events-none -z-1">
 					<BlurImage
 						src="/about/budbo 1.gif"
 						alt="bitcoin"

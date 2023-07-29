@@ -243,7 +243,7 @@ const Reason = () => {
                   className="w-[700px] lg:w-[1178px]"
                 />
               </div>
-              <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[100px] lg:w-[212px]">
+              <div className="absolute lg:translate-x-[-140px] translate-y-[15px] w-[80px] lg:w-[212px]">
                 <BlurImage
                   src="/reason/connectphone 1.png"
                   alt="connectphone"
@@ -282,7 +282,7 @@ const Reason = () => {
                   height={520}
                 />
               </div>
-              <div className="absolute lg:translate-x-[-140px] w-[80px] lg:w-[163px] translate-y-[15px]">
+              <div className="absolute lg:translate-x-[-140px] w-[70px] lg:w-[163px] translate-y-[15px]">
                 <BlurImage
                   src="/reason/traxchain 1.png"
                   alt="traxchain"

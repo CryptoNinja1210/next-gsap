@@ -90,7 +90,7 @@ export default function Budbo() {
 
   return (
     <div ref={wrapperRef} className="w-[100vw] h-[100vh] overflow-hidden flexx flex-col text-center font-sysui pt-24">
-      <div ref={weAreRef} className="text-[40px] lg:text-[60px]">
+      <div ref={weAreRef} className="text-[40px] lg:text-[60px] lg:mt-2 mt-[33%]">
         <span>
           We are
         </span>&nbsp;
