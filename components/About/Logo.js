@@ -106,18 +106,20 @@ const Logo = () => {
     return [revealLogoTimeline, scrollTrigger];
   }
 
+  const rotateViewportX = window.innerWidth > window.innerHeight ? (window.innerWidth - window.innerHeight)/2 : 0;
   const revealPhone = (e) => {
     const revealPhoneTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     revealPhoneTimeline
       .from(
         phone_1.current[e],
         {
-          x: 500,
-          y: 1500,
+          x: window.innerWidth,
+          y: window.innerHeight,
           opacity: 1,
           transformOrigin: "100% 100%",
           duration: 2,
           rotateZ: 90,
+          // translateX: rotateViewportX,
         },
         e * 4.3
       )
@@ -126,11 +128,13 @@ const Logo = () => {
         {
           transformOrigin: "100% 100%",
           rotationZ: 0,
+          // translateX: rotateViewportX,
         },
         {
           transformOrigin: "50% 50%",
           rotationZ: -45,
           duration: 1,
+          // translateX: rotateViewportX,
         }
       )
       .to(
@@ -185,10 +189,12 @@ const Logo = () => {
     return [revealPhoneTimeline, scrollTrigger];
   }
 
+  // console.log("rotateViewportX",window.innerWidth > window.innerHeight ? (window.innerWidth - window.innerHeight)/2 : 0, "rotateViewportY", window.innerWidth < window.innerHeight ? (window.innerHeight - window.innerWidth)/2 : 0)
+
   return (
     <div ref={wrapperRef} className="text-center relative h-[100vh] w-[100vw] flex flex-col justify-center items-center">
-      <div className="relative w-full h-[60vh] md:h-[80vh] lg:h-[100vh] flex flex-col justify-center items-center">
-        <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px] h-[209px]">
+      <div className={`relative ${window.innerWidth > window.innerHeight ? ` h-[100vh] w-[100vh] ` : ` h-[100vw] w-[100vw] `} flex flex-col justify-center items-center`}>
+        <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[150px] md:w-[200px] h-[157px] md:h-[209px]">
           <BlurImage
             src="/logo.svg"
             alt="Logo"
@@ -207,13 +213,19 @@ const Logo = () => {
           />
         </div>
         {[...Array(8)].map((_, index) => (
-          <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className="z-40 inset-0 absolute">
+          <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className={`z-40 absolute ${
+            rotateViewportX > 0 ?
+              ` left-[${rotateViewportX}px] top-0  ` : 
+              rotateViewportX == 0 ? 
+                ` left-0 right-0 top-0 bottom-0 ` : 
+                ` top-[${-rotateViewportX}px] left-0  `
+          } w-[80px] md:w-[120px] lg:w-[150px]`}>
+          {/* translate-x-[${rotateViewportX}px] */}
             <BlurImage
               src="/screenshot/map 3.png"
               alt="Logo Phone"
               width={201}
               height={405}
-              className="w-[100px] lg:w-[201px]"
             />
           </div>
         ))}
