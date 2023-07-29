@@ -1,10 +1,8 @@
 import { Linear } from "gsap";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import BlurImage from "../BlurImage";
-// import { Icon } from '@iconify/react';
 
 const  	We1 = () => {
 

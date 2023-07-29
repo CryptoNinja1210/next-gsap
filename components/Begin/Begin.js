@@ -1,10 +1,9 @@
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import BlurImage from "../BlurImage";
 
-const Begin = ({ isDesktop, clientHeight }) => {
+const Begin = ({  }) => {
 
 	const wrapperRef = useRef(null);
 	const leftPhone = useRef(null);
@@ -254,7 +253,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		<div ref={wrapperRef} className={`text-[${1.5*window.innerWidth/1508 + 1644/1508}rem] bg-transparent relative w-[100vw] h-[100vh] font-normal leading-normal flex flex-row justify-center items-end gap-[50px] p-auto overflow-hidden`}>
 			<div ref={leftPhone} id="left-phone" className=" flex flex-col text-right gap-5">
 				<span ref={topleftText} className=" pr-5 whitespace-nowrap">
-					Recession-proof	
+					Recession-proof
 				</span>
 				<BlurImage
 					src="/begin/cart_5.png"

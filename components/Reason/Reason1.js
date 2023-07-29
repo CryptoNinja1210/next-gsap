@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 import Team from "./Team";
 import Reason2 from "./Reason2";
 import { useEffect, useRef } from "react";

@@ -1,6 +1,5 @@
-import Image from "next/image";
 import React, { useState } from "react";
-
+import Image from "next/image";
 export default function BlurImage({ src, alt, width, height, className }) {
   const [isLoading, setLoading] = useState(true);
 
@@ -11,7 +10,6 @@ export default function BlurImage({ src, alt, width, height, className }) {
       src={src}
       width={width}
       height={height}
-      // objectFit="cover"
       className={`
           duration-700 ease-in-out group-hover:opacity-75 overflow-hidden
           ${className}

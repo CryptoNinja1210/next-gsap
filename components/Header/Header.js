@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { Dialog } from '@headlessui/react'
@@ -22,37 +21,31 @@ const menues = [
 
 const Header = () => {
 
-  const { systemTheme, theme, setTheme } = useTheme();
+  // const { systemTheme, theme, setTheme } = useTheme();
 
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const roles = document.getElementById('roles');
-      const we = document.getElementById('we');
-      const reason = document.getElementById('reason');
-      const header = document.getElementById('header');
-      const future = document.getElementById('future');
-      const investor = document.getElementById('investor');
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const roles = document.getElementById('roles');
+  //     const we = document.getElementById('we');
+  //     const reason = document.getElementById('reason');
+  //     const investor = document.getElementById('investor');
 
-      (roles.getBoundingClientRect().top > 0) && setTheme('light');
-      (roles.getBoundingClientRect().top < 0) &&(we.getBoundingClientRect().top > 0 ) && setTheme('dark');
-      (we.getBoundingClientRect().top < 0 ) && (reason.getBoundingClientRect().top > 0) && setTheme('light');
-      (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
-      (investor.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().bottom > 0) && setTheme('light');
-      (investor.getBoundingClientRect().bottom <= 0) && setTheme('dark');
+  //     (roles.getBoundingClientRect().top > 0) && setTheme('light');
+  //     (roles.getBoundingClientRect().top < 0) &&(we.getBoundingClientRect().top > 0 ) && setTheme('dark');
+  //     (we.getBoundingClientRect().top < 0 ) && (reason.getBoundingClientRect().top > 0) && setTheme('light');
+  //     (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
+  //     (investor.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().bottom > 0) && setTheme('light');
+  //     (investor.getBoundingClientRect().bottom <= 0) && setTheme('dark');
+  //   };
 
-      // (roles.getBoundingClientRect().top < 0 && we.getBoundingClientRect().top < 0 && )
-
-
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [setTheme]);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [setTheme]);
 
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  // const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <nav className="w-full fixed top-0 z-50 select-none dark:bg-gray-dark-2  bg-white/70 backdrop-blur-xl transition-all duration-300">
@@ -221,7 +214,7 @@ const Header = () => {
                       </div>
                     </div>
                     <div>
-                      <p className="font-bold font-Gilroy my-5  text-center">380 W 62nd Ave, Denver, CO</p>
+                      <p className="font-bold my-5 text-center">380 W 62nd Ave, Denver, CO</p>
                     </div>
                     <div>
                     <button className="flex justify-center mx-auto my-5 py-[9px] px-[15px] dark:bg-gray-dark-2 bg-white border-[1px] text-primary-graydark border-secondary-graylight rounded-[8px] text-xs font-sysui font-bold leading-4">

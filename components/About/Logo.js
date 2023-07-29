@@ -207,15 +207,8 @@ const Logo = () => {
           />
         </div>
         {[...Array(8)].map((_, index) => (
-          <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className={`z-40 absolute inset-y-0 ${true ? `inset-x-[${rotateViewportX}px]` : `inset-x-0`} w-[60px] md:w-[120px] lg:w-[180px]`}>
-          {/* ${
-          rotateViewportX > 0 ?
-            ` left-[${rotateViewportX}px] right-[${rotateViewportX}px] top-0 bottom-0 ` : 
-            rotateViewportX == 0 ?
-              ` left-0 right-0 top-0 bottom-0 ` : 
-              ` top-[${-rotateViewportX}px] bottom-[${-rotateViewportX}px] left-0 right-0 `
-          } */}
-          {/* translate-x-[${rotateViewportX}px] */}
+          <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className={`z-40 absolute inset-y-0 inset-x-[${Math.max(0, Math.abs(window.innerWidth - window.innerHeight) / 2)}px] w-[60px] md:w-[120px] lg:w-[180px]`}>
+          
             <BlurImage
               src="/screenshot/map 3.png"
               alt="Logo Phone"

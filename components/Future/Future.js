@@ -1,9 +1,5 @@
-import Image from "next/image";
 import Lottie from "lottie-react";
 import animatedCheckbox from "./checkbox.json"
-import { useEffect, useRef } from "react";
-import { gsap, Linear } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import BlurImage from "../BlurImage";
 
 
