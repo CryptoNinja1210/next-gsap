@@ -21,31 +21,31 @@ const menues = [
 
 const Header = () => {
 
-  // const { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
 
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const roles = document.getElementById('roles');
-  //     const we = document.getElementById('we');
-  //     const reason = document.getElementById('reason');
-  //     const investor = document.getElementById('investor');
+  useEffect(() => {
+    const handleScroll = () => {
+      const roles = document.getElementById('roles');
+      const we = document.getElementById('we');
+      const reason = document.getElementById('reason');
+      const investor = document.getElementById('investor');
 
-  //     (roles.getBoundingClientRect().top > 0) && setTheme('light');
-  //     (roles.getBoundingClientRect().top < 0) &&(we.getBoundingClientRect().top > 0 ) && setTheme('dark');
-  //     (we.getBoundingClientRect().top < 0 ) && (reason.getBoundingClientRect().top > 0) && setTheme('light');
-  //     (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
-  //     (investor.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().bottom > 0) && setTheme('light');
-  //     (investor.getBoundingClientRect().bottom <= 0) && setTheme('dark');
-  //   };
+      (roles.getBoundingClientRect().top > 0) && setTheme('light');
+      (roles.getBoundingClientRect().top < 0) &&(we.getBoundingClientRect().top > 0 ) && setTheme('dark');
+      (we.getBoundingClientRect().top < 0 ) && (reason.getBoundingClientRect().top > 0) && setTheme('light');
+      (reason.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().top > 0) && setTheme('dark');
+      (investor.getBoundingClientRect().top < 0) && (investor.getBoundingClientRect().bottom > 0) && setTheme('light');
+      (investor.getBoundingClientRect().bottom <= 0) && setTheme('dark');
+    };
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [setTheme]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [setTheme]);
 
 
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  // const currentTheme = theme === 'system' ? systemTheme : theme;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <nav className="w-full fixed top-0 z-50 select-none dark:bg-gray-dark-2  bg-white/70 backdrop-blur-xl transition-all duration-300">
