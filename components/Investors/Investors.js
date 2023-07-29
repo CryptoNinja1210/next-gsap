@@ -1,5 +1,3 @@
-import { Icon } from "@iconify/react";
-import Image from "next/image";
 import BlurImage from "../BlurImage";
 
 const members = [
