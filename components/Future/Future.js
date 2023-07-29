@@ -60,8 +60,8 @@ const Future = ({ }) => {
 					className="m-auto flex lg:w-[764px]"
 				/>
 			</div>
-			<div className="flex justify-center text-center relative z-10 lg:py-[34px] py-[64px] my-auto">
-				<div className=" m-auto p-5 rounded-3xl flex flex-col gap-[100px] bg-linear bg-opacity-50">
+			<div className="px-4 flex justify-center text-center relative z-10 lg:py-[34px] py-[64px] my-auto">
+				<div className=" m-auto p-5 rounded-3xl flex flex-col gap-[30px] md:gap-[50px] lg:gap-[100px]  bg-linear bg-opacity-50">
 					<h3 className="lg:text-[80px] text-4xl font-semibold ">Invest with confidence today</h3>
 					<button className="h-[52px] lg:h-[80px] px-[48px] m-auto bg-primary-purple hover:bg-primary-purple50 transition-all rounded-xl">
 						I’m joining the Budbo Team
