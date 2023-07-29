@@ -5,38 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import BlurImage from "../BlurImage";
 
 export default function Acount() {
-  const paramList = [
-    {
-      number: 1000,
-      minNumber: 0,
-      heading1: 'Laboratories',
-      heading2: '($1.1billion global industry CAGR 15.4%)'
-    },
-    {
-      number: 8500,
-      minNumber: 1000,
-      heading1: 'Growers',
-      heading2: '($1.8 billion globally, CAGR 21.4%)'
-    },
-    {
-      number: 40000,
-      minNumber: 8500,
-      heading1: 'Dispensaries and Retailers',
-      heading2: '($13.2 billion globally, CAGR 25.5%)'
-    },
-    {
-      number: 100000,
-      minNumber: 40000,
-      heading1: 'Product Manufacturers',
-      heading2: '($18.38 billion globally, CAGR 21.15%)'
-    },
-    {
-      number: 289000000,
-      minNumber: 100000,
-      heading1: 'Consumers and Patients',
-      heading2: '($323.9 billion globally, CAGR 21.4%)'
-    },
-  ]
+  
 
   const parameterRef = useRef([]);
   const [parameters, setParameters] = useState([
@@ -73,6 +42,74 @@ export default function Acount() {
   ])
 
   useEffect(() => {
+
+    
+  const countUp = (index) => {
+
+    const paramList = [
+      {
+        number: 1000,
+        minNumber: 0,
+        heading1: 'Laboratories',
+        heading2: '($1.1billion global industry CAGR 15.4%)'
+      },
+      {
+        number: 8500,
+        minNumber: 1000,
+        heading1: 'Growers',
+        heading2: '($1.8 billion globally, CAGR 21.4%)'
+      },
+      {
+        number: 40000,
+        minNumber: 8500,
+        heading1: 'Dispensaries and Retailers',
+        heading2: '($13.2 billion globally, CAGR 25.5%)'
+      },
+      {
+        number: 100000,
+        minNumber: 40000,
+        heading1: 'Product Manufacturers',
+        heading2: '($18.38 billion globally, CAGR 21.15%)'
+      },
+      {
+        number: 289000000,
+        minNumber: 100000,
+        heading1: 'Consumers and Patients',
+        heading2: '($323.9 billion globally, CAGR 21.4%)'
+      },
+    ]
+
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: parameterRef.current[index],
+      start: "bottom bottom",
+      // endTrigger: parameterRef.current[index + 1],
+      end: "center center",
+      scrub: 0,
+      onUpdate: (self) => {
+        const progress = Math.max(paramList[index].minNumber, Math.ceil(self.progress * paramList[index].number));
+        setParameters(prevState => {
+          return [
+            ...prevState.slice(0, index),
+            {
+              ...prevState[index],
+              number: progress
+            },
+            ...prevState.slice(index + 1)
+          ];
+        });
+        // console.log(
+        //   "progress:",
+        //   progress,
+        //   "direction:",
+        //   self.direction,
+        //   "velocity",
+        //   self.getVelocity()
+        // );
+      }
+    });
+    return scrollTrigger;
+  }
+
     const countScolltrigger0 = countUp(0);
     const countScolltrigger1 = countUp(1);
     const countScolltrigger2 = countUp(2);
@@ -134,38 +171,6 @@ export default function Acount() {
       animation: fadeOutParameterTimeline
     });
     return [fadeOutParameterTimeline, scrollTrigger];
-  }
-
-  const countUp = (index) => {
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: parameterRef.current[index],
-      start: "bottom bottom",
-      // endTrigger: parameterRef.current[index + 1],
-      end: "center center",
-      scrub: 0,
-      onUpdate: (self) => {
-        const progress = Math.max(paramList[index].minNumber, Math.ceil(self.progress * paramList[index].number));
-        setParameters(prevState => {
-          return [
-            ...prevState.slice(0, index),
-            {
-              ...prevState[index],
-              number: progress
-            },
-            ...prevState.slice(index + 1)
-          ];
-        });
-        // console.log(
-        //   "progress:",
-        //   progress,
-        //   "direction:",
-        //   self.direction,
-        //   "velocity",
-        //   self.getVelocity()
-        // );
-      }
-    });
-    return scrollTrigger;
   }
 
   return (

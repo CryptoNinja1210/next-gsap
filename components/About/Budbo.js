@@ -14,6 +14,9 @@ export default function Budbo() {
   const img2Ref = useRef(null);
   const phoneRef = useRef(null);
   const textCarouselRef = useRef(null);
+  const textCarouselRef1 = useRef(null);
+  const textCarouselRef2 = useRef(null);
+  const textCarouselRef3 = useRef(null);
 
   useEffect(() => {
     const [carouselTimeline, scrollTrigger] = Carousel();
@@ -37,7 +40,7 @@ export default function Budbo() {
       .to(imgRef.current, { x: -(carouselTextX), duration: 5 })
       .to(img2Ref.current, { x: carouselTextX, duration: 5 }, "<")
       .from(phoneRef.current, { y: height, duration: 2 }, "<+=3.5")
-      .to(phoneRef.current, { bottom: -10, duration: 2 });
+      .to(phoneRef.current, { bottom: -10, duration: 0.3 });
 
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
@@ -52,24 +55,51 @@ export default function Budbo() {
 
   const textCarousel = () => {
     const textCarouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-    const percent = window.innerWidth >= 1000 ? "200%" : "500%";
+    const percent = window.innerWidth >= 1000 ? "200%" : "400%";
     textCarouselTimeline
-      .to(
-        textCarouselRef.current,
+      .fromTo(
+        textCarouselRef1.current,
         {
-          translateY: `-${100/3}%`,
+          opacity: 1,
+          translateY: 0
+        },
+        {
+          opacity: 0,
+          translateY: `-100%`,
           duration: 1
         },
         1
       )
-      .to(
-        textCarouselRef.current,
+      .fromTo(
+        textCarouselRef2.current,
         {
-          translateY: `-${200/3}%`,
+          opacity: 0,
+          translateY: 0
+        },
+        {
+          opacity: 1,
+          translateY: -textCarouselRef1.current.clientHeight,
           duration: 1
         },
-        "<+=3"
-
+        "<+=2"
+      )
+      .to(
+        textCarouselRef2.current,
+        {
+          opacity: 0,
+          translateY: -textCarouselRef1.current.clientHeight - textCarouselRef2.current.clientHeight,
+          duration: 1
+        },
+        "<+=1"
+      )
+      .to(
+        textCarouselRef3.current,
+        {
+          opacity: 1,
+          translateY: -textCarouselRef1.current.clientHeight - textCarouselRef2.current.clientHeight,
+          duration: 1
+        },
+        "<+=1"
       )
       .to(
         textCarouselRef.current,
@@ -98,11 +128,11 @@ export default function Budbo() {
           Budbo
         </span>
       </div>
-      <div className="h-[20px] md:h-[30px] lg:h-[45px] overflow-y-hidden">
+      <div className="h-[20px] md:h-[30px] lg:h-[45px]">
         <div ref={textCarouselRef} className="flex flex-col">
-          <p className="text-[16px] md:text-[24px] lg:text-[30px]">...and we&apos;ve been expecting you! Join the Revolution, invest today!</p>
-          <p className="text-[16px] md:text-[24px] lg:text-[30px]">‘Tinder&apos; for buying cannabis? Yea, we did that.</p>
-          <p className="text-[16px] md:text-[24px] lg:text-[30px]">We&apos;ve been expecting you! Join the Revolution, invest today!</p>
+          <p ref={textCarouselRef1} className="text-[16px] md:text-[24px] lg:text-[30px] ">...and we&apos;ve been expecting you! Join the Revolution, invest today!</p>
+          <p ref={textCarouselRef2} className="text-[16px] md:text-[24px] lg:text-[30px] ">&apos;Tinder&apos; for buying cannabis? Yea, we did that.</p>
+          <p ref={textCarouselRef3} className="text-[16px] md:text-[24px] lg:text-[30px] ">We&apos;ve been expecting you! Join the Revolution, invest today!</p>
         </div>
       </div>
       <div className="flex flex-col k lg:gap-[108px] gap-4 mt-10">
