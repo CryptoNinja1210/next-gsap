@@ -28,13 +28,14 @@ const Role = () => {
         <span>Simply</span>&nbsp;
         <span className="italic">savvy.</span>
       </div>
-      <BlurImage
-        src="/about/ez.gif"
-        alt="savvy"
-        width={962}
-        height={722}
-        className="m-auto"
-      />
+      <div></div>
+        <BlurImage
+          src="/about/ez.gif"
+          alt="savvy"
+          width={962}
+          height={722}
+          className="m-auto"
+        />
     </div>
   );
 };
