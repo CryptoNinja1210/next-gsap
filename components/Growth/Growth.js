@@ -74,22 +74,22 @@ const Growth = () => {
 					<p className="text-[13px]">Invest for as little as $195</p>
 				</button>
 				<div id="left-phone"
-					className="absolute lg:left-[-10%] left-[-18%] lg:top-[750px] top-[100px]">
+					className="absolute lg:w-[912px] w-[250px] lg:left-[-30%] left-[-58%] md:left-[-48%] lg:top-[750px] top-[110px]">
 					<BlurImage
 						src="/begin/cart_5.png"
 						alt="Left phone"
-						width={window.innerWidth * .25}
-						height={window.innerWidth * .35}
+						width={912}
+						height={912}
 					/>
 				</div>
 				<div id="right-phone"
-					className="absolute lg:right-[-8%] right-[-15%] lg:top-[865px] top-[100px]">
+					className="absolute lg:w-[672px] w-[150px] lg:right-[-18%] right-[-35%] md:right-[-25%] lg:top-[865px] top-[120px]">
 					<BlurImage
 						// className="absolute right-[100px]"
 						src="/begin/puff_6.png"
 						alt="Right phone"
-						width={window.innerWidth * .20}
-						height={window.innerWidth * .30}
+						width={672}
+						height={672}
 					/>
 				</div>
 			</div>

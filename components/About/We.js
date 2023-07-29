@@ -96,12 +96,12 @@ const We = () => {
   }
 
   return (
-    <div id="we" className="relative h-[100vh] text-center font-sysui lg:my-[130px]">
+    <div id="we" className="relative h-[100vh] text-center font-sysui lg:my-[130px] ">
       <div>
-        <h1 className="text-[60px] font-medium">
+        <h1 className="lg:text-[60px] text-[40px] font-medium">
           We are
         </h1>
-        <h1 className="italic lg:text-[90px] text-[60px] bg-linear bg-clip-text text-transparent">
+        <h1 className="italic lg:text-[90px] text-[40px] bg-linear bg-clip-text text-transparent">
           The Premier Online Marketplace
         </h1>
         <p className="text-[30px] font-bold mt-10">for Recreational and Medical Cannabis - Shop 1000s of local dispensaries</p>
@@ -193,13 +193,13 @@ const We = () => {
             />
           </div>
         </div>
-        <div className="lg:h-[2460px] h-[1300px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
+        <div className="lg:h-[2460px] h-[1000px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
       </div>
-      <div className="relative my-[120px]  text-center">
-        <h2 className="text-[60px]">
+      <div className="relative mt-[220px]  text-center">
+        <h2 className="lg:text-[60px] text-[40px]">
           We are
         </h2>
-        <h1 className="italic lg:text-[90px] text-[70px] font-medium bg-linear bg-clip-text text-transparent mb-[120px]">
+        <h1 className="italic lg:text-[90px] text-[35px] font-medium bg-linear bg-clip-text text-transparent mb-[50px]">
           Software-as-a-Service
         </h1>
         <div ref={(ref) => (bookRef.current[2] = ref)} className="">
@@ -211,7 +211,7 @@ const We = () => {
           />
         </div>
         <div className="flex justify-center mt-[100px] mb-[26px]">
-          <div className="text-[40px] lg:text-[48px] w-[860px]">
+          <div className="text-[25px] lg:text-[48px] w-[860px]">
             <span>Explosive potential for revenue growth</span>&nbsp;
             <span className="italic font-medium bg-linear bg-clip-text text-transparent">Saas</span>&nbsp;
             <span>through monthly recurring revenue model</span>
