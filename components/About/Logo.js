@@ -105,8 +105,9 @@ const Logo = () => {
       .from(
         phone_1.current[e],
         {
-          translateX: window.innerWidth * 0.75,
+          translateX: window.innerWidth * 0.6,
           translateY: 400,
+          scale: 0.02,
           // x: window.innerWidth,
           // y: window.innerHeight,
           opacity: 1,
@@ -168,6 +169,7 @@ const Logo = () => {
         {
           translateX: -window.innerWidth * 0.75,
           translateY: 400,
+          scale: 0.02,
           opacity: 1,
           duration: 2,
           rotateZ: -405,
