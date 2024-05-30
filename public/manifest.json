@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Portfolio | Shubh Porwal",
-  "short_name": "Shubh Porwal",
-  "description": "Shubh Porwal's Portfolio Website.",
+  "name": "Jerome Pangilinan",
+  "short_name": "Jerome",
+  "description": "Jerome's GSAP project.",
   "icons": [
     {
       "src": "/icon-192x192.png",
